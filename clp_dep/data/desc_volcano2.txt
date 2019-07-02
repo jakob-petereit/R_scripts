@@ -1,0 +1,75 @@
+Locus Identifier	Gene Model Name	Gene Model Description	Gene Model Type	Primary Gene Symbol	All Gene Symbols
+AT1G70190	AT1G70190.1	ribosomal protein L7/L12 domain-containing protein;(source:Araport11)	protein_coding			
+AT2G45030	AT2G45030.1	Translation elongation factor EFG/EF2 protein;(source:Araport11)	protein_coding			
+AT5G47890	AT5G47890.1	NADH-ubiquinone oxidoreductase B8 subunit;(source:Araport11)	protein_coding			
+AT2G44525	AT2G44525.1	NADH dehydrogenase ubiquinone 1 alpha subcomplex assembly factor-like protein (DUF498/DUF598);(source:Araport11)	protein_coding			
+AT2G31240	AT2G31240.1	Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11)	protein_coding			
+AT5G55610	AT5G55610.1	isopentenyl-diphosphate delta-isomerase;(source:Araport11)	protein_coding			
+AT3G62530	AT3G62530.1	ARM repeat superfamily protein;(source:Araport11)	protein_coding			
+AT3G12260	AT3G12260.1	LYR family of Fe/S cluster biogenesis protein;(source:Araport11)	protein_coding			
+AT5G40660	AT5G40660.1	ATP12 protein-like protein;(source:Araport11)	protein_coding			
+AT1G15120	AT1G15120.2	Ubiquinol-cytochrome C reductase hinge protein;(source:Araport11)	protein_coding			
+AT4G35850	AT4G35850.1	Pentatricopeptide repeat (PPR) superfamily protein;(source:Araport11)	protein_coding			
+AT1G72170	AT1G72170.1	MICOS complex subunit, putative (DUF543);(source:Araport11)	protein_coding			
+AT2G16710	AT2G16710.3	Iron-sulfur cluster biosynthesis family protein;(source:Araport11)	protein_coding			
+AT4G11120	AT4G11120.1	translation elongation factor Ts (EF-Ts);(source:Araport11)	protein_coding			
+AT3G02650	AT3G02650.1	Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11)	protein_coding			
+AT4G25315	AT4G25315.1	Expressed protein;(source:Araport11)	protein_coding			
+AT4G21020	AT4G21020.1	Late embryogenesis abundant protein (LEA) family protein;(source:Araport11)	protein_coding			
+AT4G02580	AT4G02580.1	NADH-ubiquinone oxidoreductase 24 kDa subunit;(source:Araport11)	protein_coding			
+AT5G19760	AT5G19760.1	Encodes a novel mitochondrial carrier capable of transporting both dicarboxylates (such as malate, oxaloacetate, oxoglutarate, and maleate) and tricarboxylates (such as citrate, isocitrate, cis-aconitate, and trans-aconitate).	protein_coding			
+AT5G51440	AT5G51440.1	HSP20-like chaperones superfamily protein;(source:Araport11)	protein_coding			
+AT1G64880	AT1G64880.1	Ribosomal protein S5 family protein;(source:Araport11)	protein_coding			
+AT1G26460	AT1G26460.1	Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11)	protein_coding			
+AT5G64670	AT5G64670.1	Ribosomal protein L18e/L15 superfamily protein;(source:Araport11)	protein_coding			
+AT5G08690	AT5G08690.1	Encodes the mitochondrial ATP synthase beta-subunit.  This subunit is encoded by a multigene family of three members (At5g08670, At5g08680, At5g08690) that shared 98% sequence identity at the amino acid level. The mRNA is cell-to-cell mobile.	protein_coding			
+AT4G15640	AT4G15640.1	adenylyl cyclase;(source:Araport11)	protein_coding			
+AT3G27240	AT3G27240.1	Cytochrome C1 family;(source:Araport11)	protein_coding			
+AT1G51980	AT1G51980.1	Insulinase (Peptidase family M16) protein;(source:Araport11)	protein_coding			
+AT5G20080	AT5G20080.1	FAD/NAD(P)-binding oxidoreductase;(source:Araport11)	protein_coding			
+AT5G02740	AT5G02740.1	Ribosomal protein S24e family protein;(source:Araport11)	protein_coding			
+AT4G29480	AT4G29480.1	Mitochondrial ATP synthase subunit G protein;(source:Araport11)	protein_coding			
+AT1G34360	AT1G34360.1	translation initiation factor 3 (IF-3) family protein;(source:Araport11)	protein_coding	 (ATINFC-1)	INITIATION FACTOR 3-1 (ATIF3-1); (ATINFC-1)	
+AT3G02090	AT3G02090.2	Insulinase (Peptidase family M16) protein;(source:Araport11)	protein_coding	 (MPPBETA)	 (MPPBETA)	
+ATCG00490	ATCG00490.1	large subunit of RUBISCO. Protein is tyrosine-phosphorylated and its phosphorylation state is modulated in response to ABA in Arabidopsis thaliana seeds.	protein_coding	 (RBCL)	 (RBCL)	
+AT5G08530	AT5G08530.1	51 kDa subunit of complex I;(source:Araport11)	protein_coding	51 KDA SUBUNIT OF COMPLEX I (CI51)	51 KDA SUBUNIT OF COMPLEX I (CI51); (NDUFV1)	
+AT2G37250	AT2G37250.1	encodes adenylate kinase that is located in the chloroplast involved in the coordination of metabolism and growth	protein_coding	ADENOSINE KINASE (ADK)	ADENOSINE KINASE (ADK); (ATPADK1)	
+AT5G63400	AT5G63400.1	encodes a protein similar to adenylate kinase.	protein_coding	ADENYLATE KINASE 1 (ADK1)	ADENYLATE KINASE 1 (ADK1)	
+AT3G08580	AT3G08580.1	mitochondrial ADP/ATP carrier	protein_coding	ADP/ATP CARRIER 1 (AAC1)	ADP/ATP CARRIER 1 (AAC1)	
+AT2G43360	AT2G43360.1	Catalyzes the conversion of dethiobiotin to biotin.	protein_coding	BIOTIN AUXOTROPH 2 (BIO2)	BIOTIN AUXOTROPH 2 (BIO2);BIOTIN AUXOTROPH B (BIOB)	
+AT5G53350	AT5G53350.1	CLP protease regulatory subunit CLPX mRNA, nuclear gene	protein_coding	CLP PROTEASE REGULATORY SUBUNIT X (CLPX)	CLP PROTEASE REGULATORY SUBUNIT X (CLPX)	
+AT1G22450	AT1G22450.1	subunit 6b of cytochrome c oxidase	protein_coding	CYTOCHROME C OXIDASE 6B (COX6B)	CYTOCHROME C OXIDASE 6B (COX6B);CYTOCHROME C OXIDASE 6B2 (ATCOX6B2)	
+AT5G37510	AT5G37510.2	Encodes a subunit of the 400 kDa subcomplex of the mitochondrial NADH dehydrogenase (complex I).  The protein has been isolated in the male gametophyte. The mRNA is cell-to-cell mobile.	protein_coding	EMBRYO DEFECTIVE 1467 (EMB1467)	EMBRYO DEFECTIVE 1467 (EMB1467); (CI76)	
+AT2G31060	AT2G31060.3	elongation factor family protein;(source:Araport11)	protein_coding	EMBRYO DEFECTIVE 2785 (EMB2785)	EMBRYO DEFECTIVE 2785 (EMB2785)	
+AT5G62270	AT5G62270.2	ribosomal protein L20;(source:Araport11)	protein_coding	GAMETE CELL DEFECTIVE 1 (GCD1)	GAMETE CELL DEFECTIVE 1 (GCD1)	
+AT5G48030	AT5G48030.1	encodes a mitochondrially targeted DNAJ protein involved in female gametophyte development.	protein_coding	GAMETOPHYTIC FACTOR 2 (GFA2)	GAMETOPHYTIC FACTOR 2 (GFA2)	
+AT2G33040	AT2G33040.1	gamma subunit of Mt ATP synthase;(source:Araport11)	protein_coding	GAMMA SUBUNIT OF MT ATP SYNTHASE (ATP3)	GAMMA SUBUNIT OF MT ATP SYNTHASE (ATP3)	
+AT1G54010	AT1G54010.1	GDSL-motif  esterase/acyltransferase/lipase. Enzyme group with broad substrate specificity that may catalyze acyltransfer or hydrolase reactions with lipid and non-lipid substrates.	protein_coding	GDSL-LIKE LIPASE 23 (GLL23)	GDSL-LIKE LIPASE 23 (GLL23)	
+AT1G10270	AT1G10270.1	glutamine-rich protein 23;(source:Araport11)	protein_coding	GLUTAMINE-RICH PROTEIN 23 (GRP23)	GLUTAMINE-RICH PROTEIN 23 (GRP23)	
+AT2G35370	AT2G35370.1	Encodes glycine decarboxylase complex H protein. Involved in photorespiration. The mRNA is cell-to-cell mobile.	protein_coding	GLYCINE DECARBOXYLASE COMPLEX H (GDCH)	GLYCINE DECARBOXYLASE COMPLEX H (GDCH)	
+AT2G26080	AT2G26080.1	glycine decarboxylase P-protein 2;(source:Araport11)	protein_coding	GLYCINE DECARBOXYLASE P-PROTEIN 2 (GLDP2)	GLYCINE DECARBOXYLASE P-PROTEIN 2 (AtGLDP2);GLYCINE DECARBOXYLASE P-PROTEIN 2 (GLDP2)	
+AT3G16460	AT3G16460.1	Mannose-binding lectin superfamily protein;(source:Araport11)	protein_coding	JACALIN-RELATED LECTIN 34 (JAL34)	JACALIN-RELATED LECTIN 34 (JAL34)	
+AT3G17240	AT3G17240.1	lipoamide dehydrogenase precursor	protein_coding	LIPOAMIDE DEHYDROGENASE 2 (mtLPD2)	LIPOAMIDE DEHYDROGENASE 2 (mtLPD2)	
+AT5G55200	AT5G55200.1	Co-chaperone GrpE family protein;(source:Araport11)	protein_coding	MITOCHONDRIAL GRPE 1 (MGE1)	MITOCHONDRIAL GRPE 1 (MGE1)	
+AT4G37910	AT4G37910.1	mitochondrial heat shock protein 70-1;(source:Araport11)	protein_coding	MITOCHONDRIAL HEAT SHOCK PROTEIN 70-1 (mtHsc70-1)	MITOCHONDRIAL HEAT SHOCK PROTEIN 70-1 (mtHsc70-1)	
+AT3G16480	AT3G16480.1	mitochondrial processing peptidase alpha subunit;(source:Araport11)	protein_coding	MITOCHONDRIAL PROCESSING PEPTIDASE ALPHA SUBUNIT (MPPalpha)	MITOCHONDRIAL PROCESSING PEPTIDASE ALPHA SUBUNIT (MPPalpha)	
+AT4G30930	AT4G30930.1	Encodes a ribosomal RPL21M protein that is localized to the mitochondrion and is involved in karyogamy during female gametophyte development and fertilization. Mutants display defects in both male and female gametophyte development (i.e.collapsed pollen and female gametophytes with unfused central cells).	protein_coding	NUCLEAR FUSION DEFECTIVE 1 (NFD1)	NUCLEAR FUSION DEFECTIVE 1 (NFD1)	
+AT1G31817	AT1G31817.1	Ribosomal L18p/L5e family protein;(source:Araport11)	protein_coding	NUCLEAR FUSION DEFECTIVE 3 (NFD3)	NUCLEAR FUSION DEFECTIVE 3 (NFD3)	
+AT1G19520	AT1G19520.1	Ribosomal pentatricopeptide repeat protein	protein_coding	NUCLEAR FUSION DEFECTIVE 5 (NFD5)	NUCLEAR FUSION DEFECTIVE 5 (NFD5);RIBOSOMAL PENTATRICOPEPTIDE REPEAT PROTEIN 2 (RPPR2)	
+AT5G23140	AT5G23140.1	One of several nuclear-encoded ClpPs (caseinolytic protease). Contains a highly conserved catalytic triad of Ser-type proteases (Ser-His-Asp). The name reflects nomenclature described in Adam et. al (2001).	protein_coding	NUCLEAR-ENCODED CLP PROTEASE P7 (NCLPP7)	 (CLPP2);NUCLEAR-ENCODED CLP PROTEASE P7 (NCLPP7)	
+AT4G11010	AT4G11010.1	nucleoside diphosphate kinase 3 (ndpk3), located to the inter-membrane space in mitochondria	protein_coding	NUCLEOSIDE DIPHOSPHATE KINASE 3 (NDPK3)	NUCLEOSIDE DIPHOSPHATE KINASE 3 (NDPK3)	
+AT3G49240	AT3G49240.1	Encodes NUWA, an imprinted gene that controls mitochondrial function in early seed development.  It is expressed in both the mitochondrion and chloroplast and is also involved in RNA editing in the mitochondrion and chloroplast as a core member of E+-type PPR editosomes.	protein_coding	NUWA (NUWA)	NUWA (NUWA);EMBRYO DEFECTIVE 1796 (emb1796)	
+AT1G61870	AT1G61870.1	Generic translation factor involved in mitochondrial translation.	protein_coding	PENTATRICOPEPTIDE REPEAT 336 (PPR336)	PENTATRICOPEPTIDE REPEAT 336 (PPR336);RIBOSOMAL PPR PROTEIN 1 (RPPR1)	
+AT1G80270	AT1G80270.1	PENTATRICOPEPTIDE REPEAT 596;(source:Araport11)	protein_coding	PENTATRICOPEPTIDE REPEAT 596 (PPR596)	PENTATRICOPEPTIDE REPEAT 596 (PPR596)	
+AT1G06530	AT1G06530.1	Encodes PEROXISOMAL AND MITOCHONDRIAL DIVISION FACTOR2. Involved in mitochondrial morphogenesis.	protein_coding	PEROXISOMAL AND MITOCHONDRIAL DIVISION FACTOR 2 (PMD2)	PEROXISOMAL AND MITOCHONDRIAL DIVISION FACTOR 2 (PMD2)	
+AT3G22200	AT3G22200.2	Genetically redundant with POP3;mediates pollen tube guidance. Double mutants are self sterile; gamma-aminobutyrate transaminase subunit precursor; nuclear gene for mitochondrial product. Encodes gamma-aminobutyrate transaminase that uses pyruvate instead of alpha-ketoglutarate as cosubstrate. Mutations in POP2/HER1 render roots resistant to the inhibitory growth effects of the volatile organic compound E-2-hexenal implicated in plant defense.	protein_coding	POLLEN-PISTIL INCOMPATIBILITY 2 (POP2)	POLLEN-PISTIL INCOMPATIBILITY 2 (POP2)	
+AT5G60960	AT5G60960.1	Encodes PNM1 (for PPR protein localized to the nucleus and mitochondria 1), a PPR protein that is dual localized to mitochondria and nuclei. Loss of PNM1 function in mitochondria, but not in nuclei, is lethal for the embryo. In mitochondria, it is associated with polysomes and may play a role in translation.	protein_coding	PPR PROTEIN LOCALIZED TO THE NUCLEUS AND MITOCHONDRIA 1 (PNM1)	PPR PROTEIN LOCALIZED TO THE NUCLEUS AND MITOCHONDRIA 1 (PNM1);RIBOSOMAL PENTATRICOPEPTIDE REPEAT PROTEIN 9 (RPPR9)	
+AT3G19170	AT3G19170.1	Zinc metalloprotease pitrilysin subfamily A. Signal peptide degrading enzyme targeted to mitochondria and chloroplasts. Expressed only in siliques and flowers	protein_coding	PRESEQUENCE PROTEASE 1 (PREP1)	PRESEQUENCE PROTEASE 1 (ATPREP1); (ATZNMP);PRESEQUENCE PROTEASE 1 (PREP1)	
+AT3G22310	AT3G22310.1	Sequence similarity ot DEAD-box RNA helicases. Binds RNA and DNA. Involved in drought, salt and cold stress responses. The mRNA is cell-to-cell mobile.	protein_coding	PUTATIVE MITOCHONDRIAL RNA HELICASE 1 (PMH1)	PUTATIVE MITOCHONDRIAL RNA HELICASE 1 (PMH1);RNA HELICASE 9 (ATRH9)	
+AT3G22330	AT3G22330.1	DEAD-box protein required for efficient group II  intron splicing in mitochondria.	protein_coding	PUTATIVE MITOCHONDRIAL RNA HELICASE 2 (PMH2)	PUTATIVE MITOCHONDRIAL RNA HELICASE 2 (PMH2); (ATRH53)	
+AT4G09730	AT4G09730.1	Encodes RH39, a DEAD-box protein involved in the introduction of the hidden break into the 23S rRNA in the chloroplasts. Recombinant RH39 binds to the 23S rRNA in a segment adjacent to the stem-loop creating the hidden break target loop in a sequence-dependent manner. Has ATP-hydrolyzing activity at a Kcat of 5.3 /min in the presence of rRNA sequence. Mutants have drastically reduced level of level of ribulose 1,5-bisphosphate carboxylase/oxygenase. The mRNA is cell-to-cell mobile.	protein_coding	RH39 (RH39)	RH39 (RH39)	
+AT3G15000	AT3G15000.1	Encodes RIP1 (RNA-editing factor interacting protein 1). Involved in chloroplast and mitochondrial RNA editing. The mRNA is cell-to-cell mobile.	protein_coding	RNA-EDITING FACTOR INTERACTING PROTEIN 1 (RIP1)	RNA-EDITING FACTOR INTERACTING PROTEIN 1 (RIP1);MULTIPLE ORGANELLAR RNA EDITING FACTOR 8 (MORF8)	
+AT2G45290	AT2G45290.1	Transketolase;(source:Araport11)	protein_coding	TRANSKETOLASE 2 (TKL2)	TRANSKETOLASE 2 (TKL2)	
+AT5G43970	AT5G43970.1	Subunit of the TOM complex, a translocase in the outer mitochondrial membrane that selectively allows proteins with a mitochondrial targeting sequence to enter the mitochondrion.	protein_coding	TRANSLOCASE OF OUTER MEMBRANE 22-V (TOM22-V)	TRANSLOCASE OF OUTER MEMBRANE 22-V (TOM22-V);TRANSLOCASE OUTER MITOCHONDRIAL MEMBRANE 22-V (TOM9-2); (ATTOM22-V)	
+AT1G61570	AT1G61570.1	Encodes a putative small zinc finger-like protein (TIM13); nucleus-encoded gene whose product is found in the mitochondrial inner membrane space.	protein_coding	TRANSLOCASE OF THE INNER MITOCHONDRIAL MEMBRANE 13 (TIM13)	TRANSLOCASE OF THE INNER MITOCHONDRIAL MEMBRANE 13 (TIM13)	
+AT5G67500	AT5G67500.2	Encodes a voltage-dependent anion channel (VDAC: AT3G01280/VDAC1, AT5G67500/VDAC2, AT5G15090/VDAC3, AT5G57490/VDAC4, AT5G15090/VDAC5). VDACs are reported to be porin-type, beta-barrel diffusion pores. They are prominently localized in the outer mitochondrial membrane and are involved in metabolite exchange between the organelle and the cytosol. The mRNA is cell-to-cell mobile.	protein_coding	VOLTAGE DEPENDENT ANION CHANNEL 2 (VDAC2)	VOLTAGE DEPENDENT ANION CHANNEL 2 (VDAC2)	

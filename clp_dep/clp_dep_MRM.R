@@ -1,0 +1,10 @@
+library(DEP)
+library(tidyverse)
+library(data.table)
+library(fitdistrplus)
+library(Biostrings)
+library(SummarizedExperiment)
+
+data <- fread('data/proteinGroups.txt')
+data <- filter(data, Reverse != "+", `Potential contaminant` != "+")
+colnames(data)

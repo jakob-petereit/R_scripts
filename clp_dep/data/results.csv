@@ -1,0 +1,1411 @@
+ID,label,condition,diff,p.adj,threshhold,fraction
+AT3G06850, 2-oxoacid dehydrogenases acyltransferase family protein ,clp1p,0.037801269,0.871301371,FALSE,Membrane Proteins
+AT3G06850, 2-oxoacid dehydrogenases acyltransferase family protein ,clp1s,-0.57502868,0.54414756,FALSE,Soluble Proteins
+AT3G55410, 2-oxoglutarate dehydrogenase,clp1p,-0.028186846,0.84298465,FALSE,Membrane Proteins
+AT3G55410, 2-oxoglutarate dehydrogenase,clp1s,-0.173646301,0.494294023,FALSE,Soluble Proteins
+AT5G65750, 2-oxoglutarate dehydrogenase,clp1p,0.198386004,0.518338583,FALSE,Membrane Proteins
+AT5G65750, 2-oxoglutarate dehydrogenase,clp1s,-0.24182322,0.335476218,FALSE,Soluble Proteins
+AT3G07480, 2Fe-2S ferredoxin-like superfamily protein ,clp1p,-1.27387576,0.425604649,FALSE,Membrane Proteins
+AT3G07480, 2Fe-2S ferredoxin-like superfamily protein ,clp1s,-0.340355568,0.791425657,FALSE,Soluble Proteins
+AT5G66120, 3-dehydroquinate synthase ,clp1p,-0.425225044,0.714971333,FALSE,Membrane Proteins
+AT5G66120, 3-dehydroquinate synthase ,clp1s,-0.057013804,0.859689166,FALSE,Soluble Proteins
+AT3G15290, 3-hydroxyacyl-CoA dehydrogenase family protein ,clp1p,0.063867718,0.519112028,FALSE,Membrane Proteins
+AT3G15290, 3-hydroxyacyl-CoA dehydrogenase family protein ,clp1s,0.133652156,0.822311041,FALSE,Soluble Proteins
+AT5G46290, 3-ketoacyl-acyl carrier protein synthase I ,clp1p,-1.612683561,0.345638142,FALSE,Membrane Proteins
+AT5G46290, 3-ketoacyl-acyl carrier protein synthase I ,clp1s,-0.338052147,0.808473782,FALSE,Soluble Proteins
+AT5G08530,51 kD CI,clp1p,3.781602018,0.002275588,TRUE,Membrane Proteins
+AT5G08530,51 kD CI,clp1s,0.601897592,0.699473233,FALSE,Soluble Proteins
+AT1G64190, 6-phosphogluconate dehydrogenase family protein ,clp1p,-0.958029168,0.684990227,FALSE,Membrane Proteins
+AT1G64190, 6-phosphogluconate dehydrogenase family protein ,clp1s,-0.570461093,0.695878018,FALSE,Soluble Proteins
+AT4G20930, 6-phosphogluconate dehydrogenase family protein ,clp1p,0.029189479,0.826730298,FALSE,Membrane Proteins
+AT4G20930, 6-phosphogluconate dehydrogenase family protein ,clp1s,-0.094951398,0.779617179,FALSE,Soluble Proteins
+AT5G41670, 6-phosphogluconate dehydrogenase family protein ,clp1p,-0.243834743,0.800652476,FALSE,Membrane Proteins
+AT5G41670, 6-phosphogluconate dehydrogenase family protein ,clp1s,0.350032286,0.591565029,FALSE,Soluble Proteins
+AT2G18330, AAA-type ATPase family protein ,clp1p,-0.053078093,0.778891392,FALSE,Membrane Proteins
+AT2G18330, AAA-type ATPase family protein ,clp1s,-0.113907038,0.848431414,FALSE,Soluble Proteins
+AT5G16930, AAA-type ATPase family protein ,clp1p,-0.082400031,0.783866152,FALSE,Membrane Proteins
+AT5G16930, AAA-type ATPase family protein ,clp1s,0.094890659,0.779101262,FALSE,Soluble Proteins
+AT4G01660, ABC transporter 1 ,clp1p,-0.438453742,0.767077362,FALSE,Membrane Proteins
+AT4G01660, ABC transporter 1 ,clp1s,-0.273373815,0.702024819,FALSE,Soluble Proteins
+AT5G53650, ABC transporter A family protein ,clp1p,-0.192241576,0.865672413,FALSE,Membrane Proteins
+AT5G53650, ABC transporter A family protein ,clp1s,0.587838081,0.768098351,FALSE,Soluble Proteins
+AT5G58270, ABC transporter of the mitochondrion 3 ,clp1p,-0.049766101,0.836873932,FALSE,Membrane Proteins
+AT5G58270, ABC transporter of the mitochondrion 3 ,clp1s,-0.442661712,0.522205826,FALSE,Soluble Proteins
+AT5G48230, acetoacetyl-CoA thiolase 2 ,clp1p,-0.841733063,0.399689109,FALSE,Membrane Proteins
+AT5G48230, acetoacetyl-CoA thiolase 2 ,clp1s,0.307619198,0.718095948,FALSE,Soluble Proteins
+AT5G35360, acetyl Co-enzyme a carboxylase biotin carboxylase subunit ,clp1p,-0.475749505,0.737440948,FALSE,Membrane Proteins
+AT5G35360, acetyl Co-enzyme a carboxylase biotin carboxylase subunit ,clp1s,-0.307229372,0.734677452,FALSE,Soluble Proteins
+AT2G38040, acetyl Co-enzyme a carboxylase carboxyltransferase alpha subunit ,clp1p,-0.218820939,0.82893292,FALSE,Membrane Proteins
+AT2G38040, acetyl Co-enzyme a carboxylase carboxyltransferase alpha subunit ,clp1s,-0.089737096,0.822781461,FALSE,Soluble Proteins
+AT4G26970, aconitase 2 ,clp1p,-0.363944331,0.243244574,FALSE,Membrane Proteins
+AT4G26970, aconitase 2 ,clp1s,-0.262667018,0.202250241,FALSE,Soluble Proteins
+AT2G05710, aconitase 3 ,clp1p,-0.250454335,0.531940758,FALSE,Membrane Proteins
+AT2G05710, aconitase 3 ,clp1s,-0.234599622,0.351591463,FALSE,Soluble Proteins
+AT2G43090, Aconitase/3-isopropylmalate dehydratase protein ,clp1p,-0.344610175,0.663201864,FALSE,Membrane Proteins
+AT2G43090, Aconitase/3-isopropylmalate dehydratase protein ,clp1s,-0.277646719,0.577038524,FALSE,Soluble Proteins
+AT5G04740, ACT domain-containing protein ,clp1p,-0.454458802,0.616388006,FALSE,Membrane Proteins
+AT5G04740, ACT domain-containing protein ,clp1s,0.503060423,0.334330978,FALSE,Soluble Proteins
+AT3G16910, acyl-activating enzyme 7 ,clp1p,-0.903266003,0.154922015,FALSE,Membrane Proteins
+AT3G16910, acyl-activating enzyme 7 ,clp1s,-0.115417693,0.827751189,FALSE,Soluble Proteins
+AT3G06810, acyl-CoA dehydrogenase-like protein ,clp1p,-0.472304549,0.514587171,FALSE,Membrane Proteins
+AT3G06810, acyl-CoA dehydrogenase-like protein ,clp1s,0.002356175,0.872625752,FALSE,Soluble Proteins
+AT4G16760, acyl-CoA oxidase 1 ,clp1p,-0.348847862,0.560926511,FALSE,Membrane Proteins
+AT4G16760, acyl-CoA oxidase 1 ,clp1s,-0.142149615,0.792034463,FALSE,Soluble Proteins
+AT5G65110, acyl-CoA oxidase 2 ,clp1p,-0.35960994,0.824050022,FALSE,Membrane Proteins
+AT5G65110, acyl-CoA oxidase 2 ,clp1s,0.47524492,0.711075659,FALSE,Soluble Proteins
+AT1G06290, acyl-CoA oxidase 3 ,clp1p,-0.026200124,0.753389097,FALSE,Membrane Proteins
+AT1G06290, acyl-CoA oxidase 3 ,clp1s,-0.044461862,0.795893063,FALSE,Soluble Proteins
+AT3G51840, acyl-CoA oxidase 4 ,clp1p,-0.194331659,0.693861319,FALSE,Membrane Proteins
+AT3G51840, acyl-CoA oxidase 4 ,clp1s,0.067883009,0.867447758,FALSE,Soluble Proteins
+AT2G35690, acyl-CoA oxidase 5 ,clp1p,-0.660025076,0.473650299,FALSE,Membrane Proteins
+AT2G35690, acyl-CoA oxidase 5 ,clp1s,-0.120604055,0.83886054,FALSE,Soluble Proteins
+AT1G20560, acyl activating enzyme 1 ,clp1p,0.007181171,0.841061324,FALSE,Membrane Proteins
+AT1G20560, acyl activating enzyme 1 ,clp1s,-0.018606778,0.854645645,FALSE,Soluble Proteins
+AT4G01100, adenine nucleotide transporter 1 ,clp1p,-0.566082975,0.574160106,FALSE,Membrane Proteins
+AT4G01100, adenine nucleotide transporter 1 ,clp1s,-0.156976147,0.815572585,FALSE,Soluble Proteins
+AT2G37250,ADENOSINE KINASE,clp1p,2.240627423,1.67E-04,TRUE,Membrane Proteins
+AT2G37250,ADENOSINE KINASE,clp1s,3.372608536,4.03E-14,TRUE,Soluble Proteins
+AT5G63400, adenylate kinase 1 ,clp1p,-0.64087772,0.104538447,FALSE,Membrane Proteins
+AT5G63400, adenylate kinase 1 ,clp1s,-0.029494983,0.857808048,FALSE,Soluble Proteins
+AT5G50370, Adenylate kinase family protein ,clp1p,-0.945522349,0.44515411,FALSE,Membrane Proteins
+AT5G50370, Adenylate kinase family protein ,clp1s,0.027190038,0.853561918,FALSE,Soluble Proteins
+AT4G15640, adenylyl cyclase ,clp1p,2.155297501,0.1823143,FALSE,Membrane Proteins
+AT4G15640, adenylyl cyclase ,clp1s,1.407591249,0.340125971,FALSE,Soluble Proteins
+AT3G08580, ADP/ATP carrier 1 ,clp1p,-1.671555511,0.279252645,FALSE,Membrane Proteins
+AT3G08580, ADP/ATP carrier 1 ,clp1s,-0.319280107,0.81372585,FALSE,Soluble Proteins
+AT5G13490, ADP/ATP carrier 2 ,clp1p,-1.533544631,0.6967272,FALSE,Membrane Proteins
+AT5G13490, ADP/ATP carrier 2 ,clp1s,-0.203641555,0.863166091,FALSE,Soluble Proteins
+AT4G30490, AFG1-like ATPase family protein ,clp1p,-0.096975557,0.832234089,FALSE,Membrane Proteins
+AT4G30490, AFG1-like ATPase family protein ,clp1s,-0.294802454,0.770551997,FALSE,Soluble Proteins
+AT1G70580, alanine-2-oxoglutarate aminotransferase 2 ,clp1p,-0.019596005,0.876926253,FALSE,Membrane Proteins
+AT1G70580, alanine-2-oxoglutarate aminotransferase 2 ,clp1s,0.400924252,0.535374407,FALSE,Soluble Proteins
+AT2G45060, alanine-tRNA ligase ,clp1p,-0.677466664,0.456354621,FALSE,Membrane Proteins
+AT2G45060, alanine-tRNA ligase ,clp1s,-0.118963702,0.832807714,FALSE,Soluble Proteins
+AT1G17290, alanine aminotransferas ,clp1p,-0.21772747,0.572761648,FALSE,Membrane Proteins
+AT1G17290, alanine aminotransferas ,clp1s,-0.199819551,0.512335697,FALSE,Soluble Proteins
+AT1G72330, alanine aminotransferase 2 ,clp1p,-0.277078284,0.810088751,FALSE,Membrane Proteins
+AT1G72330, alanine aminotransferase 2 ,clp1s,0.019889203,0.875534161,FALSE,Soluble Proteins
+AT2G13360, alanine:glyoxylate aminotransferase ,clp1p,-0.228771123,0.795339456,FALSE,Membrane Proteins
+AT2G13360, alanine:glyoxylate aminotransferase ,clp1s,-0.227355368,0.618015648,FALSE,Soluble Proteins
+AT4G39660, alanine:glyoxylate aminotransferase 2 ,clp1p,-0.41990221,0.725053405,FALSE,Membrane Proteins
+AT4G39660, alanine:glyoxylate aminotransferase 2 ,clp1s,-0.772229738,0.302193242,FALSE,Soluble Proteins
+AT1G77120, alcohol dehydrogenase 1 ,clp1p,-0.400567036,0.505494632,FALSE,Membrane Proteins
+AT1G77120, alcohol dehydrogenase 1 ,clp1s,-0.214503681,0.688939461,FALSE,Soluble Proteins
+AT3G48170, aldehyde dehydrogenase 10A9 ,clp1p,-0.306598109,0.645226303,FALSE,Membrane Proteins
+AT3G48170, aldehyde dehydrogenase 10A9 ,clp1s,-0.092494902,0.832080417,FALSE,Soluble Proteins
+AT5G62530, aldehyde dehydrogenase 12A1 ,clp1p,-0.079288837,0.789172341,FALSE,Membrane Proteins
+AT5G62530, aldehyde dehydrogenase 12A1 ,clp1s,-0.338005107,0.087544421,FALSE,Soluble Proteins
+AT3G48000, aldehyde dehydrogenase 2B4 ,clp1p,-0.061107644,0.830900168,FALSE,Membrane Proteins
+AT3G48000, aldehyde dehydrogenase 2B4 ,clp1s,-0.368464393,0.048980955,FALSE,Soluble Proteins
+AT1G23800, aldehyde dehydrogenase 2B7 ,clp1p,-0.265230101,0.81595884,FALSE,Membrane Proteins
+AT1G23800, aldehyde dehydrogenase 2B7 ,clp1s,-0.38490354,0.582145378,FALSE,Soluble Proteins
+AT1G79440, aldehyde dehydrogenase 5F1 ,clp1p,-0.323884805,0.641969917,FALSE,Membrane Proteins
+AT1G79440, aldehyde dehydrogenase 5F1 ,clp1s,-0.429665655,0.257171113,FALSE,Soluble Proteins
+AT2G14170, aldehyde dehydrogenase 6B2 ,clp1p,-0.093293639,0.818011704,FALSE,Membrane Proteins
+AT2G14170, aldehyde dehydrogenase 6B2 ,clp1s,-0.037020559,0.852874546,FALSE,Soluble Proteins
+AT5G13420, Aldolase-type TIM barrel family protein ,clp1p,-0.20423728,0.853791707,FALSE,Membrane Proteins
+AT5G13420, Aldolase-type TIM barrel family protein ,clp1s,0.868382441,0.395405666,FALSE,Soluble Proteins
+AT4G18360, Aldolase-type TIM barrel family protein ,clp1p,0.202705144,0.842934568,FALSE,Membrane Proteins
+AT4G18360, Aldolase-type TIM barrel family protein ,clp1s,0.215538604,0.615639716,FALSE,Soluble Proteins
+AT3G14415, Aldolase-type TIM barrel family protein ,clp1p,-0.197365092,0.837711758,FALSE,Membrane Proteins
+AT3G14415, Aldolase-type TIM barrel family protein ,clp1s,0.174050609,0.801462672,FALSE,Soluble Proteins
+AT3G14420, Aldolase-type TIM barrel family protein ,clp1p,-0.402337638,0.677569069,FALSE,Membrane Proteins
+AT3G14420, Aldolase-type TIM barrel family protein ,clp1s,0.149777408,0.799424603,FALSE,Soluble Proteins
+AT2G01140, Aldolase superfamily protein ,clp1p,-0.737625149,0.661575044,FALSE,Membrane Proteins
+AT2G01140, Aldolase superfamily protein ,clp1s,0.66803934,0.490383053,FALSE,Soluble Proteins
+AT2G26800, Aldolase superfamily protein ,clp1p,0.837679703,0.437667863,FALSE,Membrane Proteins
+AT2G26800, Aldolase superfamily protein ,clp1s,-0.723879637,0.233429711,FALSE,Soluble Proteins
+AT3G52930, Aldolase superfamily protein ,clp1p,-1.404749222,0.197324522,FALSE,Membrane Proteins
+AT3G52930, Aldolase superfamily protein ,clp1s,-0.996361897,0.193792956,FALSE,Soluble Proteins
+AT1G06460, alpha-crystallin domain 32.1 ,clp1p,-0.116222321,0.858410471,FALSE,Membrane Proteins
+AT1G06460, alpha-crystallin domain 32.1 ,clp1s,-0.628125801,0.484752059,FALSE,Soluble Proteins
+AT1G16700, Alpha-helical ferredoxin ,clp1p,-0.399652172,0.832485312,FALSE,Membrane Proteins
+AT1G16700, Alpha-helical ferredoxin ,clp1s,-0.462125118,0.753423496,FALSE,Soluble Proteins
+AT3G22370, alternative oxidase 1A ,clp1p,-0.530997212,0.771890814,FALSE,Membrane Proteins
+AT3G22370, alternative oxidase 1A ,clp1s,0.674490554,0.545068972,FALSE,Soluble Proteins
+AT3G25660, Amidase family protein ,clp1p,0.632091356,0.465937731,FALSE,Membrane Proteins
+AT3G25660, Amidase family protein ,clp1s,0.281720948,0.603389884,FALSE,Soluble Proteins
+AT4G05160, AMP-dependent synthetase and ligase family protein ,clp1p,-0.438564426,0.507113141,FALSE,Membrane Proteins
+AT4G05160, AMP-dependent synthetase and ligase family protein ,clp1s,0.060525436,0.858435106,FALSE,Soluble Proteins
+AT5G63380, AMP-dependent synthetase and ligase family protein ,clp1p,0.16611747,0.86101343,FALSE,Membrane Proteins
+AT5G63380, AMP-dependent synthetase and ligase family protein ,clp1s,-0.052455063,0.776382899,FALSE,Soluble Proteins
+AT2G38280, AMP deaminase,clp1p,-0.167297955,0.789493478,FALSE,Membrane Proteins
+AT2G38280, AMP deaminase,clp1s,0.031856375,0.866602267,FALSE,Soluble Proteins
+AT1G35720, annexin 1 ,clp1p,-0.365414684,0.749312877,FALSE,Membrane Proteins
+AT1G35720, annexin 1 ,clp1s,-0.205905662,0.815203058,FALSE,Soluble Proteins
+AT4G08870, Arginase/deacetylase superfamily protein ,clp1p,0.60602787,0.75645307,FALSE,Membrane Proteins
+AT4G08870, Arginase/deacetylase superfamily protein ,clp1s,-0.043831824,0.872541127,FALSE,Soluble Proteins
+AT4G24830, arginosuccinate synthase family ,clp1p,0.651243213,0.686988897,FALSE,Membrane Proteins
+AT4G24830, arginosuccinate synthase family ,clp1s,-0.159859482,0.845151434,FALSE,Soluble Proteins
+AT3G62530,ARM repeat,clp1p,0.360190757,0.342905175,FALSE,Membrane Proteins
+AT3G62530,ARM repeat,clp1s,0.527326333,0.004542183,TRUE,Soluble Proteins
+AT1G49670, ARP protein (REF) ,clp1p,-0.588704817,0.562432859,FALSE,Membrane Proteins
+AT1G49670, ARP protein (REF) ,clp1s,-0.159182944,0.838822689,FALSE,Soluble Proteins
+AT4G35000, ascorbate peroxidase 3 ,clp1p,-1.039640161,0.699807304,FALSE,Membrane Proteins
+AT4G35000, ascorbate peroxidase 3 ,clp1s,0.199380081,0.853724609,FALSE,Soluble Proteins
+AT2G30970, aspartate aminotransferase 1 ,clp1p,-0.013982413,0.688059977,FALSE,Membrane Proteins
+AT2G30970, aspartate aminotransferase 1 ,clp1s,-0.145641021,0.73897889,FALSE,Soluble Proteins
+AT5G19550, aspartate aminotransferase 2 ,clp1p,-0.068900253,0.843089002,FALSE,Membrane Proteins
+AT5G19550, aspartate aminotransferase 2 ,clp1s,-0.045008533,0.867271634,FALSE,Soluble Proteins
+AT5G11520, aspartate aminotransferase 3 ,clp1p,-0.121682721,0.798452982,FALSE,Membrane Proteins
+AT5G11520, aspartate aminotransferase 3 ,clp1s,0.086059447,0.844720728,FALSE,Soluble Proteins
+AT4G31990, aspartate aminotransferase 5 ,clp1p,-0.335814879,0.824454691,FALSE,Membrane Proteins
+AT4G31990, aspartate aminotransferase 5 ,clp1s,-0.365217918,0.766812834,FALSE,Soluble Proteins
+AT4G13360, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1p,-0.361964628,0.80534388,FALSE,Membrane Proteins
+AT4G13360, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1s,0.326967741,0.765630911,FALSE,Soluble Proteins
+AT4G16800, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1p,-0.32515457,0.739932778,FALSE,Membrane Proteins
+AT4G16800, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1s,0.063912902,0.836694453,FALSE,Soluble Proteins
+AT4G31810, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1p,1.047687026,0.617238731,FALSE,Membrane Proteins
+AT4G31810, ATP-dependent caseinolytic (Clp) protease/crotonase family protein ,clp1s,1.500059428,0.167246661,FALSE,Soluble Proteins
+AT1G33360, ATP-dependent Clp protease ,clp1p,-0.642045686,0.476021012,FALSE,Membrane Proteins
+AT1G33360, ATP-dependent Clp protease ,clp1s,-0.409698204,0.518105429,FALSE,Soluble Proteins
+AT4G30010, ATP-dependent RNA helicase ,clp1p,-0.343333318,0.749429419,FALSE,Membrane Proteins
+AT4G30010, ATP-dependent RNA helicase ,clp1s,-0.160055088,0.80715515,FALSE,Soluble Proteins
+AT1G09620, ATP binding/leucine-tRNA ligases/aminoacyl-tRNA ligase ,clp1p,-0.603229705,0.697294756,FALSE,Membrane Proteins
+AT1G09620, ATP binding/leucine-tRNA ligases/aminoacyl-tRNA ligase ,clp1s,-0.263070324,0.695231365,FALSE,Soluble Proteins
+AT2G20420, ATP citrate lyase (ACL) family protein ,clp1p,-0.313936828,0.345297558,FALSE,Membrane Proteins
+AT2G20420, ATP citrate lyase (ACL) family protein ,clp1s,-0.239546372,0.308062307,FALSE,Soluble Proteins
+AT5G08690,ATP synthase beta-subunit,clp1p,1.473271824,2.80E-05,TRUE,Membrane Proteins
+AT5G08690,ATP synthase beta-subunit,clp1s,0.386927763,0.278183937,FALSE,Soluble Proteins
+AT3G52300, ATP synthase D chain ,clp1p,0.117362204,0.855152239,FALSE,Membrane Proteins
+AT3G52300, ATP synthase D chain ,clp1s,-0.089827969,0.849139221,FALSE,Soluble Proteins
+AT1G51650, ATP synthase epsilon chain ,clp1p,-0.071603746,0.690846215,FALSE,Membrane Proteins
+AT1G51650, ATP synthase epsilon chain ,clp1s,0.638240726,0.749828491,FALSE,Soluble Proteins
+ATMG01190, ATP synthase subunit 1 ,clp1p,-0.900338888,0.734505257,FALSE,Membrane Proteins
+ATMG01190, ATP synthase subunit 1 ,clp1s,0.107448298,0.86548568,FALSE,Soluble Proteins
+ATCG00120, ATP synthase subunit alpha ,clp1p,-1.137192574,0.385294532,FALSE,Membrane Proteins
+ATCG00120, ATP synthase subunit alpha ,clp1s,-0.66485304,0.46761419,FALSE,Soluble Proteins
+ATCG00480, ATP synthase subunit beta ,clp1p,-1.24854949,0.610397012,FALSE,Membrane Proteins
+ATCG00480, ATP synthase subunit beta ,clp1s,-0.240182295,0.847730462,FALSE,Soluble Proteins
+AT5G40660, ATP12 protein-like protein ,clp1p,1.597059216,0.062643267,FALSE,Membrane Proteins
+AT5G40660, ATP12 protein-like protein ,clp1s,-0.197545125,0.81463408,FALSE,Soluble Proteins
+ATCG00130, ATPase,clp1p,0.315192251,0.80876673,FALSE,Membrane Proteins
+ATCG00130, ATPase,clp1s,-0.17063937,0.833007293,FALSE,Soluble Proteins
+AT5G47030, ATPase,clp1p,1.403863078,0.705045191,FALSE,Membrane Proteins
+AT5G47030, ATPase,clp1s,0.698083009,0.775592773,FALSE,Soluble Proteins
+AT3G29970, B12D protein ,clp1p,-0.074154583,0.871906982,FALSE,Membrane Proteins
+AT3G29970, B12D protein ,clp1s,1.102725625,0.603978567,FALSE,Soluble Proteins
+AT3G48140, B12D protein ,clp1p,0.373704945,0.700465046,FALSE,Membrane Proteins
+AT3G48140, B12D protein ,clp1s,-0.402912718,0.528188785,FALSE,Soluble Proteins
+AT5G65940, beta-hydroxyisobutyryl-CoA hydrolase 1 ,clp1p,0.130272144,0.764344748,FALSE,Membrane Proteins
+AT5G65940, beta-hydroxyisobutyryl-CoA hydrolase 1 ,clp1s,0.335682264,0.699645842,FALSE,Soluble Proteins
+AT5G17560, BolA-like family protein ,clp1p,0.048560599,0.844241609,FALSE,Membrane Proteins
+AT5G17560, BolA-like family protein ,clp1s,0.092425009,0.779493447,FALSE,Soluble Proteins
+AT5G23060, calcium sensing receptor ,clp1p,0.325446814,0.728169286,FALSE,Membrane Proteins
+AT5G23060, calcium sensing receptor ,clp1s,-0.137305172,0.700054873,FALSE,Soluble Proteins
+AT5G61790, calnexin 1 ,clp1p,0.218618229,0.839509731,FALSE,Membrane Proteins
+AT5G61790, calnexin 1 ,clp1s,0.603515112,0.540221882,FALSE,Soluble Proteins
+AT1G29900, carbamoyl phosphate synthetase B ,clp1p,-0.383944435,0.819873743,FALSE,Membrane Proteins
+AT1G29900, carbamoyl phosphate synthetase B ,clp1s,-0.696816412,0.560140984,FALSE,Soluble Proteins
+AT1G20630, catalase 1 ,clp1p,-1.505588518,0.509353587,FALSE,Membrane Proteins
+AT1G20630, catalase 1 ,clp1s,0.118542273,0.865963669,FALSE,Soluble Proteins
+AT4G35090, catalase 2 ,clp1p,-0.042100188,0.635712973,FALSE,Membrane Proteins
+AT4G35090, catalase 2 ,clp1s,0.391679694,0.247897916,FALSE,Soluble Proteins
+AT1G20620, catalase 3 ,clp1p,-0.309737455,0.70877646,FALSE,Membrane Proteins
+AT1G20620, catalase 3 ,clp1s,0.010550771,0.831583317,FALSE,Soluble Proteins
+AT3G52950, CBS / octicosapeptide/Phox/Bemp1 (PB1) domains-containing protein ,clp1p,0.122643302,0.865928685,FALSE,Membrane Proteins
+AT3G52950, CBS / octicosapeptide/Phox/Bemp1 (PB1) domains-containing protein ,clp1s,-0.537897622,0.550126153,FALSE,Soluble Proteins
+AT1G79390, centrosomal protein ,clp1p,-0.796587081,0.442638335,FALSE,Membrane Proteins
+AT1G79390, centrosomal protein ,clp1s,0.012916716,0.802912064,FALSE,Soluble Proteins
+AT2G35795, Chaperone DnaJ-domain superfamily protein ,clp1p,-0.148833841,0.840989085,FALSE,Membrane Proteins
+AT2G35795, Chaperone DnaJ-domain superfamily protein ,clp1s,0.092520757,0.845109036,FALSE,Soluble Proteins
+AT2G04030, Chaperone protein htpG family protein ,clp1p,-0.413499196,0.767548934,FALSE,Membrane Proteins
+AT2G04030, Chaperone protein htpG family protein ,clp1s,-0.023247023,0.833879337,FALSE,Soluble Proteins
+AT4G24190, Chaperone protein htpG family protein ,clp1p,-0.326436482,0.765932206,FALSE,Membrane Proteins
+AT4G24190, Chaperone protein htpG family protein ,clp1s,-0.155539009,0.787839859,FALSE,Soluble Proteins
+AT2G28000, chaperonin-60alpha ,clp1p,-0.609367583,0.729291739,FALSE,Membrane Proteins
+AT2G28000, chaperonin-60alpha ,clp1s,0.489248091,0.604731606,FALSE,Soluble Proteins
+AT1G14980, chaperonin 10 ,clp1p,-0.172330795,0.684598641,FALSE,Membrane Proteins
+AT1G14980, chaperonin 10 ,clp1s,-0.00407874,0.839837584,FALSE,Soluble Proteins
+AT5G20720, chaperonin 20 ,clp1p,-0.505192979,0.794509299,FALSE,Membrane Proteins
+AT5G20720, chaperonin 20 ,clp1s,0.689123485,0.523437957,FALSE,Soluble Proteins
+AT1G55490, chaperonin 60 beta ,clp1p,-0.594063913,0.642642533,FALSE,Membrane Proteins
+AT1G55490, chaperonin 60 beta ,clp1s,-0.41209107,0.580990558,FALSE,Soluble Proteins
+AT5G64400, CHCH domain protein ,clp1p,-0.777012915,0.476507705,FALSE,Membrane Proteins
+AT5G64400, CHCH domain protein ,clp1s,-0.667986387,0.392003878,FALSE,Soluble Proteins
+AT1G44575, Chlorophyll A-B binding family protein ,clp1p,-0.508310968,0.8205357,FALSE,Membrane Proteins
+AT1G44575, Chlorophyll A-B binding family protein ,clp1s,-1.031352698,0.599948539,FALSE,Soluble Proteins
+AT4G24280, chloroplast heat shock protein 70-1 ,clp1p,-0.273012869,0.774427364,FALSE,Membrane Proteins
+AT4G24280, chloroplast heat shock protein 70-1 ,clp1s,0.081265704,0.819834946,FALSE,Soluble Proteins
+AT1G48850, chorismate synthase,clp1p,-0.188822541,0.837979918,FALSE,Membrane Proteins
+AT1G48850, chorismate synthase,clp1s,0.052848789,0.812661067,FALSE,Soluble Proteins
+AT4G26410, chromosome-associated kinesin ,clp1p,0.092806495,0.859468628,FALSE,Membrane Proteins
+AT4G26410, chromosome-associated kinesin ,clp1s,-0.145189274,0.823922003,FALSE,Soluble Proteins
+AT2G30490, cinnamate-4-hydroxylase ,clp1p,-0.511268899,0.701190926,FALSE,Membrane Proteins
+AT2G30490, cinnamate-4-hydroxylase ,clp1s,-0.261071672,0.788740144,FALSE,Soluble Proteins
+AT3G58750, citrate synthase 2 ,clp1p,0.139480356,0.835566341,FALSE,Membrane Proteins
+AT3G58750, citrate synthase 2 ,clp1s,0.149572475,0.860940245,FALSE,Soluble Proteins
+AT2G42790, citrate synthase 3 ,clp1p,-0.29639429,0.671555134,FALSE,Membrane Proteins
+AT2G42790, citrate synthase 3 ,clp1s,0.470975621,0.399934131,FALSE,Soluble Proteins
+AT2G44350, Citrate synthase family protein ,clp1p,-0.358177268,0.265666125,FALSE,Membrane Proteins
+AT2G44350, Citrate synthase family protein ,clp1s,-0.310792793,0.19814923,FALSE,Soluble Proteins
+AT5G52520, Class II aaRS and biotin synthetases superfamily protein ,clp1p,0.213904663,0.754617103,FALSE,Membrane Proteins
+AT5G52520, Class II aaRS and biotin synthetases superfamily protein ,clp1s,-0.276659876,0.722935264,FALSE,Soluble Proteins
+AT5G53350,CLPX,clp1p,0.835321494,0.002157878,TRUE,Membrane Proteins
+AT5G53350,CLPX,clp1s,0.802290165,4.50E-08,TRUE,Soluble Proteins
+AT5G50920, CLPC homologue 1 ,clp1p,-0.48569369,0.805482026,FALSE,Membrane Proteins
+AT5G50920, CLPC homologue 1 ,clp1s,-0.523438452,0.692177051,FALSE,Soluble Proteins
+AT4G26780, Co-chaperone GrpE family protein ,clp1p,0.127135991,0.77670448,FALSE,Membrane Proteins
+AT4G26780, Co-chaperone GrpE family protein ,clp1s,0.041892646,0.844614552,FALSE,Soluble Proteins
+AT5G55200,MITOCHONDRIAL GRPE 1,clp1p,0.702727245,0.066794516,FALSE,Membrane Proteins
+AT5G55200,MITOCHONDRIAL GRPE 1,clp1s,0.565792831,0.020131507,TRUE,Soluble Proteins
+AT5G17920, Cobalamin-independent synthase family protein ,clp1p,-0.634670159,0.785035628,FALSE,Membrane Proteins
+AT5G17920, Cobalamin-independent synthase family protein ,clp1s,-0.203477207,0.849111878,FALSE,Soluble Proteins
+AT1G71310, cobalt ion binding protein ,clp1p,-0.013908482,0.778039803,FALSE,Membrane Proteins
+AT1G71310, cobalt ion binding protein ,clp1s,-0.306983217,0.592729845,FALSE,Soluble Proteins
+AT3G15000,RIP1,clp1p,0.674873504,0.073300305,FALSE,Membrane Proteins
+AT3G15000,RIP1,clp1s,0.976690167,4.47E-05,TRUE,Soluble Proteins
+AT2G30920, coenzyme Q 3 ,clp1p,-0.94607679,0.432118968,FALSE,Membrane Proteins
+AT2G30920, coenzyme Q 3 ,clp1s,0.200672226,0.816781033,FALSE,Soluble Proteins
+AT2G16460, coiled-coil 90B-like protein (DUF1640) ,clp1p,-0.298017204,0.799651812,FALSE,Membrane Proteins
+AT2G16460, coiled-coil 90B-like protein (DUF1640) ,clp1s,-0.002112262,0.786766029,FALSE,Soluble Proteins
+AT3G62810, complex 1 family protein / LVR family protein ,clp1p,0.012794254,0.879217172,FALSE,Membrane Proteins
+AT3G62810, complex 1 family protein / LVR family protein ,clp1s,-0.028090619,0.745893011,FALSE,Soluble Proteins
+AT3G17300, COMPLEX 1 LYR-like protein ,clp1p,1.1533152,0.328865608,FALSE,Membrane Proteins
+AT3G17300, COMPLEX 1 LYR-like protein ,clp1s,0.269873912,0.739048897,FALSE,Soluble Proteins
+AT3G19508, complex 1 protein,clp1p,-0.613983306,0.51103125,FALSE,Membrane Proteins
+AT3G19508, complex 1 protein,clp1s,-0.229877576,0.764421336,FALSE,Soluble Proteins
+AT2G42490, Copper amine oxidase family protein ,clp1p,-0.058874051,0.678359905,FALSE,Membrane Proteins
+AT2G42490, Copper amine oxidase family protein ,clp1s,0.01992559,0.860804478,FALSE,Soluble Proteins
+AT2G27730, copper ion binding protein ,clp1p,0.360988101,0.835149488,FALSE,Membrane Proteins
+AT2G27730, copper ion binding protein ,clp1s,-0.141060856,0.866947744,FALSE,Soluble Proteins
+AT4G05400, copper ion binding protein ,clp1p,0.35588008,0.410323101,FALSE,Membrane Proteins
+AT4G05400, copper ion binding protein ,clp1s,0.238797059,0.457949556,FALSE,Soluble Proteins
+AT4G12340, copper ion binding protein ,clp1p,0.347304944,0.840643827,FALSE,Membrane Proteins
+AT4G12340, copper ion binding protein ,clp1s,1.456665469,0.327238453,FALSE,Soluble Proteins
+AT1G08830, copper/zinc superoxide dismutase 1 ,clp1p,-0.375944715,0.799928108,FALSE,Membrane Proteins
+AT1G08830, copper/zinc superoxide dismutase 1 ,clp1s,0.249179058,0.805574238,FALSE,Soluble Proteins
+AT2G28190, copper/zinc superoxide dismutase 2 ,clp1p,-0.162098561,0.837976372,FALSE,Membrane Proteins
+AT2G28190, copper/zinc superoxide dismutase 2 ,clp1s,0.242687193,0.724651264,FALSE,Soluble Proteins
+AT4G23760, Cox19-like CHCH family protein ,clp1p,0.120688413,0.852119979,FALSE,Membrane Proteins
+AT4G23760, Cox19-like CHCH family protein ,clp1s,0.150544785,0.827533257,FALSE,Soluble Proteins
+AT5G18800, Cox19-like CHCH family protein ,clp1p,-0.058677703,0.857477414,FALSE,Membrane Proteins
+AT5G18800, Cox19-like CHCH family protein ,clp1s,-0.062024063,0.861433891,FALSE,Soluble Proteins
+AT1G09794, Cox19 family protein (CHCH motif) ,clp1p,-0.260505303,0.789219223,FALSE,Membrane Proteins
+AT1G09794, Cox19 family protein (CHCH motif) ,clp1s,-0.275307016,0.757650215,FALSE,Soluble Proteins
+AT4G01150, CURVATURE THYLAKOID 1A-like protein ,clp1p,-0.358129211,0.812276023,FALSE,Membrane Proteins
+AT4G01150, CURVATURE THYLAKOID 1A-like protein ,clp1s,-0.261170759,0.806954569,FALSE,Soluble Proteins
+AT5G10860, Cystathionine beta-synthase (CBS) family protein ,clp1p,0.160864424,0.809497499,FALSE,Membrane Proteins
+AT5G10860, Cystathionine beta-synthase (CBS) family protein ,clp1s,0.394331052,0.296910966,FALSE,Soluble Proteins
+AT3G61440, cysteine synthase C1 ,clp1p,-0.339147346,0.342026626,FALSE,Membrane Proteins
+AT3G61440, cysteine synthase C1 ,clp1s,-0.44224132,0.037539985,FALSE,Soluble Proteins
+AT5G53560, cytochrome B5 isoform E ,clp1p,-0.350209707,0.676431213,FALSE,Membrane Proteins
+AT5G53560, cytochrome B5 isoform E ,clp1s,-0.308704441,0.685896971,FALSE,Soluble Proteins
+AT4G32470, Cytochrome bd ubiquinol oxidase,clp1p,-0.138268552,0.869390827,FALSE,Membrane Proteins
+AT4G32470, Cytochrome bd ubiquinol oxidase,clp1s,0.254611759,0.84354032,FALSE,Soluble Proteins
+AT1G22840, CYTOCHROME C-1 ,clp1p,-0.844879912,0.758291772,FALSE,Membrane Proteins
+AT1G22840, CYTOCHROME C-1 ,clp1s,0.120265034,0.780687871,FALSE,Soluble Proteins
+AT4G37830, cytochrome c oxidase-like protein ,clp1p,-0.061910105,0.845151753,FALSE,Membrane Proteins
+AT4G37830, cytochrome c oxidase-like protein ,clp1s,-0.43604165,0.650899914,FALSE,Soluble Proteins
+AT1G22450, cytochrome C oxidase 6B ,clp1p,-1.185442871,0.127741674,FALSE,Membrane Proteins
+AT1G22450, cytochrome C oxidase 6B ,clp1s,-0.111501546,0.750500952,FALSE,Soluble Proteins
+AT1G02410, cytochrome c oxidase assembly protein CtaG / Cox11 family ,clp1p,0.179052364,0.833928259,FALSE,Membrane Proteins
+AT1G02410, cytochrome c oxidase assembly protein CtaG / Cox11 family ,clp1s,-0.045296233,0.851366802,FALSE,Soluble Proteins
+AT1G53030, Cytochrome C oxidase copper chaperone (COX17) ,clp1p,0.75892663,0.625451239,FALSE,Membrane Proteins
+AT1G53030, Cytochrome C oxidase copper chaperone (COX17) ,clp1s,-0.262676475,0.79008656,FALSE,Soluble Proteins
+AT3G62400, cytochrome C oxidase subunit ,clp1p,-0.102708189,0.866348283,FALSE,Membrane Proteins
+AT3G62400, cytochrome C oxidase subunit ,clp1s,0.336872021,0.764532239,FALSE,Soluble Proteins
+AT5G58005, Cytochrome c oxidase,clp1p,0.252552849,0.754039861,FALSE,Membrane Proteins
+AT5G58005, Cytochrome c oxidase,clp1s,0.223509406,0.800780708,FALSE,Soluble Proteins
+AT3G27240, Cytochrome C1 family ,clp1p,-2.331990665,0.074050422,FALSE,Membrane Proteins
+AT3G27240, Cytochrome C1 family ,clp1s,0.009768966,0.871384723,FALSE,Soluble Proteins
+AT5G40810, Cytochrome C1 family ,clp1p,-0.925713337,0.549822856,FALSE,Membrane Proteins
+AT5G40810, Cytochrome C1 family ,clp1s,-0.064765626,0.868940502,FALSE,Soluble Proteins
+AT1G65930, cytosolic NADP+-dependent isocitrate dehydrogenase ,clp1p,-0.352018265,0.729426534,FALSE,Membrane Proteins
+AT1G65930, cytosolic NADP+-dependent isocitrate dehydrogenase ,clp1s,-0.738672313,0.411751412,FALSE,Soluble Proteins
+AT4G34200, D-3-phosphoglycerate dehydrogenase ,clp1p,-0.112674144,0.792021824,FALSE,Membrane Proteins
+AT4G34200, D-3-phosphoglycerate dehydrogenase ,clp1s,0.066251702,0.714454866,FALSE,Soluble Proteins
+AT1G48420, D-cysteine desulfhydrase ,clp1p,-0.467515236,0.72851835,FALSE,Membrane Proteins
+AT1G48420, D-cysteine desulfhydrase ,clp1s,-0.086097367,0.85781325,FALSE,Soluble Proteins
+AT1G76180, Dehydrin family protein ,clp1p,-0.181018997,0.83952672,FALSE,Membrane Proteins
+AT1G76180, Dehydrin family protein ,clp1s,0.033311297,0.861957183,FALSE,Soluble Proteins
+AT5G13450, delta subunit of Mt ATP synthase ,clp1p,-1.651442173,0.371850139,FALSE,Membrane Proteins
+AT5G13450, delta subunit of Mt ATP synthase ,clp1s,0.023557207,0.876518075,FALSE,Soluble Proteins
+AT1G54220, Dihydrolipoamide acetyltransferase,clp1p,-0.110267531,0.811181626,FALSE,Membrane Proteins
+AT1G54220, Dihydrolipoamide acetyltransferase,clp1s,-0.300500285,0.198361202,FALSE,Soluble Proteins
+AT3G13930, Dihydrolipoamide acetyltransferase,clp1p,-0.125941081,0.749949482,FALSE,Membrane Proteins
+AT3G13930, Dihydrolipoamide acetyltransferase,clp1s,-0.342773693,0.071201165,FALSE,Soluble Proteins
+AT3G52200, Dihydrolipoamide acetyltransferase,clp1p,-0.158394495,0.716642589,FALSE,Membrane Proteins
+AT3G52200, Dihydrolipoamide acetyltransferase,clp1s,-0.318513215,0.090641438,FALSE,Soluble Proteins
+AT5G55070, Dihydrolipoamide succinyltransferase ,clp1p,-0.067417365,0.839996896,FALSE,Membrane Proteins
+AT5G55070, Dihydrolipoamide succinyltransferase ,clp1s,-0.152138753,0.634610743,FALSE,Soluble Proteins
+AT4G26910, Dihydrolipoamide succinyltransferase ,clp1p,0.02340182,0.850517514,FALSE,Membrane Proteins
+AT4G26910, Dihydrolipoamide succinyltransferase ,clp1s,-0.207935629,0.447200686,FALSE,Soluble Proteins
+AT4G30000, Dihydropterin pyrophosphokinase / Dihydropteroate synthase ,clp1p,-0.133361581,0.836727576,FALSE,Membrane Proteins
+AT4G30000, Dihydropterin pyrophosphokinase / Dihydropteroate synthase ,clp1s,0.262152779,0.535474671,FALSE,Soluble Proteins
+AT3G10690, DNA GYRASE A ,clp1p,-0.415770968,0.811360525,FALSE,Membrane Proteins
+AT3G10690, DNA GYRASE A ,clp1s,-0.202800724,0.733326479,FALSE,Soluble Proteins
+AT3G10270, DNA gyrase subunit B ,clp1p,0.019009462,0.823396876,FALSE,Membrane Proteins
+AT3G10270, DNA gyrase subunit B ,clp1s,-0.289033595,0.794844627,FALSE,Soluble Proteins
+AT3G15950, DNA topoisomerase-like protein ,clp1p,-0.496414127,0.770303816,FALSE,Membrane Proteins
+AT3G15950, DNA topoisomerase-like protein ,clp1s,-0.603115468,0.571236492,FALSE,Soluble Proteins
+AT4G31210, DNA topoisomerase,clp1p,0.219968749,0.843085059,FALSE,Membrane Proteins
+AT4G31210, DNA topoisomerase,clp1s,0.470564673,0.617147003,FALSE,Soluble Proteins
+AT2G35720, DNAJ heat shock N-terminal domain-containing protein ,clp1p,-0.280071037,0.843170304,FALSE,Membrane Proteins
+AT2G35720, DNAJ heat shock N-terminal domain-containing protein ,clp1s,0.105996323,0.819527073,FALSE,Soluble Proteins
+AT5G25940, early nodulin-like protein ,clp1p,-0.242986352,0.789648581,FALSE,Membrane Proteins
+AT5G25940, early nodulin-like protein ,clp1s,0.036273675,0.868248047,FALSE,Soluble Proteins
+AT1G50940, electron transfer flavoprotein alpha ,clp1p,-0.164881278,0.85396813,FALSE,Membrane Proteins
+AT1G50940, electron transfer flavoprotein alpha ,clp1s,-0.432203626,0.693311822,FALSE,Soluble Proteins
+AT5G43430, electron transfer flavoprotein beta ,clp1p,-0.26098202,0.496867889,FALSE,Membrane Proteins
+AT5G43430, electron transfer flavoprotein beta ,clp1s,-0.331947387,0.800574619,FALSE,Soluble Proteins
+AT3G08950, electron transport SCO1/SenC family protein ,clp1p,-0.142933184,0.833154112,FALSE,Membrane Proteins
+AT3G08950, electron transport SCO1/SenC family protein ,clp1s,-0.028697331,0.87140116,FALSE,Soluble Proteins
+AT2G31060,EMBRYO DEFECTIVE 2785,clp1p,0.469515877,0.241558054,FALSE,Membrane Proteins
+AT2G31060,EMBRYO DEFECTIVE 2785,clp1s,0.677810039,8.43E-04,TRUE,Soluble Proteins
+AT1G14670, Endomembrane protein 70 protein family ,clp1p,-0.278336605,0.833220741,FALSE,Membrane Proteins
+AT1G14670, Endomembrane protein 70 protein family ,clp1s,-0.458894688,0.698931491,FALSE,Soluble Proteins
+AT1G74030, enolase 1 ,clp1p,-0.347413775,0.794486033,FALSE,Membrane Proteins
+AT1G74030, enolase 1 ,clp1s,-0.506768162,0.594690319,FALSE,Soluble Proteins
+AT1G76150, enoyl-CoA hydratase 2 ,clp1p,-0.053833349,0.833161886,FALSE,Membrane Proteins
+AT1G76150, enoyl-CoA hydratase 2 ,clp1s,-0.055727098,0.849684416,FALSE,Soluble Proteins
+AT4G16210, enoyl-CoA hydratase/isomerase A ,clp1p,-0.043230734,0.869074933,FALSE,Membrane Proteins
+AT4G16210, enoyl-CoA hydratase/isomerase A ,clp1s,0.343924935,0.752348636,FALSE,Soluble Proteins
+AT1G60550, enoyl-CoA hydratase/isomerase D ,clp1p,0.371531444,0.734812618,FALSE,Membrane Proteins
+AT1G60550, enoyl-CoA hydratase/isomerase D ,clp1s,0.219935495,0.820190526,FALSE,Soluble Proteins
+AT4G29010, Enoyl-CoA hydratase/isomerase family ,clp1p,-0.568703871,0.508621333,FALSE,Membrane Proteins
+AT4G29010, Enoyl-CoA hydratase/isomerase family ,clp1s,0.069700468,0.858830015,FALSE,Soluble Proteins
+AT3G13920, eukaryotic translation initiation factor 4A1 ,clp1p,-0.162686612,0.847605488,FALSE,Membrane Proteins
+AT3G13920, eukaryotic translation initiation factor 4A1 ,clp1s,-0.057253216,0.85998189,FALSE,Soluble Proteins
+AT4G20150, excitatory amino acid transporter ,clp1p,-0.096579771,0.807418516,FALSE,Membrane Proteins
+AT4G20150, excitatory amino acid transporter ,clp1s,-0.344893417,0.675448256,FALSE,Soluble Proteins
+AT4G25315, Expressed protein ,clp1p,-0.030492688,0.854244108,FALSE,Membrane Proteins
+AT4G25315, Expressed protein ,clp1s,0.069853969,0.830802592,FALSE,Soluble Proteins
+AT5G04750, F1F0-ATPase inhibitor protein ,clp1p,-0.478012843,0.833341789,FALSE,Membrane Proteins
+AT5G04750, F1F0-ATPase inhibitor protein ,clp1s,0.553409935,0.772697449,FALSE,Soluble Proteins
+AT3G10370, FAD-dependent oxidoreductase family protein ,clp1p,-0.113795845,0.811096729,FALSE,Membrane Proteins
+AT3G10370, FAD-dependent oxidoreductase family protein ,clp1s,-0.084891264,0.838046021,FALSE,Soluble Proteins
+AT4G36400, FAD-linked oxidases family protein ,clp1p,-0.131203777,0.847510849,FALSE,Membrane Proteins
+AT4G36400, FAD-linked oxidases family protein ,clp1s,-0.415335047,0.472596581,FALSE,Soluble Proteins
+AT5G06580, FAD-linked oxidases family protein ,clp1p,-1.118074679,0.531868051,FALSE,Membrane Proteins
+AT5G06580, FAD-linked oxidases family protein ,clp1s,0.222655967,0.82080941,FALSE,Soluble Proteins
+AT5G20080, FAD/NAD(P)-binding oxidoreductase ,clp1p,-0.695601409,0.04134369,FALSE,Membrane Proteins
+AT5G20080, FAD/NAD(P)-binding oxidoreductase ,clp1s,-0.079430973,0.803751479,FALSE,Soluble Proteins
+AT3G24200, FAD/NAD(P)-binding oxidoreductase family protein ,clp1p,0.168650252,0.795539645,FALSE,Membrane Proteins
+AT3G24200, FAD/NAD(P)-binding oxidoreductase family protein ,clp1s,-0.055456182,0.838558032,FALSE,Soluble Proteins
+AT5G49555, FAD/NAD(P)-binding oxidoreductase family protein ,clp1p,-0.422125471,0.795298395,FALSE,Membrane Proteins
+AT5G49555, FAD/NAD(P)-binding oxidoreductase family protein ,clp1s,-0.363961519,0.766797608,FALSE,Soluble Proteins
+AT2G31725, FAM136A-like protein (DUF842) ,clp1p,-0.551951213,0.366829259,FALSE,Membrane Proteins
+AT2G31725, FAM136A-like protein (DUF842) ,clp1s,-0.058821412,0.843394928,FALSE,Soluble Proteins
+AT3G07568, fanconi anemia group D2 protein ,clp1p,-0.458741604,0.753621228,FALSE,Membrane Proteins
+AT3G07568, fanconi anemia group D2 protein ,clp1s,0.050293316,0.720246256,FALSE,Soluble Proteins
+AT4G25100, Fe superoxide dismutase 1 ,clp1p,0.27328427,0.851110585,FALSE,Membrane Proteins
+AT4G25100, Fe superoxide dismutase 1 ,clp1s,-0.05543702,0.874523525,FALSE,Soluble Proteins
+AT2G27510, ferredoxin 3 ,clp1p,-0.14876681,0.862248204,FALSE,Membrane Proteins
+AT2G27510, ferredoxin 3 ,clp1s,-0.273123291,0.639980326,FALSE,Soluble Proteins
+AT5G22350, fission ELM1-like protein (DUF1022) ,clp1p,-0.413276486,0.759960714,FALSE,Membrane Proteins
+AT5G22350, fission ELM1-like protein (DUF1022) ,clp1s,0.206299537,0.600675446,FALSE,Soluble Proteins
+AT5G14780, formate dehydrogenase ,clp1p,-0.299911595,0.529490157,FALSE,Membrane Proteins
+AT5G14780, formate dehydrogenase ,clp1s,-0.515321739,0.03858275,FALSE,Soluble Proteins
+AT4G38970, fructose-bisphosphate aldolase 2 ,clp1p,-0.717067177,0.713919996,FALSE,Membrane Proteins
+AT4G38970, fructose-bisphosphate aldolase 2 ,clp1s,-0.516240441,0.726725705,FALSE,Soluble Proteins
+AT2G29080, FTSH protease 3 ,clp1p,-0.270599392,0.811001335,FALSE,Membrane Proteins
+AT2G29080, FTSH protease 3 ,clp1s,-0.408730342,0.738326269,FALSE,Soluble Proteins
+AT2G26140, FTSH protease 4 ,clp1p,0.293539417,0.785878071,FALSE,Membrane Proteins
+AT2G26140, FTSH protease 4 ,clp1s,-0.172028599,0.805145822,FALSE,Soluble Proteins
+AT2G47510, fumarase 1 ,clp1p,-0.291016345,0.446394697,FALSE,Membrane Proteins
+AT2G47510, fumarase 1 ,clp1s,-0.242544552,0.34606567,FALSE,Soluble Proteins
+AT5G08060, furry ,clp1p,-0.360626563,0.793675582,FALSE,Membrane Proteins
+AT5G08060, furry ,clp1s,-0.26582949,0.808587418,FALSE,Soluble Proteins
+AT5G48030,GAMETOPHYTIC FACTOR 2,clp1p,1.826438293,0.041312496,FALSE,Membrane Proteins
+AT5G48030,GAMETOPHYTIC FACTOR 2,clp1s,1.329353393,0.016150972,TRUE,Soluble Proteins
+AT1G19580, gamma carbonic anhydrase 1 ,clp1p,-0.855487004,0.523081605,FALSE,Membrane Proteins
+AT1G19580, gamma carbonic anhydrase 1 ,clp1s,0.018120279,0.875616628,FALSE,Soluble Proteins
+AT1G47260, gamma carbonic anhydrase 2 ,clp1p,-1.962404457,0.359887425,FALSE,Membrane Proteins
+AT1G47260, gamma carbonic anhydrase 2 ,clp1s,-0.080074016,0.869856747,FALSE,Soluble Proteins
+AT5G66510, gamma carbonic anhydrase 3 ,clp1p,-2.012322064,0.138581446,FALSE,Membrane Proteins
+AT5G66510, gamma carbonic anhydrase 3 ,clp1s,-0.216351611,0.839651683,FALSE,Soluble Proteins
+AT5G63510, gamma carbonic anhydrase like 1 ,clp1p,-0.914730616,0.441527676,FALSE,Membrane Proteins
+AT5G63510, gamma carbonic anhydrase like 1 ,clp1s,0.020145266,0.875585668,FALSE,Soluble Proteins
+AT2G33040, gamma subunit of Mt ATP synthase ,clp1p,1.778867217,0.266882304,FALSE,Membrane Proteins
+AT2G33040, gamma subunit of Mt ATP synthase ,clp1s,0.40747719,0.739982488,FALSE,Soluble Proteins
+AT1G14060, GCK domain-containing protein ,clp1p,-0.325406012,0.559970979,FALSE,Membrane Proteins
+AT1G14060, GCK domain-containing protein ,clp1s,0.138577741,0.742285186,FALSE,Soluble Proteins
+AT3G14210, GDSL-like lipase/acylhydrolase superfamily protein ,clp1p,-2.370329078,0.531858711,FALSE,Membrane Proteins
+AT3G14210, GDSL-like lipase/acylhydrolase superfamily protein ,clp1s,0.015437643,0.872024686,FALSE,Soluble Proteins
+AT1G54000, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1p,-0.268832442,0.67851143,FALSE,Membrane Proteins
+AT1G54000, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1s,-0.834031179,0.124264652,FALSE,Soluble Proteins
+AT1G54010, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1p,-1.694000649,0.395344251,FALSE,Membrane Proteins
+AT1G54010, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1s,-0.415975397,0.80515446,FALSE,Soluble Proteins
+AT1G54030, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1p,-0.411371128,0.759417474,FALSE,Membrane Proteins
+AT1G54030, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1s,0.017591993,0.862938498,FALSE,Soluble Proteins
+AT3G14220, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1p,-0.951588372,0.714988035,FALSE,Membrane Proteins
+AT3G14220, GDSL-like Lipase/Acylhydrolase superfamily protein ,clp1s,-0.047819366,0.82836497,FALSE,Soluble Proteins
+AT2G34630, geranyl diphosphate synthase 1 ,clp1p,0.876619163,0.637469561,FALSE,Membrane Proteins
+AT2G34630, geranyl diphosphate synthase 1 ,clp1s,1.62095162,0.120343298,FALSE,Soluble Proteins
+AT1G48520, GLU-ADT subunit B ,clp1p,0.240264589,0.834886509,FALSE,Membrane Proteins
+AT1G48520, GLU-ADT subunit B ,clp1s,-0.121530523,0.857483254,FALSE,Soluble Proteins
+AT1G24280, glucose-6-phosphate dehydrogenase 3 ,clp1p,-0.1937784,0.840949667,FALSE,Membrane Proteins
+AT1G24280, glucose-6-phosphate dehydrogenase 3 ,clp1s,-0.449137171,0.621021196,FALSE,Soluble Proteins
+AT5G63570, glutamate-1-semialdehyde-2,clp1p,-0.833314271,0.557844059,FALSE,Membrane Proteins
+AT5G63570, glutamate-1-semialdehyde-2,clp1s,0.10204451,0.672881878,FALSE,Soluble Proteins
+AT4G23100, glutamate-cysteine ligase ,clp1p,-0.999558256,0.419492605,FALSE,Membrane Proteins
+AT4G23100, glutamate-cysteine ligase ,clp1s,-0.420557218,0.710229558,FALSE,Soluble Proteins
+AT5G07440, glutamate dehydrogenase 2 ,clp1p,0.203570077,0.739118646,FALSE,Membrane Proteins
+AT5G07440, glutamate dehydrogenase 2 ,clp1s,-0.844012108,0.114653588,FALSE,Soluble Proteins
+AT2G41220, glutamate synthase 2 ,clp1p,-0.180057837,0.820008459,FALSE,Membrane Proteins
+AT2G41220, glutamate synthase 2 ,clp1s,-0.115882245,0.789889223,FALSE,Soluble Proteins
+AT1G23310, glutamate:glyoxylate aminotransferase ,clp1p,-0.309525562,0.719177337,FALSE,Membrane Proteins
+AT1G23310, glutamate:glyoxylate aminotransferase ,clp1s,-0.03511143,0.839218057,FALSE,Soluble Proteins
+AT1G10270,GLUTAMINE-RICH PROTEIN 23,clp1p,1.418231991,0.087626213,FALSE,Membrane Proteins
+AT1G10270,GLUTAMINE-RICH PROTEIN 23,clp1s,2.268693841,5.27E-07,TRUE,Soluble Proteins
+AT5G35630, glutamine synthetase 2 ,clp1p,-0.42467575,0.735121154,FALSE,Membrane Proteins
+AT5G35630, glutamine synthetase 2 ,clp1s,0.01275134,0.773248808,FALSE,Soluble Proteins
+AT3G15660, glutaredoxin 4 ,clp1p,0.123181224,0.784043798,FALSE,Membrane Proteins
+AT3G15660, glutaredoxin 4 ,clp1s,0.198513173,0.453018977,FALSE,Soluble Proteins
+AT4G11600, glutathione peroxidase 6 ,clp1p,-0.152203392,0.848394181,FALSE,Membrane Proteins
+AT4G11600, glutathione peroxidase 6 ,clp1s,-0.519751725,0.548650638,FALSE,Soluble Proteins
+AT5G42150, Glutathione S-transferase family protein ,clp1p,-0.378029817,0.815852257,FALSE,Membrane Proteins
+AT5G42150, Glutathione S-transferase family protein ,clp1s,0.006965494,0.877590686,FALSE,Soluble Proteins
+AT4G19880, Glutathione S-transferase family protein ,clp1p,-0.299695701,0.765469188,FALSE,Membrane Proteins
+AT4G19880, Glutathione S-transferase family protein ,clp1s,-0.630600364,0.359668004,FALSE,Soluble Proteins
+AT4G02520, glutathione S-transferase PHI 2 ,clp1p,-0.421142292,0.664859809,FALSE,Membrane Proteins
+AT4G02520, glutathione S-transferase PHI 2 ,clp1s,-0.428591412,0.593959975,FALSE,Soluble Proteins
+AT5G41210, glutathione S-transferase THETA 1 ,clp1p,-0.538607411,0.738869121,FALSE,Membrane Proteins
+AT5G41210, glutathione S-transferase THETA 1 ,clp1s,-0.001203001,0.857731726,FALSE,Soluble Proteins
+AT1G42970, glyceraldehyde-3-phosphate dehydrogenase B subunit ,clp1p,-0.755023736,0.591327453,FALSE,Membrane Proteins
+AT1G42970, glyceraldehyde-3-phosphate dehydrogenase B subunit ,clp1s,0.406779459,0.482970027,FALSE,Soluble Proteins
+AT1G13440, glyceraldehyde-3-phosphate dehydrogenase C2 ,clp1p,-1.935448914,0.284119109,FALSE,Membrane Proteins
+AT1G13440, glyceraldehyde-3-phosphate dehydrogenase C2 ,clp1s,-0.104871941,0.866422983,FALSE,Soluble Proteins
+AT2G05520, glycine-rich protein 3 ,clp1p,-0.427184392,0.787794568,FALSE,Membrane Proteins
+AT2G05520, glycine-rich protein 3 ,clp1s,-0.673225919,0.555458736,FALSE,Soluble Proteins
+AT2G05380, glycine-rich protein 3 short isoform ,clp1p,-0.094568877,0.851118275,FALSE,Membrane Proteins
+AT2G05380, glycine-rich protein 3 short isoform ,clp1s,0.218308026,0.781437356,FALSE,Soluble Proteins
+AT4G13850, glycine-rich RNA-binding protein 2 ,clp1p,0.161565827,0.771115615,FALSE,Membrane Proteins
+AT4G13850, glycine-rich RNA-binding protein 2 ,clp1s,0.260253343,0.486510339,FALSE,Soluble Proteins
+AT5G61030, glycine-rich RNA-binding protein 3 ,clp1p,0.347472829,0.820258456,FALSE,Membrane Proteins
+AT5G61030, glycine-rich RNA-binding protein 3 ,clp1s,2.018656897,0.034095331,FALSE,Soluble Proteins
+AT1G74230, glycine-rich RNA-binding protein 5 ,clp1p,1.325471005,0.684094153,FALSE,Membrane Proteins
+AT1G74230, glycine-rich RNA-binding protein 5 ,clp1s,2.075424331,0.243530656,FALSE,Soluble Proteins
+AT1G11860, Glycine cleavage T-protein family ,clp1p,-0.385395342,0.265048111,FALSE,Membrane Proteins
+AT1G11860, Glycine cleavage T-protein family ,clp1s,-0.284665045,0.216169692,FALSE,Soluble Proteins
+AT4G12130, Glycine cleavage T-protein family ,clp1p,-0.258667476,0.799652465,FALSE,Membrane Proteins
+AT4G12130, Glycine cleavage T-protein family ,clp1s,0.342575503,0.642616155,FALSE,Soluble Proteins
+AT2G35370, glycine decarboxylase complex H ,clp1p,-0.590873175,0.320073217,FALSE,Membrane Proteins
+AT2G35370, glycine decarboxylase complex H ,clp1s,-0.0088644,0.8614751,FALSE,Soluble Proteins
+AT4G33010, glycine decarboxylase P-protein 1 ,clp1p,0.449545779,0.205746113,FALSE,Membrane Proteins
+AT4G33010, glycine decarboxylase P-protein 1 ,clp1s,0.413142872,0.041003388,FALSE,Soluble Proteins
+AT2G26080, glycine decarboxylase P-protein 2 ,clp1p,0.571292279,0.123049531,FALSE,Membrane Proteins
+AT2G26080, glycine decarboxylase P-protein 2 ,clp1s,0.490655958,0.036769775,FALSE,Soluble Proteins
+AT1G66270, Glycosyl hydrolase superfamily protein ,clp1p,0.089959745,0.864437569,FALSE,Membrane Proteins
+AT1G66270, Glycosyl hydrolase superfamily protein ,clp1s,-0.585665943,0.393763004,FALSE,Soluble Proteins
+AT1G66280, Glycosyl hydrolase superfamily protein ,clp1p,0.137168462,0.743901158,FALSE,Membrane Proteins
+AT1G66280, Glycosyl hydrolase superfamily protein ,clp1s,-0.51930375,0.51345971,FALSE,Soluble Proteins
+AT3G09260, Glycosyl hydrolase superfamily protein ,clp1p,-3.000668845,0.463146483,FALSE,Membrane Proteins
+AT3G09260, Glycosyl hydrolase superfamily protein ,clp1s,-0.008269614,0.877249409,FALSE,Soluble Proteins
+AT2G33220, GRIM-19 protein ,clp1p,-0.775063068,0.662761173,FALSE,Membrane Proteins
+AT2G33220, GRIM-19 protein ,clp1s,-0.07905825,0.867142563,FALSE,Soluble Proteins
+AT1G23100, GroES-like family protein ,clp1p,-0.253794782,0.675919604,FALSE,Membrane Proteins
+AT1G23100, GroES-like family protein ,clp1s,0.17891581,0.708763358,FALSE,Soluble Proteins
+AT3G15090, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1p,-0.912738425,0.314245585,FALSE,Membrane Proteins
+AT3G15090, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1s,-0.112287175,0.844116302,FALSE,Soluble Proteins
+AT3G56460, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1p,-0.186268748,0.724863826,FALSE,Membrane Proteins
+AT3G56460, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1s,0.106848187,0.766712442,FALSE,Soluble Proteins
+AT5G63620, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1p,-0.34071125,0.819194458,FALSE,Membrane Proteins
+AT5G63620, GroES-like zinc-binding alcohol dehydrogenase family protein ,clp1s,-1.660326713,0.385832638,FALSE,Soluble Proteins
+AT5G43940, GroES-like zinc-binding dehydrogenase family protein ,clp1p,-1.559705923,0.656683672,FALSE,Membrane Proteins
+AT5G43940, GroES-like zinc-binding dehydrogenase family protein ,clp1s,0.071025185,0.87320163,FALSE,Soluble Proteins
+AT1G30960, GTP-binding family protein ,clp1p,0.243864702,0.737611152,FALSE,Membrane Proteins
+AT1G30960, GTP-binding family protein ,clp1s,-0.266399578,0.72090843,FALSE,Soluble Proteins
+AT3G49725, GTP-binding protein,clp1p,0.456541751,0.685770471,FALSE,Membrane Proteins
+AT3G49725, GTP-binding protein,clp1s,0.178958843,0.773447193,FALSE,Soluble Proteins
+AT4G02930, GTP binding Elongation factor Tu family protein ,clp1p,-0.118157981,0.738744358,FALSE,Membrane Proteins
+AT4G02930, GTP binding Elongation factor Tu family protein ,clp1s,-0.126768692,0.717225265,FALSE,Soluble Proteins
+AT5G60390, GTP binding Elongation factor Tu family protein ,clp1p,-1.098280428,0.507308811,FALSE,Membrane Proteins
+AT5G60390, GTP binding Elongation factor Tu family protein ,clp1s,-0.356388687,0.783657233,FALSE,Soluble Proteins
+AT1G55900, Haloacid dehalogenase-like hydrolase (HAD) superfamily protein ,clp1p,-0.083092708,0.858351968,FALSE,Membrane Proteins
+AT1G55900, Haloacid dehalogenase-like hydrolase (HAD) superfamily protein ,clp1s,-0.201815466,0.771621498,FALSE,Soluble Proteins
+AT5G44730, Haloacid dehalogenase-like hydrolase (HAD) superfamily protein ,clp1p,-0.10021843,0.790684421,FALSE,Membrane Proteins
+AT5G44730, Haloacid dehalogenase-like hydrolase (HAD) superfamily protein ,clp1s,-0.22257951,0.575454972,FALSE,Soluble Proteins
+AT5G02500, heat shock cognate protein 70-1 ,clp1p,-0.533353395,0.596305882,FALSE,Membrane Proteins
+AT5G02500, heat shock cognate protein 70-1 ,clp1s,-0.132103479,0.832586888,FALSE,Soluble Proteins
+AT2G33210, heat shock protein 60-2 ,clp1p,-0.041494226,0.84587095,FALSE,Membrane Proteins
+AT2G33210, heat shock protein 60-2 ,clp1s,-0.142409309,0.550549932,FALSE,Soluble Proteins
+AT3G13860, heat shock protein 60-3A ,clp1p,0.024877619,0.86683192,FALSE,Membrane Proteins
+AT3G13860, heat shock protein 60-3A ,clp1s,-0.200883174,0.380003068,FALSE,Soluble Proteins
+AT3G23990, heat shock protein 60 ,clp1p,-0.00476951,0.862226354,FALSE,Membrane Proteins
+AT3G23990, heat shock protein 60 ,clp1s,-0.17791651,0.392812447,FALSE,Soluble Proteins
+AT5G28540, heat shock protein 70 (Hsp 70) family protein ,clp1p,-0.366189779,0.830156588,FALSE,Membrane Proteins
+AT5G28540, heat shock protein 70 (Hsp 70) family protein ,clp1s,-0.058984991,0.858493624,FALSE,Soluble Proteins
+AT5G56030, heat shock protein 81-2 ,clp1p,0.09299819,0.803256381,FALSE,Membrane Proteins
+AT5G56030, heat shock protein 81-2 ,clp1s,-0.299221993,0.778483953,FALSE,Soluble Proteins
+AT3G07770, HEAT SHOCK PROTEIN 89.1 ,clp1p,0.3283354,0.22661674,FALSE,Membrane Proteins
+AT3G07770, HEAT SHOCK PROTEIN 89.1 ,clp1s,0.156126855,0.487014129,FALSE,Soluble Proteins
+AT4G29130, hexokinase 1 ,clp1p,-0.871480493,0.670286034,FALSE,Membrane Proteins
+AT4G29130, hexokinase 1 ,clp1s,-0.079576966,0.865489897,FALSE,Soluble Proteins
+AT2G19860, hexokinase 2 ,clp1p,-0.480445803,0.680810644,FALSE,Membrane Proteins
+AT2G19860, hexokinase 2 ,clp1s,-0.198953229,0.803083662,FALSE,Soluble Proteins
+AT1G66240, homolog of anti-oxidant 1 ,clp1p,-0.146394275,0.798129925,FALSE,Membrane Proteins
+AT1G66240, homolog of anti-oxidant 1 ,clp1s,0.385684621,0.609341348,FALSE,Soluble Proteins
+AT5G51440,HSP20-like,clp1p,0.870691718,0.570350704,FALSE,Membrane Proteins
+AT5G51440,HSP20-like,clp1s,1.892836069,0.002719685,TRUE,Soluble Proteins
+AT5G47210, Hyaluronan / mRNA binding family ,clp1p,-0.647895796,0.65401118,FALSE,Membrane Proteins
+AT5G47210, Hyaluronan / mRNA binding family ,clp1s,0.114598163,0.850020825,FALSE,Soluble Proteins
+ATMG00640, hydrogen ion transporting ATP synthases,clp1p,0.089327168,0.850667162,FALSE,Membrane Proteins
+ATMG00640, hydrogen ion transporting ATP synthases,clp1s,-0.34901589,0.711311615,FALSE,Soluble Proteins
+AT1G53645, hydroxyproline-rich glycoprotein family protein ,clp1p,0.12622254,0.573606948,FALSE,Membrane Proteins
+AT1G53645, hydroxyproline-rich glycoprotein family protein ,clp1s,0.325557885,0.064170285,FALSE,Soluble Proteins
+AT1G68010, hydroxypyruvate reductase ,clp1p,-0.032463379,0.860022108,FALSE,Membrane Proteins
+AT1G68010, hydroxypyruvate reductase ,clp1s,0.066369023,0.808761031,FALSE,Soluble Proteins
+AT1G20430, hypothetical protein ,clp1p,0.280328634,0.802858644,FALSE,Membrane Proteins
+AT1G20430, hypothetical protein ,clp1s,0.774379563,0.502360121,FALSE,Soluble Proteins
+AT1G27435, hypothetical protein ,clp1p,0.252416248,0.825290127,FALSE,Membrane Proteins
+AT1G27435, hypothetical protein ,clp1s,0.004278847,0.795619215,FALSE,Soluble Proteins
+AT1G71730, hypothetical protein ,clp1p,0.627804631,0.786837643,FALSE,Membrane Proteins
+AT1G71730, hypothetical protein ,clp1s,0.587085916,0.733863391,FALSE,Soluble Proteins
+AT5G24165, hypothetical protein ,clp1p,-0.119643737,0.806047125,FALSE,Membrane Proteins
+AT5G24165, hypothetical protein ,clp1s,-0.149996124,0.623617271,FALSE,Soluble Proteins
+AT3G56430, import inner membrane translocase subunit ,clp1p,0.416902073,0.671171394,FALSE,Membrane Proteins
+AT3G56430, import inner membrane translocase subunit ,clp1s,-0.573063568,0.635841549,FALSE,Soluble Proteins
+AT4G19540, INDH1(iron-sulfur protein required for NADH dehydrogenase) ,clp1p,-0.213666106,0.841986724,FALSE,Membrane Proteins
+AT4G19540, INDH1(iron-sulfur protein required for NADH dehydrogenase) ,clp1s,-0.091498603,0.860298244,FALSE,Soluble Proteins
+AT1G50510, indigoidine synthase A family protein ,clp1p,-0.076397411,0.850815102,FALSE,Membrane Proteins
+AT1G50510, indigoidine synthase A family protein ,clp1s,0.012773005,0.876919058,FALSE,Soluble Proteins
+AT4G05530, indole-3-butyric acid response 1 ,clp1p,-0.867194805,0.509917211,FALSE,Membrane Proteins
+AT4G05530, indole-3-butyric acid response 1 ,clp1s,-0.010162778,0.874718307,FALSE,Soluble Proteins
+AT4G14430, indole-3-butyric acid response 10 ,clp1p,-0.076087647,0.781607877,FALSE,Membrane Proteins
+AT4G14430, indole-3-butyric acid response 10 ,clp1s,-0.234014786,0.774107174,FALSE,Soluble Proteins
+AT1G42960, inner membrane localized protein ,clp1p,-0.283131187,0.848641119,FALSE,Membrane Proteins
+AT1G42960, inner membrane localized protein ,clp1s,-0.262583014,0.829649101,FALSE,Soluble Proteins
+AT1G15690, Inorganic H pyrophosphatase family protein ,clp1p,-0.011582759,0.705808562,FALSE,Membrane Proteins
+AT1G15690, Inorganic H pyrophosphatase family protein ,clp1s,-0.253935424,0.71506034,FALSE,Soluble Proteins
+AT1G51980, Insulinase (Peptidase family M16) protein ,clp1p,0.825591518,0.167529172,FALSE,Membrane Proteins
+AT1G51980, Insulinase (Peptidase family M16) protein ,clp1s,0.178800859,0.776554882,FALSE,Soluble Proteins
+AT3G02090, Insulinase (Peptidase family M16) protein ,clp1p,0.553337016,0.226622931,FALSE,Membrane Proteins
+AT3G02090, Insulinase (Peptidase family M16) protein ,clp1s,0.113756258,0.785146588,FALSE,Soluble Proteins
+ATCG01060, iron-sulfur cluster binding,clp1p,-0.626549194,0.5073729,FALSE,Membrane Proteins
+ATCG01060, iron-sulfur cluster binding,clp1s,-0.171872503,0.808572908,FALSE,Soluble Proteins
+AT5G03905, Iron-sulfur cluster biosynthesis family protein ,clp1p,0.503379026,0.792154401,FALSE,Membrane Proteins
+AT5G03905, Iron-sulfur cluster biosynthesis family protein ,clp1s,0.145273323,0.838174398,FALSE,Soluble Proteins
+AT2G16710, Iron-sulfur cluster biosynthesis family protein ,clp1p,0.876977999,0.574354273,FALSE,Membrane Proteins
+AT2G16710, Iron-sulfur cluster biosynthesis family protein ,clp1s,-0.173700111,0.844172942,FALSE,Soluble Proteins
+AT1G54340, isocitrate dehydrogenase ,clp1p,0.525125647,0.784778326,FALSE,Membrane Proteins
+AT1G54340, isocitrate dehydrogenase ,clp1s,-0.656514789,0.594829415,FALSE,Soluble Proteins
+AT4G35260, isocitrate dehydrogenase 1 ,clp1p,-0.21146155,0.584513115,FALSE,Membrane Proteins
+AT4G35260, isocitrate dehydrogenase 1 ,clp1s,-0.291982256,0.189740154,FALSE,Soluble Proteins
+AT2G17130, isocitrate dehydrogenase subunit 2 ,clp1p,-0.193311153,0.706401009,FALSE,Membrane Proteins
+AT2G17130, isocitrate dehydrogenase subunit 2 ,clp1s,-0.330542599,0.318392234,FALSE,Soluble Proteins
+AT5G03290, isocitrate dehydrogenase V ,clp1p,-0.128078927,0.756872187,FALSE,Membrane Proteins
+AT5G03290, isocitrate dehydrogenase V ,clp1s,-0.356974205,0.05466442,FALSE,Soluble Proteins
+AT3G09810,ISOCITRATE DEHYDROGENASE VI,clp1p,-0.207057213,0.680873957,FALSE,Membrane Proteins
+AT3G09810,ISOCITRATE DEHYDROGENASE VI,clp1s,-0.490153022,0.021697443,TRUE,Soluble Proteins
+AT3G21720, isocitrate lyase ,clp1p,0.596761338,0.464982355,FALSE,Membrane Proteins
+AT3G21720, isocitrate lyase ,clp1s,0.636459086,0.259279878,FALSE,Soluble Proteins
+AT5G14590, Isocitrate/isopropylmalate dehydrogenase family protein ,clp1p,-0.198051293,0.808253871,FALSE,Membrane Proteins
+AT5G14590, Isocitrate/isopropylmalate dehydrogenase family protein ,clp1s,-0.614600654,0.166064431,FALSE,Soluble Proteins
+AT5G55610, isopentenyl-diphosphate delta-isomerase ,clp1p,-0.828555582,0.407834147,FALSE,Membrane Proteins
+AT5G55610, isopentenyl-diphosphate delta-isomerase ,clp1s,-0.27091684,0.770888862,FALSE,Soluble Proteins
+AT3G02780, isopentenyl pyrophosphate:dimethylallyl pyrophosphate isomerase 2 ,clp1p,-0.109718436,0.778737749,FALSE,Membrane Proteins
+AT3G02780, isopentenyl pyrophosphate:dimethylallyl pyrophosphate isomerase 2 ,clp1s,-0.111962891,0.7483206,FALSE,Soluble Proteins
+AT4G13430, isopropyl malate isomerase large subunit 1 ,clp1p,-0.421288237,0.735067287,FALSE,Membrane Proteins
+AT4G13430, isopropyl malate isomerase large subunit 1 ,clp1s,0.328017713,0.714821046,FALSE,Soluble Proteins
+AT3G45300, isovaleryl-CoA-dehydrogenase ,clp1p,0.028303762,0.865786483,FALSE,Membrane Proteins
+AT3G45300, isovaleryl-CoA-dehydrogenase ,clp1s,-0.914637837,0.28169798,FALSE,Soluble Proteins
+AT1G33790, jacalin lectin family protein ,clp1p,-0.440939139,0.778989659,FALSE,Membrane Proteins
+AT1G33790, jacalin lectin family protein ,clp1s,-0.156355329,0.833906191,FALSE,Soluble Proteins
+AT1G53760, K+-H+ exchange-like protein ,clp1p,-0.789044179,0.658361491,FALSE,Membrane Proteins
+AT1G53760, K+-H+ exchange-like protein ,clp1s,0.171333518,0.801805983,FALSE,Soluble Proteins
+AT3G58610, ketol-acid reductoisomerase ,clp1p,-0.496861021,0.706884451,FALSE,Membrane Proteins
+AT3G58610, ketol-acid reductoisomerase ,clp1s,-0.330054244,0.731676488,FALSE,Soluble Proteins
+AT3G47930, L-galactono-1,clp1p,-0.254450381,0.782190453,FALSE,Membrane Proteins
+AT3G47930, L-galactono-1,clp1s,-0.113164908,0.833424362,FALSE,Soluble Proteins
+AT1G04410, Lactate/malate dehydrogenase family protein ,clp1p,-0.192734681,0.83471449,FALSE,Membrane Proteins
+AT1G04410, Lactate/malate dehydrogenase family protein ,clp1s,0.865346497,0.143039258,FALSE,Soluble Proteins
+AT1G53240, Lactate/malate dehydrogenase family protein ,clp1p,-0.006745095,0.827142623,FALSE,Membrane Proteins
+AT1G53240, Lactate/malate dehydrogenase family protein ,clp1s,-0.01158558,0.839727591,FALSE,Soluble Proteins
+AT3G15020, Lactate/malate dehydrogenase family protein ,clp1p,0.018693109,0.875861152,FALSE,Membrane Proteins
+AT3G15020, Lactate/malate dehydrogenase family protein ,clp1s,-1.665114238,0.384507794,FALSE,Soluble Proteins
+AT4G21020,LEA fam prot,clp1p,1.922952925,3.07E-04,TRUE,Membrane Proteins
+AT4G21020,LEA fam prot,clp1s,1.366911342,1.94E-04,TRUE,Soluble Proteins
+AT1G65540, LETM1-like protein ,clp1p,-0.629450461,0.456330697,FALSE,Membrane Proteins
+AT1G65540, LETM1-like protein ,clp1s,-0.078553974,0.844723307,FALSE,Soluble Proteins
+AT3G59820, LETM1-like protein ,clp1p,0.197324946,0.850010335,FALSE,Membrane Proteins
+AT3G59820, LETM1-like protein ,clp1s,0.310665465,0.81150351,FALSE,Soluble Proteins
+AT3G47470, light-harvesting chlorophyll-protein complex I subunit A4 ,clp1p,-0.155271457,0.835947759,FALSE,Membrane Proteins
+AT3G47470, light-harvesting chlorophyll-protein complex I subunit A4 ,clp1s,-0.72195024,0.429935874,FALSE,Soluble Proteins
+AT5G54270, light-harvesting chlorophyll B-binding protein 3 ,clp1p,0.099162948,0.823082463,FALSE,Membrane Proteins
+AT5G54270, light-harvesting chlorophyll B-binding protein 3 ,clp1s,-0.468034151,0.75614911,FALSE,Soluble Proteins
+AT4G10340, light harvesting complex of photosystem II 5 ,clp1p,-0.911111707,0.692680311,FALSE,Membrane Proteins
+AT4G10340, light harvesting complex of photosystem II 5 ,clp1s,-0.533129223,0.724339847,FALSE,Soluble Proteins
+AT3G08940, light harvesting complex photosystem II ,clp1p,-0.523243455,0.530103314,FALSE,Membrane Proteins
+AT3G08940, light harvesting complex photosystem II ,clp1s,-0.186927511,0.687234022,FALSE,Soluble Proteins
+AT5G01530, light harvesting complex photosystem II ,clp1p,-0.106773084,0.867560457,FALSE,Membrane Proteins
+AT5G01530, light harvesting complex photosystem II ,clp1s,-0.773585643,0.698155479,FALSE,Soluble Proteins
+AT1G15820, light harvesting complex photosystem II subunit 6 ,clp1p,-1.424117922,0.113202039,FALSE,Membrane Proteins
+AT1G15820, light harvesting complex photosystem II subunit 6 ,clp1s,-0.193598064,0.81252797,FALSE,Soluble Proteins
+AT2G38530, lipid transfer protein 2 ,clp1p,-0.064736978,0.758533661,FALSE,Membrane Proteins
+AT2G38530, lipid transfer protein 2 ,clp1s,-0.028181558,0.728996286,FALSE,Soluble Proteins
+AT3G17240,LIPOAMIDE DEHYDROGENASE 2 (mt),clp1p,-0.246820354,0.607887275,FALSE,Membrane Proteins
+AT3G17240,LIPOAMIDE DEHYDROGENASE 2 (mt),clp1s,-0.595420386,0.00872884,TRUE,Soluble Proteins
+AT2G20860, lipoic acid synthase 1 ,clp1p,-0.149524486,0.722935487,FALSE,Membrane Proteins
+AT2G20860, lipoic acid synthase 1 ,clp1s,-0.658683907,0.472720556,FALSE,Soluble Proteins
+AT1G04640, lipoyltransferase 2 ,clp1p,-0.480499082,0.760061086,FALSE,Membrane Proteins
+AT1G04640, lipoyltransferase 2 ,clp1s,-0.232305507,0.80987707,FALSE,Soluble Proteins
+AT5G26860, lon protease 1 ,clp1p,0.092751904,0.833776022,FALSE,Membrane Proteins
+AT5G26860, lon protease 1 ,clp1s,-0.268492255,0.408622252,FALSE,Soluble Proteins
+AT3G05970, long-chain acyl-CoA synthetase 6 ,clp1p,-0.63401942,0.667780797,FALSE,Membrane Proteins
+AT3G05970, long-chain acyl-CoA synthetase 6 ,clp1s,0.147882715,0.844508177,FALSE,Soluble Proteins
+AT5G27600, long-chain acyl-CoA synthetase 7 ,clp1p,-1.059820121,0.339944245,FALSE,Membrane Proteins
+AT5G27600, long-chain acyl-CoA synthetase 7 ,clp1s,0.172384694,0.833211331,FALSE,Soluble Proteins
+AT5G16660, Low-density receptor-like protein ,clp1p,-0.144149336,0.863435098,FALSE,Membrane Proteins
+AT5G16660, Low-density receptor-like protein ,clp1s,-0.028840994,0.758554824,FALSE,Soluble Proteins
+AT3G12260,LYR family of Fe/S cluster,clp1p,4.26983621,6.32E-08,TRUE,Membrane Proteins
+AT3G12260,LYR family of Fe/S cluster,clp1s,0.385671709,0.725241306,FALSE,Soluble Proteins
+AT4G34700, LYR family of Fe/S cluster biogenesis protein ,clp1p,-0.674787926,0.495899005,FALSE,Membrane Proteins
+AT4G34700, LYR family of Fe/S cluster biogenesis protein ,clp1s,-0.12502919,0.84472311,FALSE,Soluble Proteins
+AT5G61220, LYR family of Fe/S cluster biogenesis protein ,clp1p,-0.041496732,0.853476632,FALSE,Membrane Proteins
+AT5G61220, LYR family of Fe/S cluster biogenesis protein ,clp1s,-0.171060336,0.649638829,FALSE,Soluble Proteins
+AT1G52760, lysophospholipase 2 ,clp1p,-0.52617644,0.740895218,FALSE,Membrane Proteins
+AT1G52760, lysophospholipase 2 ,clp1s,-0.667024706,0.475513649,FALSE,Soluble Proteins
+AT3G13490, Lysyl-tRNA synthetase,clp1p,0.722669262,0.675704123,FALSE,Membrane Proteins
+AT3G13490, Lysyl-tRNA synthetase,clp1s,-0.160813415,0.800485485,FALSE,Soluble Proteins
+AT2G35900, Mal d 1-associated protein ,clp1p,-0.901725821,0.300459978,FALSE,Membrane Proteins
+AT2G35900, Mal d 1-associated protein ,clp1s,0.423755494,0.515957589,FALSE,Soluble Proteins
+AT3G47520, malate dehydrogenase ,clp1p,-0.245287709,0.803265202,FALSE,Membrane Proteins
+AT3G47520, malate dehydrogenase ,clp1s,-0.382245542,0.649918347,FALSE,Soluble Proteins
+AT5G03860, malate synthase ,clp1p,1.064137537,0.642743918,FALSE,Membrane Proteins
+AT5G03860, malate synthase ,clp1s,1.571949214,0.319344047,FALSE,Soluble Proteins
+AT2G21870, MALE GAMETOPHYTE DEFECTIVE 1 ,clp1p,-1.275571763,0.401719891,FALSE,Membrane Proteins
+AT2G21870, MALE GAMETOPHYTE DEFECTIVE 1 ,clp1s,0.005957572,0.878707354,FALSE,Soluble Proteins
+AT1G68990, male gametophyte defective 3 ,clp1p,-0.536257434,0.469504456,FALSE,Membrane Proteins
+AT1G68990, male gametophyte defective 3 ,clp1s,0.932998471,0.037453783,FALSE,Soluble Proteins
+AT3G10920, manganese superoxide dismutase 1 ,clp1p,-0.204871512,0.726624724,FALSE,Membrane Proteins
+AT3G10920, manganese superoxide dismutase 1 ,clp1s,-0.280884467,0.548593581,FALSE,Soluble Proteins
+AT1G52070, Mannose-binding lectin superfamily protein ,clp1p,-0.016662519,0.865202597,FALSE,Membrane Proteins
+AT1G52070, Mannose-binding lectin superfamily protein ,clp1s,0.38335328,0.742620413,FALSE,Soluble Proteins
+AT3G16460, Mannose-binding lectin superfamily protein ,clp1p,-1.730323967,0.669810837,FALSE,Membrane Proteins
+AT3G16460, Mannose-binding lectin superfamily protein ,clp1s,0.199737474,0.861016125,FALSE,Soluble Proteins
+AT3G16450, Mannose-binding lectin superfamily protein ,clp1p,-0.697954828,0.788954377,FALSE,Membrane Proteins
+AT3G16450, Mannose-binding lectin superfamily protein ,clp1s,-0.220735877,0.842988095,FALSE,Soluble Proteins
+AT3G16470, Mannose-binding lectin superfamily protein ,clp1p,-0.227681816,0.78589927,FALSE,Membrane Proteins
+AT3G16470, Mannose-binding lectin superfamily protein ,clp1s,-0.438909249,0.562312427,FALSE,Soluble Proteins
+AT2G21640, marker for oxidative stress response protein ,clp1p,-0.655978606,0.76001296,FALSE,Membrane Proteins
+AT2G21640, marker for oxidative stress response protein ,clp1s,0.211625724,0.83768106,FALSE,Soluble Proteins
+AT1G79230, mercaptopyruvate sulfurtransferase 1 ,clp1p,-0.272893486,0.550568373,FALSE,Membrane Proteins
+AT1G79230, mercaptopyruvate sulfurtransferase 1 ,clp1s,-0.18761912,0.548773494,FALSE,Soluble Proteins
+AT5G41970, Metal-dependent protein hydrolase ,clp1p,-0.116909272,0.856221451,FALSE,Membrane Proteins
+AT5G41970, Metal-dependent protein hydrolase ,clp1s,0.177797538,0.826255553,FALSE,Soluble Proteins
+AT1G09300, Metallopeptidase M24 family protein ,clp1p,-0.077376116,0.822741894,FALSE,Membrane Proteins
+AT1G09300, Metallopeptidase M24 family protein ,clp1s,0.429738745,0.683744281,FALSE,Soluble Proteins
+AT2G19080, metaxin-like protein ,clp1p,-0.380631828,0.831971752,FALSE,Membrane Proteins
+AT2G19080, metaxin-like protein ,clp1s,-0.501929033,0.650571374,FALSE,Soluble Proteins
+AT3G55400, methionyl-tRNA synthetase / methionine-tRNA ligase / MetRS (cpMetRS) ,clp1p,0.186377078,0.822515931,FALSE,Membrane Proteins
+AT3G55400, methionyl-tRNA synthetase / methionine-tRNA ligase / MetRS (cpMetRS) ,clp1s,0.818719703,0.044048578,FALSE,Soluble Proteins
+AT1G03090, methylcrotonyl-CoA carboxylase alpha chain ,clp1p,-0.318224236,0.784184819,FALSE,Membrane Proteins
+AT1G03090, methylcrotonyl-CoA carboxylase alpha chain ,clp1s,-0.784951448,0.209136198,FALSE,Soluble Proteins
+AT1G18500, methylthioalkylmalate synthase-like 4 ,clp1p,-0.022625291,0.853208321,FALSE,Membrane Proteins
+AT1G18500, methylthioalkylmalate synthase-like 4 ,clp1s,0.087571707,0.840567222,FALSE,Soluble Proteins
+AT4G39690, MICOS complex subunit ,clp1p,-0.82403564,0.370606381,FALSE,Membrane Proteins
+AT4G39690, MICOS complex subunit ,clp1s,-0.087623949,0.818707685,FALSE,Soluble Proteins
+AT1G22520, MICOS complex subunit Mic10-like protein (DUF543) ,clp1p,-0.931934074,0.383503688,FALSE,Membrane Proteins
+AT1G22520, MICOS complex subunit Mic10-like protein (DUF543) ,clp1s,-0.030856966,0.866450649,FALSE,Soluble Proteins
+AT1G72170, MICOS complex subunit,clp1p,-0.397050141,0.686760868,FALSE,Membrane Proteins
+AT1G72170, MICOS complex subunit,clp1s,-0.228145419,0.757942282,FALSE,Soluble Proteins
+AT5G27540, MIRO-related GTP-ase 1 ,clp1p,0.351858834,0.825267542,FALSE,Membrane Proteins
+AT5G27540, MIRO-related GTP-ase 1 ,clp1s,-0.319684382,0.796754173,FALSE,Soluble Proteins
+AT1G16870, mitochondrial 28S ribosomal protein S29-like protein ,clp1p,0.54267424,0.427650411,FALSE,Membrane Proteins
+AT1G16870, mitochondrial 28S ribosomal protein S29-like protein ,clp1s,0.465316933,0.299267792,FALSE,Soluble Proteins
+AT1G65290, mitochondrial acyl carrier protein 2 ,clp1p,-0.088764094,0.822624682,FALSE,Membrane Proteins
+AT1G65290, mitochondrial acyl carrier protein 2 ,clp1s,-0.08456319,0.750536713,FALSE,Soluble Proteins
+AT2G19680, Mitochondrial ATP synthase subunit G protein ,clp1p,-0.842787038,0.138152533,FALSE,Membrane Proteins
+AT2G19680, Mitochondrial ATP synthase subunit G protein ,clp1s,-0.132568811,0.792905874,FALSE,Soluble Proteins
+AT4G26210, Mitochondrial ATP synthase subunit G protein ,clp1p,-0.914295921,0.758443152,FALSE,Membrane Proteins
+AT4G26210, Mitochondrial ATP synthase subunit G protein ,clp1s,0.95561412,0.676836828,FALSE,Soluble Proteins
+AT4G29480, Mitochondrial ATP synthase subunit G protein ,clp1p,-0.945854698,0.621646269,FALSE,Membrane Proteins
+AT4G29480, Mitochondrial ATP synthase subunit G protein ,clp1s,-0.084309427,0.86302168,FALSE,Soluble Proteins
+AT4G21090, MITOCHONDRIAL FERREDOXIN 2 ,clp1p,-0.219426557,0.694840545,FALSE,Membrane Proteins
+AT4G21090, MITOCHONDRIAL FERREDOXIN 2 ,clp1s,-0.186499581,0.629508649,FALSE,Soluble Proteins
+AT5G02050, Mitochondrial glycoprotein family protein ,clp1p,0.017790244,0.874806463,FALSE,Membrane Proteins
+AT5G02050, Mitochondrial glycoprotein family protein ,clp1s,0.198482577,0.568202332,FALSE,Soluble Proteins
+AT2G41600, Mitochondrial glycoprotein family protein ,clp1p,-0.488413718,0.66514097,FALSE,Membrane Proteins
+AT2G41600, Mitochondrial glycoprotein family protein ,clp1s,-0.387018522,0.630734366,FALSE,Soluble Proteins
+AT4G37910,HSP70-1,clp1p,0.634389626,0.003416903,TRUE,Membrane Proteins
+AT4G37910,HSP70-1,clp1s,0.554259007,1.33E-04,TRUE,Soluble Proteins
+AT5G09590, mitochondrial HSO70 2 ,clp1p,0.157230639,0.693225857,FALSE,Membrane Proteins
+AT5G09590, mitochondrial HSO70 2 ,clp1s,0.1194963,0.683359368,FALSE,Soluble Proteins
+AT2G42210, Mitochondrial import inner membrane translocase subunit Tim17/Tim22/Tim23 family protein ,clp1p,-0.814940909,0.792258114,FALSE,Membrane Proteins
+AT2G42210, Mitochondrial import inner membrane translocase subunit Tim17/Tim22/Tim23 family protein ,clp1s,-1.30642696,0.532806945,FALSE,Soluble Proteins
+AT3G10110, Mitochondrial import inner membrane translocase subunit Tim17/Tim22/Tim23 family protein ,clp1p,-0.2122117,0.792716908,FALSE,Membrane Proteins
+AT3G10110, Mitochondrial import inner membrane translocase subunit Tim17/Tim22/Tim23 family protein ,clp1s,0.110566745,0.842099213,FALSE,Soluble Proteins
+AT1G48030, mitochondrial lipoamide dehydrogenase 1 ,clp1p,-0.228432744,0.638338751,FALSE,Membrane Proteins
+AT1G48030, mitochondrial lipoamide dehydrogenase 1 ,clp1s,-0.323672861,0.189557941,FALSE,Soluble Proteins
+AT3G16480,MPPalpha,clp1p,0.864710396,0.008742171,TRUE,Membrane Proteins
+AT3G16480,MPPalpha,clp1s,0.129394374,0.654618461,FALSE,Soluble Proteins
+AT3G01740, Mitochondrial ribosomal protein L37 ,clp1p,-0.230448567,0.799492504,FALSE,Membrane Proteins
+AT3G01740, Mitochondrial ribosomal protein L37 ,clp1s,0.42139618,0.727315414,FALSE,Soluble Proteins
+ATMG00290, mitochondrial ribosomal protein S4 ,clp1p,0.614437333,0.700961666,FALSE,Membrane Proteins
+ATMG00290, mitochondrial ribosomal protein S4 ,clp1s,0.758230557,0.631915596,FALSE,Soluble Proteins
+AT5G19760, Mitochondrial substrate carrier family protein ,clp1p,-2.848340569,0.221813273,FALSE,Membrane Proteins
+AT5G19760, Mitochondrial substrate carrier family protein ,clp1s,-0.213680327,0.85719384,FALSE,Soluble Proteins
+AT5G46800, Mitochondrial substrate carrier family protein ,clp1p,-0.289771018,0.838473629,FALSE,Membrane Proteins
+AT5G46800, Mitochondrial substrate carrier family protein ,clp1s,-0.323146728,0.791299369,FALSE,Soluble Proteins
+AT3G27820, monodehydroascorbate reductase 4 ,clp1p,0.418853649,0.804476818,FALSE,Membrane Proteins
+AT3G27820, monodehydroascorbate reductase 4 ,clp1s,-0.19193686,0.849521346,FALSE,Soluble Proteins
+AT1G63940, monodehydroascorbate reductase 6 ,clp1p,-0.286532209,0.580119029,FALSE,Membrane Proteins
+AT1G63940, monodehydroascorbate reductase 6 ,clp1s,-0.240810727,0.444826676,FALSE,Soluble Proteins
+AT4G00860, monopolar spindle protein (DUF1138) ,clp1p,-0.590975041,0.553825949,FALSE,Membrane Proteins
+AT4G00860, monopolar spindle protein (DUF1138) ,clp1s,-0.196401818,0.79316871,FALSE,Soluble Proteins
+AT3G06860, multifunctional protein 2 ,clp1p,0.220520157,0.682971972,FALSE,Membrane Proteins
+AT3G06860, multifunctional protein 2 ,clp1s,0.54338436,0.439100639,FALSE,Soluble Proteins
+AT4G20020, multiple organellar RNA editing factor ,clp1p,-0.005394013,0.834056591,FALSE,Membrane Proteins
+AT4G20020, multiple organellar RNA editing factor ,clp1s,-0.173611131,0.734698571,FALSE,Soluble Proteins
+AT2G13560,NAD-DEPENDENT MALIC ENZYME 1,clp1p,-0.240849134,0.460320203,FALSE,Membrane Proteins
+AT2G13560,NAD-DEPENDENT MALIC ENZYME 1,clp1s,-0.366536996,0.026956137,TRUE,Soluble Proteins
+AT4G00570, NAD-dependent malic enzyme 2 ,clp1p,-0.106337703,0.794822722,FALSE,Membrane Proteins
+AT4G00570, NAD-dependent malic enzyme 2 ,clp1s,-0.310641773,0.107331171,FALSE,Soluble Proteins
+AT2G05990, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,0.503532687,0.733208459,FALSE,Membrane Proteins
+AT2G05990, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,-0.31518046,0.803988959,FALSE,Soluble Proteins
+AT2G20360, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,-0.527883835,0.583440362,FALSE,Membrane Proteins
+AT2G20360, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,-0.179465413,0.793970131,FALSE,Soluble Proteins
+AT3G18890, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,-0.318480201,0.785654726,FALSE,Membrane Proteins
+AT3G18890, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,0.198787241,0.807544939,FALSE,Soluble Proteins
+AT3G26770, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,-0.289186365,0.486127133,FALSE,Membrane Proteins
+AT3G26770, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,-0.25214484,0.382436518,FALSE,Soluble Proteins
+AT4G20760, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,-0.272658104,0.805792193,FALSE,Membrane Proteins
+AT4G20760, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,-0.345398731,0.721516625,FALSE,Soluble Proteins
+AT5G10730, NAD(P)-binding Rossmann-fold superfamily protein ,clp1p,-0.016942201,0.525719662,FALSE,Membrane Proteins
+AT5G10730, NAD(P)-binding Rossmann-fold superfamily protein ,clp1s,-0.1189869,0.751326101,FALSE,Soluble Proteins
+AT4G28220, NAD(P)H dehydrogenase B1 ,clp1p,-0.408622409,0.782389346,FALSE,Membrane Proteins
+AT4G28220, NAD(P)H dehydrogenase B1 ,clp1s,-0.678226904,0.462907693,FALSE,Soluble Proteins
+AT4G05020, NAD(P)H dehydrogenase B2 ,clp1p,-0.166376091,0.839188422,FALSE,Membrane Proteins
+AT4G05020, NAD(P)H dehydrogenase B2 ,clp1s,-0.331584344,0.668708567,FALSE,Soluble Proteins
+AT2G20800, NAD(P)H dehydrogenase B4 ,clp1p,-0.334313435,0.78235821,FALSE,Membrane Proteins
+AT2G20800, NAD(P)H dehydrogenase B4 ,clp1s,-0.220441919,0.658076135,FALSE,Soluble Proteins
+AT1G25380, NAD+ transporter 2 ,clp1p,-0.748219965,0.646813841,FALSE,Membrane Proteins
+AT1G25380, NAD+ transporter 2 ,clp1s,-0.535358006,0.607083001,FALSE,Soluble Proteins
+AT5G53460, NADH-dependent glutamate synthase 1 ,clp1p,-0.373026661,0.681824734,FALSE,Membrane Proteins
+AT5G53460, NADH-dependent glutamate synthase 1 ,clp1s,-0.023139179,0.736477306,FALSE,Soluble Proteins
+AT5G37510,75kD CI,clp1p,2.894437591,0.001548015,TRUE,Membrane Proteins
+AT5G37510,75kD CI,clp1s,0.344587231,0.763525405,FALSE,Soluble Proteins
+AT3G03070, NADH-ubiquinone oxidoreductase-like protein ,clp1p,0.038921295,0.872086185,FALSE,Membrane Proteins
+AT3G03070, NADH-ubiquinone oxidoreductase-like protein ,clp1s,0.576438103,0.789909591,FALSE,Soluble Proteins
+AT5G52840, NADH-ubiquinone oxidoreductase-like protein ,clp1p,0.297898694,0.484004542,FALSE,Membrane Proteins
+AT5G52840, NADH-ubiquinone oxidoreductase-like protein ,clp1s,0.126457068,0.721811688,FALSE,Soluble Proteins
+AT5G67590, NADH-ubiquinone oxidoreductase-like protein ,clp1p,-0.082560429,0.86263277,FALSE,Membrane Proteins
+AT5G67590, NADH-ubiquinone oxidoreductase-like protein ,clp1s,1.231969671,0.507602605,FALSE,Soluble Proteins
+AT3G62790, NADH-ubiquinone oxidoreductase-like protein ,clp1p,-0.154015473,0.837015473,FALSE,Membrane Proteins
+AT3G62790, NADH-ubiquinone oxidoreductase-like protein ,clp1s,-0.804463744,0.493800763,FALSE,Soluble Proteins
+AT1G67350, NADH-ubiquinone oxidoreductase ,clp1p,0.054856609,0.858059415,FALSE,Membrane Proteins
+AT1G67350, NADH-ubiquinone oxidoreductase ,clp1s,-0.459317183,0.536147619,FALSE,Soluble Proteins
+AT4G16450, NADH-ubiquinone oxidoreductase ,clp1p,-0.345056257,0.838407713,FALSE,Membrane Proteins
+AT4G16450, NADH-ubiquinone oxidoreductase ,clp1s,-0.326084185,0.78138064,FALSE,Soluble Proteins
+AT5G11770, NADH-ubiquinone oxidoreductase 20 kDa subunit ,clp1p,-0.700950895,0.671882214,FALSE,Membrane Proteins
+AT5G11770, NADH-ubiquinone oxidoreductase 20 kDa subunit ,clp1s,-0.259193013,0.821619562,FALSE,Soluble Proteins
+AT4G02580,24kD CI,clp1p,1.93050382,3.11E-06,TRUE,Membrane Proteins
+AT4G02580,24kD CI,clp1s,0.701030566,0.031835044,FALSE,Soluble Proteins
+AT2G02050, NADH-ubiquinone oxidoreductase B18 subunit ,clp1p,-0.990900938,0.555035489,FALSE,Membrane Proteins
+AT2G02050, NADH-ubiquinone oxidoreductase B18 subunit ,clp1s,-0.23577558,0.82853327,FALSE,Soluble Proteins
+AT5G47890, NADH-ubiquinone oxidoreductase B8 subunit ,clp1p,2.672109737,0.197161257,FALSE,Membrane Proteins
+AT5G47890, NADH-ubiquinone oxidoreductase B8 subunit ,clp1s,1.207663352,0.39978344,FALSE,Soluble Proteins
+AT1G14450, NADH dehydrogenase (ubiquinone)s ,clp1p,0.21393847,0.730854234,FALSE,Membrane Proteins
+AT1G14450, NADH dehydrogenase (ubiquinone)s ,clp1s,-0.292350852,0.575362513,FALSE,Soluble Proteins
+ATMG00510, NADH dehydrogenase subunit 7 ,clp1p,0.138504926,0.812665931,FALSE,Membrane Proteins
+ATMG00510, NADH dehydrogenase subunit 7 ,clp1s,-0.211779684,0.854039417,FALSE,Soluble Proteins
+ATMG00070, NADH dehydrogenase subunit 9 ,clp1p,1.605424311,0.454579829,FALSE,Membrane Proteins
+ATMG00070, NADH dehydrogenase subunit 9 ,clp1s,-0.144564556,0.857222699,FALSE,Soluble Proteins
+AT2G44525, NADH dehydrogenase ubiquinone 1 alpha subcomplex assembly factor-like protein (DUF498/DUF598) ,clp1p,0.974839098,0.194844823,FALSE,Membrane Proteins
+AT2G44525, NADH dehydrogenase ubiquinone 1 alpha subcomplex assembly factor-like protein (DUF498/DUF598) ,clp1s,-0.570948155,0.308405401,FALSE,Soluble Proteins
+AT1G76200, NADH dehydrogenase ubiquinone 1 beta subcomplex subunit ,clp1p,-0.420282107,0.813992245,FALSE,Membrane Proteins
+AT1G76200, NADH dehydrogenase ubiquinone 1 beta subcomplex subunit ,clp1s,0.743706835,0.555553874,FALSE,Soluble Proteins
+AT3G18410, NADH dehydrogenase ubiquinone 1 beta subcomplex subunit 10-B-like protein (Complex I subunit NDUFS6) ,clp1p,-0.436941119,0.790520419,FALSE,Membrane Proteins
+AT3G18410, NADH dehydrogenase ubiquinone 1 beta subcomplex subunit 10-B-like protein (Complex I subunit NDUFS6) ,clp1s,-0.045832034,0.628370415,FALSE,Soluble Proteins
+AT3G28700, NADH dehydrogenase ubiquinone complex I,clp1p,-0.314771067,0.789910287,FALSE,Membrane Proteins
+AT3G28700, NADH dehydrogenase ubiquinone complex I,clp1s,0.09498891,0.750934028,FALSE,Soluble Proteins
+AT5G17770, NADH:cytochrome B5 reductase 1 ,clp1p,-0.040996843,0.752722579,FALSE,Membrane Proteins
+AT5G17770, NADH:cytochrome B5 reductase 1 ,clp1s,-0.214838679,0.778399752,FALSE,Soluble Proteins
+AT3G03100, NADH:ubiquinone oxidoreductase,clp1p,-0.456339662,0.65289099,FALSE,Membrane Proteins
+AT3G03100, NADH:ubiquinone oxidoreductase,clp1s,-0.293468297,0.652243156,FALSE,Soluble Proteins
+AT1G79750, NADP-malic enzyme 4 ,clp1p,0.129045627,0.81110622,FALSE,Membrane Proteins
+AT1G79750, NADP-malic enzyme 4 ,clp1s,-0.35837263,0.266525432,FALSE,Soluble Proteins
+AT2G17420, NADPH-dependent thioredoxin reductase A ,clp1p,-0.659572642,0.753711372,FALSE,Membrane Proteins
+AT2G17420, NADPH-dependent thioredoxin reductase A ,clp1s,0.302487908,0.817937434,FALSE,Soluble Proteins
+AT2G31490, neuronal acetylcholine receptor subunit alpha-5 ,clp1p,-0.003577359,0.839515645,FALSE,Membrane Proteins
+AT2G31490, neuronal acetylcholine receptor subunit alpha-5 ,clp1s,0.487635229,0.741313053,FALSE,Soluble Proteins
+AT3G20970, NFU domain protein 4 ,clp1p,-0.070975813,0.848738246,FALSE,Membrane Proteins
+AT3G20970, NFU domain protein 4 ,clp1s,0.195542819,0.681316741,FALSE,Soluble Proteins
+AT1G51390, NFU domain protein 5 ,clp1p,-0.267881648,0.655673644,FALSE,Membrane Proteins
+AT1G51390, NFU domain protein 5 ,clp1s,-0.186455393,0.664267435,FALSE,Soluble Proteins
+AT3G44320, nitrilase 3 ,clp1p,-0.200500175,0.841506618,FALSE,Membrane Proteins
+AT3G44320, nitrilase 3 ,clp1s,-0.387111629,0.698259504,FALSE,Soluble Proteins
+AT2G15620, nitrite reductase 1 ,clp1p,-0.400212675,0.656026443,FALSE,Membrane Proteins
+AT2G15620, nitrite reductase 1 ,clp1s,0.41778294,0.472912257,FALSE,Soluble Proteins
+AT5G65720, nitrogen fixation S (NIFS)-like 1 ,clp1p,0.004957149,0.877294852,FALSE,Membrane Proteins
+AT5G65720, nitrogen fixation S (NIFS)-like 1 ,clp1s,-0.131967761,0.677967277,FALSE,Soluble Proteins
+AT5G23140,mtCLPP7,clp1p,-4.859032352,1.04E-13,TRUE,Membrane Proteins
+AT5G23140,mtCLPP7,clp1s,-4.964663665,4.03E-14,TRUE,Soluble Proteins
+AT5G04830, Nuclear transport factor 2 (NTF2) family protein ,clp1p,0.083858614,0.685222756,FALSE,Membrane Proteins
+AT5G04830, Nuclear transport factor 2 (NTF2) family protein ,clp1s,0.013482776,0.85458236,FALSE,Soluble Proteins
+AT4G11010, nucleoside diphosphate kinase 3 ,clp1p,-0.751974301,0.068300251,FALSE,Membrane Proteins
+AT4G11010, nucleoside diphosphate kinase 3 ,clp1s,-0.037518017,0.851215455,FALSE,Soluble Proteins
+AT1G19360, Nucleotide-diphospho-sugar transferase family protein ,clp1p,0.013081922,0.808988488,FALSE,Membrane Proteins
+AT1G19360, Nucleotide-diphospho-sugar transferase family protein ,clp1s,-0.026453452,0.809062405,FALSE,Soluble Proteins
+AT1G53000, Nucleotide-diphospho-sugar transferases superfamily protein ,clp1p,0.055499015,0.836925274,FALSE,Membrane Proteins
+AT1G53000, Nucleotide-diphospho-sugar transferases superfamily protein ,clp1s,-0.154781894,0.806361357,FALSE,Soluble Proteins
+AT3G59760, O-acetylserine (thiol) lyase isoform C ,clp1p,-1.483430072,0.569386082,FALSE,Membrane Proteins
+AT3G59760, O-acetylserine (thiol) lyase isoform C ,clp1s,-1.774908829,0.216704002,FALSE,Soluble Proteins
+AT1G20510, OPC-8:0 CoA ligase1 ,clp1p,-0.022352132,0.874360415,FALSE,Membrane Proteins
+AT1G20510, OPC-8:0 CoA ligase1 ,clp1s,-0.127418213,0.82409394,FALSE,Soluble Proteins
+AT1G28510, Optic atrophy 3 protein (OPA3) ,clp1p,-0.871239894,0.655691802,FALSE,Membrane Proteins
+AT1G28510, Optic atrophy 3 protein (OPA3) ,clp1s,-0.068530505,0.824993096,FALSE,Soluble Proteins
+AT5G46180, ornithine-delta-aminotransferase ,clp1p,0.258484797,0.501545836,FALSE,Membrane Proteins
+AT5G46180, ornithine-delta-aminotransferase ,clp1s,0.15741886,0.591078768,FALSE,Soluble Proteins
+AT1G75330, ornithine carbamoyltransferase ,clp1p,-0.581474419,0.731602488,FALSE,Membrane Proteins
+AT1G75330, ornithine carbamoyltransferase ,clp1s,-0.081969017,0.860368361,FALSE,Soluble Proteins
+AT3G11070, Outer membrane OMP85 family protein ,clp1p,-0.13242053,0.844112567,FALSE,Membrane Proteins
+AT3G11070, Outer membrane OMP85 family protein ,clp1s,-0.0467565,0.862332034,FALSE,Soluble Proteins
+AT5G05520, Outer membrane OMP85 family protein ,clp1p,-0.263951881,0.785995334,FALSE,Membrane Proteins
+AT5G05520, Outer membrane OMP85 family protein ,clp1s,-0.152044523,0.802590002,FALSE,Soluble Proteins
+AT2G28900, outer plastid envelope protein 16-1 ,clp1p,-0.019326101,0.804197043,FALSE,Membrane Proteins
+AT2G28900, outer plastid envelope protein 16-1 ,clp1s,-0.102345153,0.853141506,FALSE,Soluble Proteins
+AT3G28480, Oxoglutarate/iron-dependent oxygenase ,clp1p,0.289777326,0.756088861,FALSE,Membrane Proteins
+AT3G28480, Oxoglutarate/iron-dependent oxygenase ,clp1s,-0.005249046,0.820769928,FALSE,Soluble Proteins
+AT2G06050, oxophytodienoate-reductase 3 ,clp1p,-0.41361283,0.803061383,FALSE,Membrane Proteins
+AT2G06050, oxophytodienoate-reductase 3 ,clp1s,-0.505350817,0.747615914,FALSE,Soluble Proteins
+AT2G39270, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1p,0.149581021,0.828078316,FALSE,Membrane Proteins
+AT2G39270, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1s,-0.397356605,0.574685876,FALSE,Soluble Proteins
+AT3G03060, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1p,-0.331495693,0.752128549,FALSE,Membrane Proteins
+AT3G03060, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1s,-0.323343524,0.775263105,FALSE,Soluble Proteins
+AT3G19740, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1p,0.386845697,0.661065222,FALSE,Membrane Proteins
+AT3G19740, P-loop containing nucleoside triphosphate hydrolases superfamily protein ,clp1s,0.74009685,0.045713183,FALSE,Soluble Proteins
+AT1G21750, PDI-like 1-1 ,clp1p,-0.487096664,0.708318577,FALSE,Membrane Proteins
+AT1G21750, PDI-like 1-1 ,clp1s,-0.131466125,0.816326489,FALSE,Soluble Proteins
+AT5G60640, PDI-like 1-4 ,clp1p,-0.171263475,0.819136291,FALSE,Membrane Proteins
+AT5G60640, PDI-like 1-4 ,clp1s,-0.135417322,0.829911833,FALSE,Soluble Proteins
+AT1G19520,NUCLEAR FUSION DEFECTIVE 5,clp1p,0.701172631,0.133149164,FALSE,Membrane Proteins
+AT1G19520,NUCLEAR FUSION DEFECTIVE 5,clp1s,0.664609325,0.002453553,TRUE,Soluble Proteins
+AT3G49240, Pentatricopeptide repeat (PPR) superfamily protein ,clp1p,0.740741011,0.19377132,FALSE,Membrane Proteins
+AT3G49240, Pentatricopeptide repeat (PPR) superfamily protein ,clp1s,0.191487529,0.612225606,FALSE,Soluble Proteins
+AT4G35850, Pentatricopeptide repeat (PPR) superfamily protein ,clp1p,0.515520035,0.207769922,FALSE,Membrane Proteins
+AT4G35850, Pentatricopeptide repeat (PPR) superfamily protein ,clp1s,0.293689631,0.378349262,FALSE,Soluble Proteins
+AT5G15980, Pentatricopeptide repeat (PPR) superfamily protein ,clp1p,0.619570419,0.673160486,FALSE,Membrane Proteins
+AT5G15980, Pentatricopeptide repeat (PPR) superfamily protein ,clp1s,0.241158778,0.644623132,FALSE,Soluble Proteins
+AT5G60960,PPR PROTEIN PNM1,clp1p,1.15368963,0.108250463,FALSE,Membrane Proteins
+AT5G60960,PPR PROTEIN PNM1,clp1s,1.764560713,6.44E-08,TRUE,Soluble Proteins
+AT4G38150, Pentatricopeptide repeat (PPR) superfamily protein ,clp1p,0.17511405,0.810995169,FALSE,Membrane Proteins
+AT4G38150, Pentatricopeptide repeat (PPR) superfamily protein ,clp1s,-0.049895412,0.858270244,FALSE,Soluble Proteins
+AT1G61870,PPR 336,clp1p,1.861613592,2.10E-13,TRUE,Membrane Proteins
+AT1G61870,PPR 336,clp1s,0.138412609,0.559440609,FALSE,Soluble Proteins
+AT1G80270, PENTATRICOPEPTIDE REPEAT 596 ,clp1p,1.324755445,0.147539856,FALSE,Membrane Proteins
+AT1G80270, PENTATRICOPEPTIDE REPEAT 596 ,clp1s,0.861883419,0.175606064,FALSE,Soluble Proteins
+AT5G51740, Peptidase family M48 family protein ,clp1p,0.183581874,0.71696037,FALSE,Membrane Proteins
+AT5G51740, Peptidase family M48 family protein ,clp1s,0.08066697,0.846551914,FALSE,Soluble Proteins
+AT2G31140, Peptidase S24/S26A/S26B/S26C family protein ,clp1p,0.154055299,0.783462279,FALSE,Membrane Proteins
+AT2G31140, Peptidase S24/S26A/S26B/S26C family protein ,clp1s,-0.198801895,0.5201858,FALSE,Soluble Proteins
+AT4G25130, peptide met sulfoxide reductase 4 ,clp1p,-0.034738327,0.838500285,FALSE,Membrane Proteins
+AT4G25130, peptide met sulfoxide reductase 4 ,clp1s,0.163312529,0.557840828,FALSE,Soluble Proteins
+AT1G01820, peroxin 11c ,clp1p,-0.075661812,0.83634264,FALSE,Membrane Proteins
+AT1G01820, peroxin 11c ,clp1s,0.28475831,0.798396079,FALSE,Soluble Proteins
+AT2G45740, peroxin 11D ,clp1p,-0.110833943,0.809739857,FALSE,Membrane Proteins
+AT2G45740, peroxin 11D ,clp1s,0.235459991,0.777544162,FALSE,Soluble Proteins
+AT3G61070, peroxin 11E ,clp1p,-0.556275468,0.611050683,FALSE,Membrane Proteins
+AT3G61070, peroxin 11E ,clp1s,0.202267236,0.796169999,FALSE,Soluble Proteins
+AT5G62810, peroxin 14 ,clp1p,0.081330491,0.874395606,FALSE,Membrane Proteins
+AT5G62810, peroxin 14 ,clp1s,0.306669062,0.827827099,FALSE,Soluble Proteins
+AT3G06050, peroxiredoxin IIF ,clp1p,-0.206019369,0.654370208,FALSE,Membrane Proteins
+AT3G06050, peroxiredoxin IIF ,clp1s,-0.11060604,0.731651905,FALSE,Soluble Proteins
+AT5G48880, peroxisomal 3-keto-acyl-CoA thiolase 2 ,clp1p,0.297059328,0.763409548,FALSE,Membrane Proteins
+AT5G48880, peroxisomal 3-keto-acyl-CoA thiolase 2 ,clp1s,0.51702049,0.485469471,FALSE,Soluble Proteins
+AT2G33150, peroxisomal 3-ketoacyl-CoA thiolase 3 ,clp1p,-0.196135424,0.681940092,FALSE,Membrane Proteins
+AT2G33150, peroxisomal 3-ketoacyl-CoA thiolase 3 ,clp1s,0.546958053,0.337256693,FALSE,Soluble Proteins
+AT1G04710, peroxisomal 3-ketoacyl-CoA thiolase 4 ,clp1p,-0.353395507,0.532230576,FALSE,Membrane Proteins
+AT1G04710, peroxisomal 3-ketoacyl-CoA thiolase 4 ,clp1s,-0.039339125,0.862679321,FALSE,Soluble Proteins
+AT2G22780, peroxisomal NAD-malate dehydrogenase 1 ,clp1p,0.527225862,0.839590408,FALSE,Membrane Proteins
+AT2G22780, peroxisomal NAD-malate dehydrogenase 1 ,clp1s,0.320212868,0.845143462,FALSE,Soluble Proteins
+AT5G09660, peroxisomal NAD-malate dehydrogenase 2 ,clp1p,-0.413240372,0.53136494,FALSE,Membrane Proteins
+AT5G09660, peroxisomal NAD-malate dehydrogenase 2 ,clp1s,-0.107478426,0.776118493,FALSE,Soluble Proteins
+AT3G58140, phenylalanyl-tRNA synthetase class IIc family protein ,clp1p,-0.001377459,0.879992626,FALSE,Membrane Proteins
+AT3G58140, phenylalanyl-tRNA synthetase class IIc family protein ,clp1s,0.162783557,0.619013073,FALSE,Soluble Proteins
+AT5G14040, phosphate transporter 3,clp1p,-2.828065987,0.200410851,FALSE,Membrane Proteins
+AT5G14040, phosphate transporter 3,clp1s,-0.286771284,0.846706431,FALSE,Soluble Proteins
+AT4G24620, phosphoglucose isomerase 1 ,clp1p,-0.442226404,0.762885934,FALSE,Membrane Proteins
+AT4G24620, phosphoglucose isomerase 1 ,clp1s,0.076172879,0.835769267,FALSE,Soluble Proteins
+AT3G12780, phosphoglycerate kinase 1 ,clp1p,-0.486871686,0.806958231,FALSE,Membrane Proteins
+AT3G12780, phosphoglycerate kinase 1 ,clp1s,-0.665231653,0.611372818,FALSE,Soluble Proteins
+AT1G56190, Phosphoglycerate kinase family protein ,clp1p,-0.220486815,0.808774517,FALSE,Membrane Proteins
+AT1G56190, Phosphoglycerate kinase family protein ,clp1s,-0.116695826,0.858725433,FALSE,Soluble Proteins
+AT4G35630, phosphoserine aminotransferase ,clp1p,-0.324840548,0.785371208,FALSE,Membrane Proteins
+AT4G35630, phosphoserine aminotransferase ,clp1s,-0.288667802,0.722206514,FALSE,Soluble Proteins
+AT4G03280, photosynthetic electron transfer C ,clp1p,-0.252279968,0.832859023,FALSE,Membrane Proteins
+AT4G03280, photosynthetic electron transfer C ,clp1s,-0.167929562,0.599520006,FALSE,Soluble Proteins
+AT4G28750, Photosystem I reaction centre subunit IV / PsaE protein ,clp1p,-0.12701014,0.856772276,FALSE,Membrane Proteins
+AT4G28750, Photosystem I reaction centre subunit IV / PsaE protein ,clp1s,-0.109799287,0.833011672,FALSE,Soluble Proteins
+AT4G02770, photosystem I subunit D-1 ,clp1p,0.198426136,0.856925129,FALSE,Membrane Proteins
+AT4G02770, photosystem I subunit D-1 ,clp1s,1.196323422,0.291084252,FALSE,Soluble Proteins
+AT1G31330, photosystem I subunit F ,clp1p,-0.275236243,0.859346,FALSE,Membrane Proteins
+AT1G31330, photosystem I subunit F ,clp1s,0.878443099,0.460846072,FALSE,Soluble Proteins
+AT4G12800, photosystem I subunit l ,clp1p,-1.044527166,0.573749598,FALSE,Membrane Proteins
+AT4G12800, photosystem I subunit l ,clp1s,-0.129134917,0.775275339,FALSE,Soluble Proteins
+ATCG00340, Photosystem I,clp1p,-0.497821831,0.675398721,FALSE,Membrane Proteins
+ATCG00340, Photosystem I,clp1s,-0.20765223,0.796011192,FALSE,Soluble Proteins
+ATCG00350, Photosystem I,clp1p,-0.353465753,0.779746495,FALSE,Membrane Proteins
+ATCG00350, Photosystem I,clp1s,-0.1207148,0.845781113,FALSE,Soluble Proteins
+AT2G05100, photosystem II light harvesting complex protein 2.1 ,clp1p,-0.18093847,0.866620801,FALSE,Membrane Proteins
+AT2G05100, photosystem II light harvesting complex protein 2.1 ,clp1s,1.628301914,0.352804566,FALSE,Soluble Proteins
+AT2G34420, photosystem II light harvesting complex protein B1B2 ,clp1p,-0.944351489,0.792780509,FALSE,Membrane Proteins
+AT2G34420, photosystem II light harvesting complex protein B1B2 ,clp1s,-0.44497958,0.831676919,FALSE,Soluble Proteins
+ATCG00020, photosystem II reaction center protein A ,clp1p,0.832741084,0.402543065,FALSE,Membrane Proteins
+ATCG00020, photosystem II reaction center protein A ,clp1s,-0.031295756,0.789992346,FALSE,Soluble Proteins
+ATCG00680, photosystem II reaction center protein B ,clp1p,-0.871048931,0.11442159,FALSE,Membrane Proteins
+ATCG00680, photosystem II reaction center protein B ,clp1s,0.038286168,0.80747424,FALSE,Soluble Proteins
+ATCG00280, photosystem II reaction center protein C ,clp1p,-0.278991269,0.84598837,FALSE,Membrane Proteins
+ATCG00280, photosystem II reaction center protein C ,clp1s,-0.772274399,0.669393368,FALSE,Soluble Proteins
+ATCG00270, photosystem II reaction center protein D ,clp1p,-0.160515324,0.772244339,FALSE,Membrane Proteins
+ATCG00270, photosystem II reaction center protein D ,clp1s,0.060866796,0.790084139,FALSE,Soluble Proteins
+AT1G06680, photosystem II subunit P-1 ,clp1p,-1.963566986,0.396316578,FALSE,Membrane Proteins
+AT1G06680, photosystem II subunit P-1 ,clp1s,-0.380367235,0.825894722,FALSE,Soluble Proteins
+AT4G05180, photosystem II subunit Q-2 ,clp1p,-0.442608645,0.751631582,FALSE,Membrane Proteins
+AT4G05180, photosystem II subunit Q-2 ,clp1s,-0.31369709,0.752730746,FALSE,Soluble Proteins
+AT4G21280, photosystem II subunit QA ,clp1p,-0.054984204,0.867072089,FALSE,Membrane Proteins
+AT4G21280, photosystem II subunit QA ,clp1s,-0.627624275,0.47936999,FALSE,Soluble Proteins
+ATMG00480, Plant mitochondrial ATPase,clp1p,-1.113793497,0.555584536,FALSE,Membrane Proteins
+ATMG00480, Plant mitochondrial ATPase,clp1s,-0.110809276,0.864514542,FALSE,Soluble Proteins
+AT1G56560, Plant neutral invertase family protein ,clp1p,0.269658572,0.834514071,FALSE,Membrane Proteins
+AT1G56560, Plant neutral invertase family protein ,clp1s,-0.169951332,0.830935347,FALSE,Soluble Proteins
+AT1G43800, Plant stearoyl-acyl-carrier-protein desaturase family protein ,clp1p,-0.29488472,0.827111757,FALSE,Membrane Proteins
+AT1G43800, Plant stearoyl-acyl-carrier-protein desaturase family protein ,clp1s,-0.045851792,0.793545909,FALSE,Soluble Proteins
+AT3G54110, plant uncoupling mitochondrial protein 1 ,clp1p,-0.728477208,0.672975469,FALSE,Membrane Proteins
+AT3G54110, plant uncoupling mitochondrial protein 1 ,clp1s,-0.196411067,0.83412641,FALSE,Soluble Proteins
+AT4G20260, plasma-membrane associated cation-binding protein 1 ,clp1p,0.100178384,0.75245411,FALSE,Membrane Proteins
+AT4G20260, plasma-membrane associated cation-binding protein 1 ,clp1s,-0.323256269,0.683407842,FALSE,Soluble Proteins
+AT1G32580, plastid developmental protein DAG ,clp1p,2.04644831,0.527328748,FALSE,Membrane Proteins
+AT1G32580, plastid developmental protein DAG ,clp1s,1.326780088,0.600543431,FALSE,Soluble Proteins
+AT2G35240, plastid developmental protein DAG ,clp1p,1.285954653,0.536084362,FALSE,Membrane Proteins
+AT2G35240, plastid developmental protein DAG ,clp1s,-0.413852045,0.737942035,FALSE,Soluble Proteins
+AT3G06790, plastid developmental protein DAG ,clp1p,0.216333758,0.82980943,FALSE,Membrane Proteins
+AT3G06790, plastid developmental protein DAG ,clp1s,0.451793119,0.57022305,FALSE,Soluble Proteins
+AT5G52920, plastidic pyruvate kinase beta subunit 1 ,clp1p,-0.489677129,0.732310048,FALSE,Membrane Proteins
+AT5G52920, plastidic pyruvate kinase beta subunit 1 ,clp1s,-0.374135201,0.5781157,FALSE,Soluble Proteins
+AT4G17650, Polyketide cyclase / dehydrase and lipid transport protein ,clp1p,-0.300303681,0.828645374,FALSE,Membrane Proteins
+AT4G17650, Polyketide cyclase / dehydrase and lipid transport protein ,clp1s,1.13128201,0.237975731,FALSE,Soluble Proteins
+AT3G45770, Polyketide synthase,clp1p,-0.244352227,0.83912599,FALSE,Membrane Proteins
+AT3G45770, Polyketide synthase,clp1s,-0.35496268,0.735346044,FALSE,Soluble Proteins
+AT5G14580, polyribonucleotide nucleotidyltransferase ,clp1p,0.259669993,0.837320439,FALSE,Membrane Proteins
+AT5G14580, polyribonucleotide nucleotidyltransferase ,clp1s,1.193210138,0.112826929,FALSE,Soluble Proteins
+AT3G19170,PREP1,clp1p,0.841297783,0.011917376,TRUE,Membrane Proteins
+AT3G19170,PREP1,clp1s,1.039957201,7.82E-07,TRUE,Soluble Proteins
+AT1G49630, presequence protease 2 ,clp1p,-0.372880989,0.732876103,FALSE,Membrane Proteins
+AT1G49630, presequence protease 2 ,clp1s,-0.275104965,0.714548506,FALSE,Soluble Proteins
+AT4G28510, prohibitin 1 ,clp1p,-0.121387003,0.693418404,FALSE,Membrane Proteins
+AT4G28510, prohibitin 1 ,clp1s,0.046430756,0.864013684,FALSE,Soluble Proteins
+AT1G03860, prohibitin 2 ,clp1p,-1.710089721,0.441944001,FALSE,Membrane Proteins
+AT1G03860, prohibitin 2 ,clp1s,0.065474001,0.872630617,FALSE,Soluble Proteins
+AT5G40770, prohibitin 3 ,clp1p,-2.054083288,0.564462355,FALSE,Membrane Proteins
+AT5G40770, prohibitin 3 ,clp1s,0.185482489,0.864634946,FALSE,Soluble Proteins
+AT3G27280, prohibitin 4 ,clp1p,-0.317202924,0.830792385,FALSE,Membrane Proteins
+AT3G27280, prohibitin 4 ,clp1s,-0.219983204,0.63847234,FALSE,Soluble Proteins
+AT2G20530, prohibitin 6 ,clp1p,-1.27797854,0.386568629,FALSE,Membrane Proteins
+AT2G20530, prohibitin 6 ,clp1s,0.084236524,0.864803953,FALSE,Soluble Proteins
+AT4G16580, Protein phosphatase 2C family protein ,clp1p,0.165554466,0.836188188,FALSE,Membrane Proteins
+AT4G16580, Protein phosphatase 2C family protein ,clp1s,-0.559508766,0.308690451,FALSE,Soluble Proteins
+AT5G53140, Protein phosphatase 2C family protein ,clp1p,-0.040253921,0.86384499,FALSE,Membrane Proteins
+AT5G53140, Protein phosphatase 2C family protein ,clp1s,-0.131323143,0.820441527,FALSE,Soluble Proteins
+AT5G66720, Protein phosphatase 2C family protein ,clp1p,0.646992805,0.465253257,FALSE,Membrane Proteins
+AT5G66720, Protein phosphatase 2C family protein ,clp1s,-0.371580071,0.620381836,FALSE,Soluble Proteins
+AT3G51010, protein translocase subunit ,clp1p,-0.635761366,0.792625302,FALSE,Membrane Proteins
+AT3G51010, protein translocase subunit ,clp1s,1.567906568,0.351122855,FALSE,Soluble Proteins
+AT3G59280, Protein Transporter,clp1p,-0.675549588,0.63450445,FALSE,Membrane Proteins
+AT3G59280, Protein Transporter,clp1s,0.049865285,0.868457855,FALSE,Soluble Proteins
+AT5G66570, PS II oxygen-evolving complex 1 ,clp1p,-0.974712709,0.744916229,FALSE,Membrane Proteins
+AT5G66570, PS II oxygen-evolving complex 1 ,clp1s,-0.112345035,0.852988554,FALSE,Soluble Proteins
+AT1G61520, PSI type III chlorophyll a/b-binding protein ,clp1p,0.404696899,0.828676894,FALSE,Membrane Proteins
+AT1G61520, PSI type III chlorophyll a/b-binding protein ,clp1s,-1.103438257,0.505624973,FALSE,Soluble Proteins
+AT5G09840, Putative endonuclease or glycosyl hydrolase ,clp1p,0.277469397,0.751169006,FALSE,Membrane Proteins
+AT5G09840, Putative endonuclease or glycosyl hydrolase ,clp1s,0.208695608,0.758744638,FALSE,Soluble Proteins
+AT3G16230, Putative eukaryotic LigT ,clp1p,-0.396660922,0.722576103,FALSE,Membrane Proteins
+AT3G16230, Putative eukaryotic LigT ,clp1s,-0.204492099,0.823630737,FALSE,Soluble Proteins
+AT3G22310,PUTATIVE MITOCHONDRIAL RNA HELICASE 1,clp1p,2.060214615,4.00E-04,TRUE,Membrane Proteins
+AT3G22310,PUTATIVE MITOCHONDRIAL RNA HELICASE 1,clp1s,3.445011164,4.03E-14,TRUE,Soluble Proteins
+AT3G22330,PUTATIVE MITOCHONDRIAL RNA HELICASE 2,clp1p,1.549398264,0.123194579,FALSE,Membrane Proteins
+AT3G22330,PUTATIVE MITOCHONDRIAL RNA HELICASE 2,clp1s,1.746071642,0.00154725,TRUE,Soluble Proteins
+AT4G26860, Putative pyridoxal phosphate-dependent enzyme,clp1p,-0.309988427,0.743977187,FALSE,Membrane Proteins
+AT4G26860, Putative pyridoxal phosphate-dependent enzyme,clp1s,-0.215954397,0.787497308,FALSE,Soluble Proteins
+AT3G16420, PYK10-binding protein 1 ,clp1p,-1.622369161,0.693899095,FALSE,Membrane Proteins
+AT3G16420, PYK10-binding protein 1 ,clp1s,-0.066385763,0.868655961,FALSE,Soluble Proteins
+AT1G74470, Pyridine nucleotide-disulfide oxidoreductase family protein ,clp1p,-0.38183838,0.790218221,FALSE,Membrane Proteins
+AT1G74470, Pyridine nucleotide-disulfide oxidoreductase family protein ,clp1s,-0.307076617,0.753373295,FALSE,Soluble Proteins
+AT4G29840, Pyridoxal-5-phosphate-dependent enzyme family protein ,clp1p,-0.247682631,0.690408348,FALSE,Membrane Proteins
+AT4G29840, Pyridoxal-5-phosphate-dependent enzyme family protein ,clp1s,-0.596201253,0.634238425,FALSE,Soluble Proteins
+AT5G11880, Pyridoxal-dependent decarboxylase family protein ,clp1p,0.112035746,0.849751522,FALSE,Membrane Proteins
+AT5G11880, Pyridoxal-dependent decarboxylase family protein ,clp1s,-0.244390941,0.813320823,FALSE,Soluble Proteins
+AT2G17630, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1p,-0.189965032,0.578733123,FALSE,Membrane Proteins
+AT2G17630, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1s,-0.384902164,0.716030907,FALSE,Soluble Proteins
+AT3G22200, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1p,-0.539147608,0.121921177,FALSE,Membrane Proteins
+AT3G22200, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1s,-0.388209825,0.090810665,FALSE,Soluble Proteins
+AT4G33680, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1p,-0.421252324,0.57496437,FALSE,Membrane Proteins
+AT4G33680, Pyridoxal phosphate (PLP)-dependent transferases superfamily protein ,clp1s,-0.739377961,0.058972254,FALSE,Soluble Proteins
+AT3G17810, pyrimidine 1 ,clp1p,-0.249056085,0.831252109,FALSE,Membrane Proteins
+AT3G17810, pyrimidine 1 ,clp1s,-0.092113218,0.859562873,FALSE,Soluble Proteins
+AT3G08860, PYRIMIDINE 4 ,clp1p,0.615856739,0.664420837,FALSE,Membrane Proteins
+AT3G08860, PYRIMIDINE 4 ,clp1s,-0.665660421,0.447593147,FALSE,Soluble Proteins
+AT5G23300, pyrimidine d ,clp1p,-0.563431013,0.529910148,FALSE,Membrane Proteins
+AT5G23300, pyrimidine d ,clp1s,0.027119336,0.837285419,FALSE,Soluble Proteins
+AT5G09650, pyrophosphorylase 6 ,clp1p,-0.518666474,0.740470084,FALSE,Membrane Proteins
+AT5G09650, pyrophosphorylase 6 ,clp1s,-0.684457966,0.450123142,FALSE,Soluble Proteins
+AT1G59900, pyruvate dehydrogenase complex E1 alpha subunit ,clp1p,0.02106888,0.869114171,FALSE,Membrane Proteins
+AT1G59900, pyruvate dehydrogenase complex E1 alpha subunit ,clp1s,-0.204685967,0.375138035,FALSE,Soluble Proteins
+AT1G01090, pyruvate dehydrogenase E1 alpha ,clp1p,-0.620520882,0.693254876,FALSE,Membrane Proteins
+AT1G01090, pyruvate dehydrogenase E1 alpha ,clp1s,-0.320998804,0.672430325,FALSE,Soluble Proteins
+AT3G06483, pyruvate dehydrogenase kinase ,clp1p,0.095663967,0.860636176,FALSE,Membrane Proteins
+AT3G06483, pyruvate dehydrogenase kinase ,clp1s,-0.620645931,0.702167007,FALSE,Soluble Proteins
+AT3G22960, Pyruvate kinase family protein ,clp1p,-0.264673155,0.7544162,FALSE,Membrane Proteins
+AT3G22960, Pyruvate kinase family protein ,clp1s,-0.613095874,0.361504638,FALSE,Soluble Proteins
+AT4G20360, RAB GTPase homolog E1B ,clp1p,-0.021236224,0.803235594,FALSE,Membrane Proteins
+AT4G20360, RAB GTPase homolog E1B ,clp1s,-0.335605575,0.809600361,FALSE,Soluble Proteins
+AT2G43360,BIOTIN AUXOTROPH 2,clp1p,2.131546987,0.026406885,FALSE,Membrane Proteins
+AT2G43360,BIOTIN AUXOTROPH 2,clp1s,1.777508047,0.002650218,TRUE,Soluble Proteins
+AT5G59840, Ras-related small GTP-binding family protein ,clp1p,-0.029119661,0.668970399,FALSE,Membrane Proteins
+AT5G59840, Ras-related small GTP-binding family protein ,clp1s,0.095891102,0.852051937,FALSE,Soluble Proteins
+AT2G44610, Ras-related small GTP-binding family protein ,clp1p,0.120951376,0.819583223,FALSE,Membrane Proteins
+AT2G44610, Ras-related small GTP-binding family protein ,clp1s,0.253089495,0.764216522,FALSE,Soluble Proteins
+AT4G09730,RH39,clp1p,0.191085461,0.806370258,FALSE,Membrane Proteins
+AT4G09730,RH39,clp1s,1.796931823,6.56E-05,TRUE,Soluble Proteins
+AT1G31817, Ribosomal L18p/L5e family protein ,clp1p,1.024113214,0.321222535,FALSE,Membrane Proteins
+AT1G31817, Ribosomal L18p/L5e family protein ,clp1s,0.578152567,0.460223219,FALSE,Soluble Proteins
+AT2G19730, Ribosomal L28e protein family ,clp1p,-1.128933508,0.51259119,FALSE,Membrane Proteins
+AT2G19730, Ribosomal L28e protein family ,clp1s,-0.018897558,0.847252044,FALSE,Soluble Proteins
+AT5G65220, Ribosomal L29 family protein ,clp1p,-0.714904853,0.561221231,FALSE,Membrane Proteins
+AT5G65220, Ribosomal L29 family protein ,clp1s,0.049037096,0.863854955,FALSE,Soluble Proteins
+AT3G59540, Ribosomal L38e protein family ,clp1p,-0.32298521,0.837097966,FALSE,Membrane Proteins
+AT3G59540, Ribosomal L38e protein family ,clp1s,-0.170086687,0.744306521,FALSE,Soluble Proteins
+AT5G45775, Ribosomal L5P family protein ,clp1p,0.078912553,0.819438357,FALSE,Membrane Proteins
+AT5G45775, Ribosomal L5P family protein ,clp1s,-0.503314935,0.560485792,FALSE,Soluble Proteins
+AT2G37270, ribosomal protein 5B ,clp1p,0.385902682,0.762929486,FALSE,Membrane Proteins
+AT2G37270, ribosomal protein 5B ,clp1s,-0.2560905,0.724367925,FALSE,Soluble Proteins
+AT3G01790, Ribosomal protein L13 family protein ,clp1p,-0.293658893,0.761882655,FALSE,Membrane Proteins
+AT3G01790, Ribosomal protein L13 family protein ,clp1s,0.592992925,0.584857318,FALSE,Soluble Proteins
+AT5G46160, Ribosomal protein L14p/L23e family protein ,clp1p,-0.250188838,0.804239821,FALSE,Membrane Proteins
+AT5G46160, Ribosomal protein L14p/L23e family protein ,clp1s,0.353557193,0.523611236,FALSE,Soluble Proteins
+AT3G04400, Ribosomal protein L14p/L23e family protein ,clp1p,-0.74257351,0.274157465,FALSE,Membrane Proteins
+AT3G04400, Ribosomal protein L14p/L23e family protein ,clp1s,0.025213673,0.871471073,FALSE,Soluble Proteins
+AT5G64670,Ribosomal protein L18e/L15,clp1p,1.011228978,0.182728335,FALSE,Membrane Proteins
+AT5G64670,Ribosomal protein L18e/L15,clp1s,1.561294426,9.74E-05,TRUE,Soluble Proteins
+AT2G42710, Ribosomal protein L1p/L10e family ,clp1p,0.904402093,0.362761658,FALSE,Membrane Proteins
+AT2G42710, Ribosomal protein L1p/L10e family ,clp1s,0.5344899,0.480731468,FALSE,Soluble Proteins
+AT2G18020, Ribosomal protein L2 family ,clp1p,-0.235781876,0.805849058,FALSE,Membrane Proteins
+AT2G18020, Ribosomal protein L2 family ,clp1s,-0.934622866,0.400958974,FALSE,Soluble Proteins
+AT2G44065, Ribosomal protein L2 family ,clp1p,0.003377036,0.865741795,FALSE,Membrane Proteins
+AT2G44065, Ribosomal protein L2 family ,clp1s,0.805368018,0.264122584,FALSE,Soluble Proteins
+AT5G62270, ribosomal protein L20 ,clp1p,0.568872644,0.18863053,FALSE,Membrane Proteins
+AT5G62270, ribosomal protein L20 ,clp1s,0.469562641,0.040328704,FALSE,Soluble Proteins
+AT4G30930,NUCLEAR FUSION DEFECTIVE 1,clp1p,1.317360886,0.176888842,FALSE,Membrane Proteins
+AT4G30930,NUCLEAR FUSION DEFECTIVE 1,clp1s,1.23983401,0.023550805,TRUE,Soluble Proteins
+AT1G67430, Ribosomal protein L22p/L17e family protein ,clp1p,0.012565029,0.876814752,FALSE,Membrane Proteins
+AT1G67430, Ribosomal protein L22p/L17e family protein ,clp1s,0.085122765,0.79729045,FALSE,Soluble Proteins
+AT4G28360, Ribosomal protein L22p/L17e family protein ,clp1p,-0.282808083,0.82879147,FALSE,Membrane Proteins
+AT4G28360, Ribosomal protein L22p/L17e family protein ,clp1s,0.530904436,0.53097467,FALSE,Soluble Proteins
+AT4G39880, Ribosomal protein L23/L15e family protein ,clp1p,0.444456745,0.574697997,FALSE,Membrane Proteins
+AT4G39880, Ribosomal protein L23/L15e family protein ,clp1s,0.545049243,0.535509879,FALSE,Soluble Proteins
+AT5G66860, Ribosomal protein L25/Gln-tRNA synthetase,clp1p,0.732259874,0.472040143,FALSE,Membrane Proteins
+AT5G66860, Ribosomal protein L25/Gln-tRNA synthetase,clp1s,0.280839207,0.731831379,FALSE,Soluble Proteins
+AT4G23620, Ribosomal protein L25/Gln-tRNA synthetase,clp1p,1.897488312,0.11931153,FALSE,Membrane Proteins
+AT4G23620, Ribosomal protein L25/Gln-tRNA synthetase,clp1s,-0.253509901,0.813701541,FALSE,Soluble Proteins
+AT1G07830, ribosomal protein L29 family protein ,clp1p,-0.250674022,0.806658077,FALSE,Membrane Proteins
+AT1G07830, ribosomal protein L29 family protein ,clp1s,0.075667359,0.767461613,FALSE,Soluble Proteins
+AT3G17465, ribosomal protein L3 plastid ,clp1p,-0.567633996,0.736411693,FALSE,Membrane Proteins
+AT3G17465, ribosomal protein L3 plastid ,clp1s,0.621948074,0.524083112,FALSE,Soluble Proteins
+AT2G20060, Ribosomal protein L4/L1 family ,clp1p,-0.133632854,0.830393201,FALSE,Membrane Proteins
+AT2G20060, Ribosomal protein L4/L1 family ,clp1s,0.636580093,0.383270043,FALSE,Soluble Proteins
+AT1G33140, Ribosomal protein L6 family ,clp1p,-0.158950377,0.784384946,FALSE,Membrane Proteins
+AT1G33140, Ribosomal protein L6 family ,clp1s,0.038980626,0.78953215,FALSE,Soluble Proteins
+AT1G70190,ribosomal protein L7/L12,clp1p,0.73827535,0.286867124,FALSE,Membrane Proteins
+AT1G70190,ribosomal protein L7/L12,clp1s,0.806172622,0.032059244,TRUE,Soluble Proteins
+AT3G62870, Ribosomal protein L7Ae/L30e/S12e/Gadd45 family protein ,clp1p,-0.609403634,0.629139867,FALSE,Membrane Proteins
+AT3G62870, Ribosomal protein L7Ae/L30e/S12e/Gadd45 family protein ,clp1s,-0.146730192,0.837109795,FALSE,Soluble Proteins
+AT5G53070, Ribosomal protein L9/RNase H1 ,clp1p,-0.226869728,0.834846172,FALSE,Membrane Proteins
+AT5G53070, Ribosomal protein L9/RNase H1 ,clp1s,0.245589864,0.80662476,FALSE,Soluble Proteins
+AT3G11510, Ribosomal protein S11 family protein ,clp1p,-0.542217434,0.317785632,FALSE,Membrane Proteins
+AT3G11510, Ribosomal protein S11 family protein ,clp1s,0.088643635,0.727214776,FALSE,Soluble Proteins
+AT4G00100, ribosomal protein S13A ,clp1p,-1.040519054,0.255300566,FALSE,Membrane Proteins
+AT4G00100, ribosomal protein S13A ,clp1s,-0.44722023,0.493774414,FALSE,Soluble Proteins
+AT4G33865, Ribosomal protein S14p/S29e family protein ,clp1p,-0.00630338,0.854011427,FALSE,Membrane Proteins
+AT4G33865, Ribosomal protein S14p/S29e family protein ,clp1s,0.233333587,0.798447633,FALSE,Soluble Proteins
+AT1G07210, Ribosomal protein S18 ,clp1p,0.5248154,0.480295686,FALSE,Membrane Proteins
+AT1G07210, Ribosomal protein S18 ,clp1s,0.59476093,0.218323041,FALSE,Soluble Proteins
+AT3G03600, ribosomal protein S2 ,clp1p,-0.220975793,0.638480602,FALSE,Membrane Proteins
+AT3G03600, ribosomal protein S2 ,clp1s,0.065785426,0.860867883,FALSE,Soluble Proteins
+AT3G18240, Ribosomal protein S24/S35 ,clp1p,0.746718448,0.552220925,FALSE,Membrane Proteins
+AT3G18240, Ribosomal protein S24/S35 ,clp1s,0.605733986,0.610681675,FALSE,Soluble Proteins
+AT5G02740, Ribosomal protein S24e family protein ,clp1p,1.956492192,0.306733796,FALSE,Membrane Proteins
+AT5G02740, Ribosomal protein S24e family protein ,clp1s,-0.086615213,0.735177675,FALSE,Soluble Proteins
+AT4G39200, Ribosomal protein S25 family protein ,clp1p,-0.017329066,0.848568985,FALSE,Membrane Proteins
+AT4G39200, Ribosomal protein S25 family protein ,clp1s,-0.444874037,0.620619945,FALSE,Soluble Proteins
+AT3G56340, Ribosomal protein S26e family protein ,clp1p,-0.61568037,0.625128512,FALSE,Membrane Proteins
+AT3G56340, Ribosomal protein S26e family protein ,clp1s,-0.185177085,0.77238513,FALSE,Soluble Proteins
+AT5G35530, Ribosomal protein S3 family protein ,clp1p,-0.055528819,0.847057462,FALSE,Membrane Proteins
+AT5G35530, Ribosomal protein S3 family protein ,clp1s,-0.642599653,0.563522069,FALSE,Soluble Proteins
+AT3G49080, Ribosomal protein S5 domain 2-like superfamily protein ,clp1p,0.825970125,0.505612705,FALSE,Membrane Proteins
+AT3G49080, Ribosomal protein S5 domain 2-like superfamily protein ,clp1s,0.33065543,0.772223638,FALSE,Soluble Proteins
+AT5G18380, Ribosomal protein S5 domain 2-like superfamily protein ,clp1p,0.115525273,0.632867395,FALSE,Membrane Proteins
+AT5G18380, Ribosomal protein S5 domain 2-like superfamily protein ,clp1s,-0.659077414,0.478577683,FALSE,Soluble Proteins
+AT1G64880,Ribosomal protein S5,clp1p,1.185183424,0.212058348,FALSE,Membrane Proteins
+AT1G64880,Ribosomal protein S5,clp1s,1.378425082,0.003274749,TRUE,Soluble Proteins
+AT1G56070, Ribosomal protein S5/Elongation factor G/III/V family protein ,clp1p,-0.557992132,0.547159516,FALSE,Membrane Proteins
+AT1G56070, Ribosomal protein S5/Elongation factor G/III/V family protein ,clp1s,-0.185244912,0.802313974,FALSE,Soluble Proteins
+AT5G59850, Ribosomal protein S8 family protein ,clp1p,0.254469256,0.605677476,FALSE,Membrane Proteins
+AT5G59850, Ribosomal protein S8 family protein ,clp1s,-0.024917406,0.816365597,FALSE,Soluble Proteins
+AT3G10610, Ribosomal S17 family protein ,clp1p,0.066539561,0.855359988,FALSE,Membrane Proteins
+AT3G10610, Ribosomal S17 family protein ,clp1s,-1.695248511,0.339409847,FALSE,Soluble Proteins
+AT3G01800, Ribosome recycling factor ,clp1p,-0.363170841,0.673256162,FALSE,Membrane Proteins
+AT3G01800, Ribosome recycling factor ,clp1s,0.258770058,0.788257828,FALSE,Soluble Proteins
+ATCG00490, ribulose-bisphosphate carboxylase ,clp1p,-0.583528279,0.20338741,FALSE,Membrane Proteins
+ATCG00490, ribulose-bisphosphate carboxylase ,clp1s,-0.135710529,0.702446465,FALSE,Soluble Proteins
+AT5G38410, Ribulose bisphosphate carboxylase (small chain) family protein ,clp1p,-2.307189922,0.426355758,FALSE,Membrane Proteins
+AT5G38410, Ribulose bisphosphate carboxylase (small chain) family protein ,clp1s,0.330598041,0.840204608,FALSE,Soluble Proteins
+AT1G67090, ribulose bisphosphate carboxylase small chain 1A ,clp1p,-0.073375251,0.865723899,FALSE,Membrane Proteins
+AT1G67090, ribulose bisphosphate carboxylase small chain 1A ,clp1s,-0.746487128,0.780627301,FALSE,Soluble Proteins
+AT5G54580, RNA-binding (RRM/RBD/RNP motifs) family protein ,clp1p,-0.004147488,0.875343768,FALSE,Membrane Proteins
+AT5G54580, RNA-binding (RRM/RBD/RNP motifs) family protein ,clp1s,1.287079259,0.032734429,FALSE,Soluble Proteins
+AT2G45300, RNA 3-terminal phosphate cyclase/enolpyruvate transferase,clp1p,-0.440747691,0.740707254,FALSE,Membrane Proteins
+AT2G45300, RNA 3-terminal phosphate cyclase/enolpyruvate transferase,clp1s,-0.267375602,0.773943381,FALSE,Soluble Proteins
+AT1G30510, root FNR 2 ,clp1p,-0.320155484,0.812117425,FALSE,Membrane Proteins
+AT1G30510, root FNR 2 ,clp1s,-0.377536396,0.711843937,FALSE,Soluble Proteins
+AT3G56070, rotamase cyclophilin 2 ,clp1p,-0.219649566,0.674676099,FALSE,Membrane Proteins
+AT3G56070, rotamase cyclophilin 2 ,clp1s,-0.045311722,0.846697047,FALSE,Soluble Proteins
+AT2G39730, rubisco activase ,clp1p,-0.432513366,0.824832688,FALSE,Membrane Proteins
+AT2G39730, rubisco activase ,clp1s,-0.768916474,0.561760309,FALSE,Soluble Proteins
+AT1G24610, Rubisco methyltransferase family protein ,clp1p,-0.223784693,0.822090629,FALSE,Membrane Proteins
+AT1G24610, Rubisco methyltransferase family protein ,clp1s,-0.22938293,0.780973578,FALSE,Soluble Proteins
+AT1G80230, Rubredoxin-like superfamily protein ,clp1p,1.50966504,0.621311137,FALSE,Membrane Proteins
+AT1G80230, Rubredoxin-like superfamily protein ,clp1s,0.060821114,0.872555931,FALSE,Soluble Proteins
+AT3G15640, Rubredoxin-like superfamily protein ,clp1p,0.048159017,0.865132531,FALSE,Membrane Proteins
+AT3G15640, Rubredoxin-like superfamily protein ,clp1s,-0.144921084,0.765028887,FALSE,Soluble Proteins
+AT4G13940, S-adenosyl-L-homocysteine hydrolase ,clp1p,-0.063827357,0.861606066,FALSE,Membrane Proteins
+AT4G13940, S-adenosyl-L-homocysteine hydrolase ,clp1s,-0.746041237,0.681909028,FALSE,Soluble Proteins
+AT1G15810, S15/NS1,clp1p,-0.26437093,0.797201721,FALSE,Membrane Proteins
+AT1G15810, S15/NS1,clp1s,0.188315703,0.785866547,FALSE,Soluble Proteins
+AT1G80620, S15/NS1,clp1p,-0.372990849,0.770104783,FALSE,Membrane Proteins
+AT1G80620, S15/NS1,clp1s,-0.312503927,0.740900004,FALSE,Soluble Proteins
+AT4G09800, S18 ribosomal protein ,clp1p,-0.229368871,0.856612975,FALSE,Membrane Proteins
+AT4G09800, S18 ribosomal protein ,clp1s,-0.603157057,0.598758343,FALSE,Soluble Proteins
+AT5G13030, selenoprotein O ,clp1p,0.270688091,0.80889888,FALSE,Membrane Proteins
+AT5G13030, selenoprotein O ,clp1s,0.112679279,0.848735246,FALSE,Soluble Proteins
+AT4G02380, senescence-associated gene 21 ,clp1p,-0.469409819,0.793970636,FALSE,Membrane Proteins
+AT4G02380, senescence-associated gene 21 ,clp1s,0.033043548,0.850755591,FALSE,Soluble Proteins
+AT3G13110, serine acetyltransferase 2,clp1p,0.772343059,0.494511786,FALSE,Membrane Proteins
+AT3G13110, serine acetyltransferase 2,clp1s,0.581045154,0.446968138,FALSE,Soluble Proteins
+AT5G26780, serine hydroxymethyltransferase 2 ,clp1p,0.341113001,0.450588359,FALSE,Membrane Proteins
+AT5G26780, serine hydroxymethyltransferase 2 ,clp1s,0.350186888,0.216233405,FALSE,Soluble Proteins
+AT4G37930, serine transhydroxymethyltransferase 1 ,clp1p,0.145561427,0.613424806,FALSE,Membrane Proteins
+AT4G37930, serine transhydroxymethyltransferase 1 ,clp1s,0.133359094,0.603528944,FALSE,Soluble Proteins
+AT3G12800, short-chain dehydrogenase-reductase B ,clp1p,-0.824618247,0.656839569,FALSE,Membrane Proteins
+AT3G12800, short-chain dehydrogenase-reductase B ,clp1s,0.002647943,0.878322035,FALSE,Soluble Proteins
+AT1G32470, Single hybrid motif superfamily protein ,clp1p,-0.193073384,0.855393715,FALSE,Membrane Proteins
+AT1G32470, Single hybrid motif superfamily protein ,clp1s,-0.455058416,0.724664498,FALSE,Soluble Proteins
+AT2G35120, Single hybrid motif superfamily protein ,clp1p,-0.393516069,0.26399791,FALSE,Membrane Proteins
+AT2G35120, Single hybrid motif superfamily protein ,clp1s,-0.387815111,0.049939905,FALSE,Soluble Proteins
+AT4G27585, SPFH/Band 7/PHB domain-containing membrane-associated protein family ,clp1p,-1.031876027,0.483538046,FALSE,Membrane Proteins
+AT4G27585, SPFH/Band 7/PHB domain-containing membrane-associated protein family ,clp1s,0.008630473,0.877359144,FALSE,Soluble Proteins
+AT5G54100, SPFH/Band 7/PHB domain-containing membrane-associated protein family ,clp1p,-0.411188108,0.716624214,FALSE,Membrane Proteins
+AT5G54100, SPFH/Band 7/PHB domain-containing membrane-associated protein family ,clp1s,-0.295642892,0.779520029,FALSE,Soluble Proteins
+AT5G42890, sterol carrier protein 2 ,clp1p,-1.037684504,0.635083808,FALSE,Membrane Proteins
+AT5G42890, sterol carrier protein 2 ,clp1s,0.517705441,0.787939429,FALSE,Soluble Proteins
+AT2G31670, Stress responsive alpha-beta barrel domain protein ,clp1p,-0.343482316,0.805250186,FALSE,Membrane Proteins
+AT2G31670, Stress responsive alpha-beta barrel domain protein ,clp1s,-0.230653862,0.817356243,FALSE,Soluble Proteins
+AT4G08390, stromal ascorbate peroxidase ,clp1p,-0.333293107,0.546472335,FALSE,Membrane Proteins
+AT4G08390, stromal ascorbate peroxidase ,clp1s,-0.227887727,0.51706538,FALSE,Soluble Proteins
+AT2G33585, subtilisin-like protease ,clp1p,-0.611147745,0.666842315,FALSE,Membrane Proteins
+AT2G33585, subtilisin-like protease ,clp1s,-0.085788449,0.840670169,FALSE,Soluble Proteins
+AT5G66760, succinate dehydrogenase 1-1 ,clp1p,-0.311111708,0.399510936,FALSE,Membrane Proteins
+AT5G66760, succinate dehydrogenase 1-1 ,clp1s,-0.212765944,0.434414234,FALSE,Soluble Proteins
+AT3G27380, succinate dehydrogenase 2-1 ,clp1p,0.423926533,0.513470167,FALSE,Membrane Proteins
+AT3G27380, succinate dehydrogenase 2-1 ,clp1s,-0.220438326,0.74959022,FALSE,Soluble Proteins
+AT5G40650, succinate dehydrogenase 2-2 ,clp1p,0.001267295,0.843980908,FALSE,Membrane Proteins
+AT5G40650, succinate dehydrogenase 2-2 ,clp1s,-0.035603667,0.871045153,FALSE,Soluble Proteins
+AT5G09600, succinate dehydrogenase 3-1 ,clp1p,-0.191642847,0.829124837,FALSE,Membrane Proteins
+AT5G09600, succinate dehydrogenase 3-1 ,clp1s,-0.487515937,0.739282139,FALSE,Soluble Proteins
+AT1G47420, succinate dehydrogenase 5 ,clp1p,-0.197657757,0.802167687,FALSE,Membrane Proteins
+AT1G47420, succinate dehydrogenase 5 ,clp1s,-0.144168168,0.737242795,FALSE,Soluble Proteins
+AT5G67490, succinate dehydrogenase assembly factor ,clp1p,0.398904759,0.831718932,FALSE,Membrane Proteins
+AT5G67490, succinate dehydrogenase assembly factor ,clp1s,0.742430706,0.68829697,FALSE,Soluble Proteins
+AT5G51040, succinate dehydrogenase assembly factor ,clp1p,-0.201912182,0.859883012,FALSE,Membrane Proteins
+AT5G51040, succinate dehydrogenase assembly factor ,clp1s,-0.59166717,0.693764848,FALSE,Soluble Proteins
+AT1G08480, succinate dehydrogenase subunit ,clp1p,-0.495379695,0.607945403,FALSE,Membrane Proteins
+AT1G08480, succinate dehydrogenase subunit ,clp1s,0.030446375,0.841240165,FALSE,Soluble Proteins
+AT3G47833, succinate dehydrogenase subunit ,clp1p,-0.185410644,0.87068868,FALSE,Membrane Proteins
+AT3G47833, succinate dehydrogenase subunit ,clp1s,-2.334204466,0.302498427,FALSE,Soluble Proteins
+AT5G62575, succinate dehydrogenase subunit ,clp1p,-0.315443081,0.852208011,FALSE,Membrane Proteins
+AT5G62575, succinate dehydrogenase subunit ,clp1s,-0.623151309,0.695251645,FALSE,Soluble Proteins
+AT5G08300, Succinyl-CoA ligase,clp1p,-0.247251492,0.548205874,FALSE,Membrane Proteins
+AT5G08300, Succinyl-CoA ligase,clp1s,-0.192829911,0.539909492,FALSE,Soluble Proteins
+AT5G23250, Succinyl-CoA ligase,clp1p,-0.384386659,0.858184066,FALSE,Membrane Proteins
+AT5G23250, Succinyl-CoA ligase,clp1s,0.339775756,0.848205192,FALSE,Soluble Proteins
+AT3G27570, Sucrase/ferredoxin-like family protein ,clp1p,-0.238913479,0.825047923,FALSE,Membrane Proteins
+AT3G27570, Sucrase/ferredoxin-like family protein ,clp1s,-0.263924694,0.825206303,FALSE,Soluble Proteins
+AT4G22220, SufE/NifU family protein ,clp1p,0.232583037,0.769617495,FALSE,Membrane Proteins
+AT4G22220, SufE/NifU family protein ,clp1s,-0.040245345,0.858459091,FALSE,Soluble Proteins
+AT3G01910, sulfite oxidase ,clp1p,-0.966147185,0.625007072,FALSE,Membrane Proteins
+AT3G01910, sulfite oxidase ,clp1s,-0.075555285,0.848279541,FALSE,Soluble Proteins
+AT3G17910, Surfeit locus 1 cytochrome c oxidase biogenesis protein ,clp1p,0.375092729,0.766370442,FALSE,Membrane Proteins
+AT3G17910, Surfeit locus 1 cytochrome c oxidase biogenesis protein ,clp1s,-0.103480528,0.851664227,FALSE,Soluble Proteins
+AT5G58070, temperature-induced lipocalin ,clp1p,-0.049124418,0.855864024,FALSE,Membrane Proteins
+AT5G58070, temperature-induced lipocalin ,clp1s,0.2767482,0.772662932,FALSE,Soluble Proteins
+AT1G26460, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,0.553383019,0.066750553,FALSE,Membrane Proteins
+AT1G26460, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.213037562,0.47239393,FALSE,Soluble Proteins
+AT1G55890, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,0.912713491,0.476460945,FALSE,Membrane Proteins
+AT1G55890, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.743104008,0.420643362,FALSE,Soluble Proteins
+AT1G60770, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,-0.124593923,0.836042219,FALSE,Membrane Proteins
+AT1G60770, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.980328561,0.256006402,FALSE,Soluble Proteins
+AT2G15690, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,0.828340254,0.665522232,FALSE,Membrane Proteins
+AT2G15690, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.286047523,0.702418017,FALSE,Soluble Proteins
+AT2G31240, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,1.079706474,0.273449712,FALSE,Membrane Proteins
+AT2G31240, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,-0.003774859,0.833074545,FALSE,Soluble Proteins
+AT2G37230, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,-0.081616674,0.850824782,FALSE,Membrane Proteins
+AT2G37230, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.482820705,0.212954245,FALSE,Soluble Proteins
+AT3G02650,TPR-like,clp1p,0.793797629,0.055871976,FALSE,Membrane Proteins
+AT3G02650,TPR-like,clp1s,0.798274867,9.47E-05,TRUE,Soluble Proteins
+AT3G13150, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,-0.015367627,0.80749948,FALSE,Membrane Proteins
+AT3G13150, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.154024296,0.816817131,FALSE,Soluble Proteins
+AT3G13160, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,-0.019647726,0.869680349,FALSE,Membrane Proteins
+AT3G13160, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.5618808,0.604173577,FALSE,Soluble Proteins
+AT3G15590, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,0.510439248,0.660943384,FALSE,Membrane Proteins
+AT3G15590, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.301170309,0.800713281,FALSE,Soluble Proteins
+AT4G36680,TPR-like,clp1p,0.192843211,0.534840435,FALSE,Membrane Proteins
+AT4G36680,TPR-like,clp1s,0.549844983,0.013330829,TRUE,Soluble Proteins
+AT5G09450, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1p,0.677397352,0.7745536,FALSE,Membrane Proteins
+AT5G09450, Tetratricopeptide repeat (TPR)-like superfamily protein ,clp1s,0.053573404,0.856417143,FALSE,Soluble Proteins
+AT1G24180,IAA-CONJUGATE-RESISTANT 4,clp1p,-0.229341905,0.539121617,FALSE,Membrane Proteins
+AT1G24180,IAA-CONJUGATE-RESISTANT 4,clp1s,-0.413342074,0.011501169,TRUE,Soluble Proteins
+AT1G48320, Thioesterase superfamily protein ,clp1p,0.381032462,0.833816595,FALSE,Membrane Proteins
+AT1G48320, Thioesterase superfamily protein ,clp1s,-0.173851612,0.731282683,FALSE,Soluble Proteins
+AT2G35010, thioredoxin O1 ,clp1p,-0.209761551,0.678673384,FALSE,Membrane Proteins
+AT2G35010, thioredoxin O1 ,clp1s,-0.077533513,0.810115962,FALSE,Soluble Proteins
+AT2G20270, Thioredoxin superfamily protein ,clp1p,-0.362608592,0.738172874,FALSE,Membrane Proteins
+AT2G20270, Thioredoxin superfamily protein ,clp1s,-0.344611392,0.613772255,FALSE,Soluble Proteins
+AT3G26060, Thioredoxin superfamily protein ,clp1p,-0.647789909,0.586726499,FALSE,Membrane Proteins
+AT3G26060, Thioredoxin superfamily protein ,clp1s,0.194351256,0.807475713,FALSE,Soluble Proteins
+AT3G52960, Thioredoxin superfamily protein ,clp1p,-0.380254216,0.806547041,FALSE,Membrane Proteins
+AT3G52960, Thioredoxin superfamily protein ,clp1s,-0.280906228,0.695518875,FALSE,Soluble Proteins
+AT3G46560, Tim10/DDP family zinc finger protein ,clp1p,-1.364879853,0.573167273,FALSE,Membrane Proteins
+AT3G46560, Tim10/DDP family zinc finger protein ,clp1s,-0.812900653,0.686218108,FALSE,Soluble Proteins
+AT2G29530, Tim10/DDP family zinc finger protein ,clp1p,-0.147804276,0.868191264,FALSE,Membrane Proteins
+AT2G29530, Tim10/DDP family zinc finger protein ,clp1s,-0.29943973,0.829503278,FALSE,Soluble Proteins
+AT3G26520, tonoplast intrinsic protein 2 ,clp1p,-0.669447232,0.715693317,FALSE,Membrane Proteins
+AT3G26520, tonoplast intrinsic protein 2 ,clp1s,-1.159695647,0.412529175,FALSE,Soluble Proteins
+AT1G58270, TRAF-like family protein ,clp1p,-0.150471124,0.844609602,FALSE,Membrane Proteins
+AT1G58270, TRAF-like family protein ,clp1s,-0.164478027,0.754640757,FALSE,Soluble Proteins
+AT5G26260, TRAF-like family protein ,clp1p,-0.26295664,0.83113843,FALSE,Membrane Proteins
+AT5G26260, TRAF-like family protein ,clp1s,-1.108431967,0.448054872,FALSE,Soluble Proteins
+AT5G26280, TRAF-like family protein ,clp1p,-1.752530587,0.241153378,FALSE,Membrane Proteins
+AT5G26280, TRAF-like family protein ,clp1s,-1.017006414,0.430755297,FALSE,Soluble Proteins
+AT1G29810, Transcriptional coactivator/pterin dehydratase ,clp1p,-0.163099157,0.692510618,FALSE,Membrane Proteins
+AT1G29810, Transcriptional coactivator/pterin dehydratase ,clp1s,0.21161279,0.790075078,FALSE,Soluble Proteins
+AT2G45290, Transketolase ,clp1p,-1.119570007,0.205715415,FALSE,Membrane Proteins
+AT2G45290, Transketolase ,clp1s,-0.322421626,0.721474501,FALSE,Soluble Proteins
+AT3G60750, Transketolase ,clp1p,-0.62925732,0.747673111,FALSE,Membrane Proteins
+AT3G60750, Transketolase ,clp1s,0.635326342,0.509961083,FALSE,Soluble Proteins
+AT5G50850, Transketolase family protein ,clp1p,-0.08886142,0.82389762,FALSE,Membrane Proteins
+AT5G50850, Transketolase family protein ,clp1s,-0.264986189,0.236148473,FALSE,Soluble Proteins
+AT2G34590, Transketolase family protein ,clp1p,-1.303750575,0.255649708,FALSE,Membrane Proteins
+AT2G34590, Transketolase family protein ,clp1s,-0.438299442,0.69323848,FALSE,Soluble Proteins
+AT3G18760, Translation elongation factor EF1B/ribosomal protein S6 family protein ,clp1p,-0.002249526,0.87417454,FALSE,Membrane Proteins
+AT3G18760, Translation elongation factor EF1B/ribosomal protein S6 family protein ,clp1s,0.420807246,0.536162826,FALSE,Soluble Proteins
+AT2G45030,EFG/EF2,clp1p,2.166443371,0.014617291,TRUE,Membrane Proteins
+AT2G45030,EFG/EF2,clp1s,3.866415369,1.40E-13,TRUE,Soluble Proteins
+AT4G11120, translation elongation factor Ts (EF-Ts) ,clp1p,0.566368656,0.072787288,FALSE,Membrane Proteins
+AT4G11120, translation elongation factor Ts (EF-Ts) ,clp1s,0.339441387,0.280031382,FALSE,Soluble Proteins
+AT1G34360, translation initiation factor 3 (IF-3) family protein ,clp1p,1.37377924,0.377069797,FALSE,Membrane Proteins
+AT1G34360, translation initiation factor 3 (IF-3) family protein ,clp1s,0.937493697,0.323371153,FALSE,Soluble Proteins
+AT2G37410, translocase inner membrane subunit 17-2 ,clp1p,-0.290108533,0.853913772,FALSE,Membrane Proteins
+AT2G37410, translocase inner membrane subunit 17-2 ,clp1s,1.070528477,0.464226578,FALSE,Soluble Proteins
+AT1G72750, translocase inner membrane subunit 23-2 ,clp1p,-0.411314706,0.772505494,FALSE,Membrane Proteins
+AT1G72750, translocase inner membrane subunit 23-2 ,clp1s,1.283312539,0.163608668,FALSE,Soluble Proteins
+AT2G36070, translocase inner membrane subunit 44-2 ,clp1p,-0.463856968,0.683500369,FALSE,Membrane Proteins
+AT2G36070, translocase inner membrane subunit 44-2 ,clp1s,0.067557473,0.867234112,FALSE,Soluble Proteins
+AT5G50810, translocase inner membrane subunit 8 ,clp1p,-1.018391919,0.482788314,FALSE,Membrane Proteins
+AT5G50810, translocase inner membrane subunit 8 ,clp1s,-0.063067952,0.866712445,FALSE,Soluble Proteins
+AT5G40930, translocase of outer membrane 20-4 ,clp1p,0.052793052,0.867261243,FALSE,Membrane Proteins
+AT5G40930, translocase of outer membrane 20-4 ,clp1s,-0.134637888,0.833510795,FALSE,Soluble Proteins
+AT3G27080, translocase of outer membrane 20 kDa subunit 3 ,clp1p,0.012218169,0.876990844,FALSE,Membrane Proteins
+AT3G27080, translocase of outer membrane 20 kDa subunit 3 ,clp1s,-0.920948446,0.490704165,FALSE,Soluble Proteins
+AT5G43970, translocase of outer membrane 22-V ,clp1p,-1.405986482,0.135785874,FALSE,Membrane Proteins
+AT5G43970, translocase of outer membrane 22-V ,clp1s,0.009569965,0.838921628,FALSE,Soluble Proteins
+AT1G61570, translocase of the inner mitochondrial membrane 13 ,clp1p,-0.634412744,0.051707527,FALSE,Membrane Proteins
+AT1G61570, translocase of the inner mitochondrial membrane 13 ,clp1s,0.006301287,0.871474167,FALSE,Soluble Proteins
+AT3G20000, translocase of the outer mitochondrial membrane 40 ,clp1p,-0.281163404,0.746473759,FALSE,Membrane Proteins
+AT3G20000, translocase of the outer mitochondrial membrane 40 ,clp1s,-0.364545107,0.487341303,FALSE,Soluble Proteins
+AT1G27390, translocase outer membrane 20-2 ,clp1p,-0.222897405,0.858220924,FALSE,Membrane Proteins
+AT1G27390, translocase outer membrane 20-2 ,clp1s,0.009399374,0.870964001,FALSE,Soluble Proteins
+AT3G47630, translocator assembly/maintenance protein ,clp1p,-0.090054468,0.869975909,FALSE,Membrane Proteins
+AT3G47630, translocator assembly/maintenance protein ,clp1s,0.355034789,0.738639506,FALSE,Soluble Proteins
+AT1G06950, translocon at the inner envelope membrane of chloroplasts 110 ,clp1p,-0.00439562,0.853425287,FALSE,Membrane Proteins
+AT1G06950, translocon at the inner envelope membrane of chloroplasts 110 ,clp1s,-0.28535884,0.735301909,FALSE,Soluble Proteins
+AT1G10950, transmembrane nine 1 ,clp1p,-0.477866239,0.826746932,FALSE,Membrane Proteins
+AT1G10950, transmembrane nine 1 ,clp1s,-0.229058964,0.802983266,FALSE,Soluble Proteins
+AT1G28540, transmembrane protein ,clp1p,0.028474562,0.830909868,FALSE,Membrane Proteins
+AT1G28540, transmembrane protein ,clp1s,0.118139101,0.841673251,FALSE,Soluble Proteins
+AT2G35790, transmembrane protein ,clp1p,-0.400843233,0.802210778,FALSE,Membrane Proteins
+AT2G35790, transmembrane protein ,clp1s,0.593207255,0.706354657,FALSE,Soluble Proteins
+AT2G40765, transmembrane protein ,clp1p,-0.186559612,0.77921913,FALSE,Membrane Proteins
+AT2G40765, transmembrane protein ,clp1s,-0.175959715,0.821660195,FALSE,Soluble Proteins
+AT3G12650, transmembrane protein ,clp1p,0.112119875,0.808737039,FALSE,Membrane Proteins
+AT3G12650, transmembrane protein ,clp1s,0.049766419,0.809665903,FALSE,Soluble Proteins
+AT3G23450, transmembrane protein ,clp1p,-0.268692249,0.856816467,FALSE,Membrane Proteins
+AT3G23450, transmembrane protein ,clp1s,1.784413958,0.189812693,FALSE,Soluble Proteins
+AT3G49720, transmembrane protein ,clp1p,-1.044195042,0.249271639,FALSE,Membrane Proteins
+AT3G49720, transmembrane protein ,clp1s,-0.139625835,0.837224927,FALSE,Soluble Proteins
+AT4G00585, transmembrane protein ,clp1p,-0.473903179,0.637898954,FALSE,Membrane Proteins
+AT4G00585, transmembrane protein ,clp1s,-0.144766433,0.833227842,FALSE,Soluble Proteins
+AT4G31830, transmembrane protein ,clp1p,-0.192290058,0.817222786,FALSE,Membrane Proteins
+AT4G31830, transmembrane protein ,clp1s,-0.508643231,0.552532608,FALSE,Soluble Proteins
+AT5G09270, transmembrane protein ,clp1p,-0.492997125,0.571818362,FALSE,Membrane Proteins
+AT5G09270, transmembrane protein ,clp1s,-0.125854937,0.765259181,FALSE,Soluble Proteins
+AT3G57280, Transmembrane proteins 14C ,clp1p,-0.757221213,0.648071438,FALSE,Membrane Proteins
+AT3G57280, Transmembrane proteins 14C ,clp1s,-0.428001636,0.700324687,FALSE,Soluble Proteins
+AT5G58220, transthyretin-like protein ,clp1p,-0.507747521,0.608301694,FALSE,Membrane Proteins
+AT5G58220, transthyretin-like protein ,clp1s,-0.17919616,0.795021551,FALSE,Soluble Proteins
+AT2G21170, triosephosphate isomerase ,clp1p,-0.419728004,0.695089174,FALSE,Membrane Proteins
+AT2G21170, triosephosphate isomerase ,clp1s,-0.368309729,0.589153079,FALSE,Soluble Proteins
+AT3G55440, triosephosphate isomerase ,clp1p,-0.174027456,0.815899083,FALSE,Membrane Proteins
+AT3G55440, triosephosphate isomerase ,clp1s,-0.553668585,0.396531011,FALSE,Soluble Proteins
+AT4G33760, tRNA synthetase class II (D,clp1p,-0.10533163,0.853793681,FALSE,Membrane Proteins
+AT4G33760, tRNA synthetase class II (D,clp1s,-0.314935624,0.716767468,FALSE,Soluble Proteins
+AT1G06530, Tropomyosin-like protein ,clp1p,-1.270150851,0.40522873,FALSE,Membrane Proteins
+AT1G06530, Tropomyosin-like protein ,clp1s,-0.169245559,0.838356429,FALSE,Soluble Proteins
+AT5G38530, tryptophan synthase beta type 2 ,clp1p,-0.349763719,0.777962406,FALSE,Membrane Proteins
+AT5G38530, tryptophan synthase beta type 2 ,clp1s,-0.17102261,0.81217274,FALSE,Soluble Proteins
+AT3G02660, Tyrosyl-tRNA synthetase,clp1p,-0.09033814,0.862827278,FALSE,Membrane Proteins
+AT3G02660, Tyrosyl-tRNA synthetase,clp1s,-0.351269294,0.775817994,FALSE,Soluble Proteins
+AT5G51220, ubiquinol-cytochrome C chaperone family protein ,clp1p,-0.50040534,0.614453899,FALSE,Membrane Proteins
+AT5G51220, ubiquinol-cytochrome C chaperone family protein ,clp1s,0.680417934,0.195269156,FALSE,Soluble Proteins
+AT1G15120, Ubiquinol-cytochrome C reductase hinge protein ,clp1p,-1.339236239,0.186467733,FALSE,Membrane Proteins
+AT1G15120, Ubiquinol-cytochrome C reductase hinge protein ,clp1s,-0.247770442,0.766039373,FALSE,Soluble Proteins
+AT5G13430, Ubiquinol-cytochrome C reductase iron-sulfur subunit ,clp1p,-0.821323649,0.734849899,FALSE,Membrane Proteins
+AT5G13430, Ubiquinol-cytochrome C reductase iron-sulfur subunit ,clp1s,-0.209263468,0.837575847,FALSE,Soluble Proteins
+AT3G52730, ubiquinol-cytochrome C reductase UQCRX/QCR9-like family protein ,clp1p,-1.718713056,0.25888054,FALSE,Membrane Proteins
+AT3G52730, ubiquinol-cytochrome C reductase UQCRX/QCR9-like family protein ,clp1s,-0.070726867,0.870081317,FALSE,Soluble Proteins
+AT1G19140, ubiquinone biosynthesis COQ9-like protein ,clp1p,-0.015747516,0.876404934,FALSE,Membrane Proteins
+AT1G19140, ubiquinone biosynthesis COQ9-like protein ,clp1s,0.187945636,0.708900346,FALSE,Soluble Proteins
+AT3G52590, ubiquitin extension protein 1 ,clp1p,0.018399027,0.877042626,FALSE,Membrane Proteins
+AT3G52590, ubiquitin extension protein 1 ,clp1s,-1.028469851,0.496883099,FALSE,Soluble Proteins
+AT4G22310, Uncharacterized protein family (UPF0041) ,clp1p,0.015119323,0.828067142,FALSE,Membrane Proteins
+AT4G22310, Uncharacterized protein family (UPF0041) ,clp1s,-0.158331148,0.822753768,FALSE,Soluble Proteins
+AT5G20090, Uncharacterized protein family (UPF0041) ,clp1p,-0.132463734,0.846398775,FALSE,Membrane Proteins
+AT5G20090, Uncharacterized protein family (UPF0041) ,clp1s,-0.075146008,0.855746945,FALSE,Soluble Proteins
+AT2G26230, uricase / urate oxidase / nodulin 35 ,clp1p,-0.135019567,0.786269487,FALSE,Membrane Proteins
+AT2G26230, uricase / urate oxidase / nodulin 35 ,clp1s,-0.169793504,0.819613003,FALSE,Soluble Proteins
+AT1G78900, vacuolar ATP synthase subunit A ,clp1p,-0.604271754,0.486181009,FALSE,Membrane Proteins
+AT1G78900, vacuolar ATP synthase subunit A ,clp1s,-0.403622808,0.505664329,FALSE,Soluble Proteins
+AT1G12840, vacuolar ATP synthase subunit C (VATC) / V-ATPase C subunit / vacuolar proton pump C subunit (DET3) ,clp1p,-0.272625074,0.817903645,FALSE,Membrane Proteins
+AT1G12840, vacuolar ATP synthase subunit C (VATC) / V-ATPase C subunit / vacuolar proton pump C subunit (DET3) ,clp1s,-0.067871908,0.856968992,FALSE,Soluble Proteins
+AT4G11150, vacuolar ATP synthase subunit E1 ,clp1p,-0.082798051,0.855141638,FALSE,Membrane Proteins
+AT4G11150, vacuolar ATP synthase subunit E1 ,clp1s,-0.441683309,0.662382862,FALSE,Soluble Proteins
+AT3G01390, vacuolar membrane ATPase 10 ,clp1p,-0.027962658,0.845201009,FALSE,Membrane Proteins
+AT3G01390, vacuolar membrane ATPase 10 ,clp1s,-0.384906708,0.707824546,FALSE,Soluble Proteins
+AT3G01280, voltage dependent anion channel 1 ,clp1p,-1.837282153,0.356192862,FALSE,Membrane Proteins
+AT3G01280, voltage dependent anion channel 1 ,clp1s,-0.387825555,0.813166417,FALSE,Soluble Proteins
+AT5G67500, voltage dependent anion channel 2 ,clp1p,-2.829623196,0.158550607,FALSE,Membrane Proteins
+AT5G67500, voltage dependent anion channel 2 ,clp1s,-0.185590479,0.858464716,FALSE,Soluble Proteins
+AT5G15090, voltage dependent anion channel 3 ,clp1p,-2.286880628,0.285610683,FALSE,Membrane Proteins
+AT5G15090, voltage dependent anion channel 3 ,clp1s,-0.098629319,0.868856872,FALSE,Soluble Proteins
+AT5G57490, voltage dependent anion channel 4 ,clp1p,-0.140507187,0.855207421,FALSE,Membrane Proteins
+AT5G57490, voltage dependent anion channel 4 ,clp1s,-0.288765809,0.757951967,FALSE,Soluble Proteins
+AT1G55160, WAS/WASL-interacting family protein ,clp1p,-0.60407858,0.494890099,FALSE,Membrane Proteins
+AT1G55160, WAS/WASL-interacting family protein ,clp1s,-0.10892844,0.828793974,FALSE,Soluble Proteins
+AT1G71260, WHIRLY 2 ,clp1p,-0.341194975,0.688205157,FALSE,Membrane Proteins
+AT1G71260, WHIRLY 2 ,clp1s,0.647924658,0.411140384,FALSE,Soluble Proteins
+AT3G54826, Zim17-type zinc finger protein ,clp1p,-0.440189102,0.76070107,FALSE,Membrane Proteins
+AT3G54826, Zim17-type zinc finger protein ,clp1s,-0.12258147,0.850342221,FALSE,Soluble Proteins
+AT1G48570, zinc finger (Ran-binding) family protein ,clp1p,0.711288005,0.514988953,FALSE,Membrane Proteins
+AT1G48570, zinc finger (Ran-binding) family protein ,clp1s,0.427034762,0.593546762,FALSE,Soluble Proteins
+AT5G65620, Zincin-like metalloproteases family protein ,clp1p,0.276062299,0.843827091,FALSE,Membrane Proteins
+AT5G65620, Zincin-like metalloproteases family protein ,clp1s,-0.528515531,0.720143381,FALSE,Soluble Proteins

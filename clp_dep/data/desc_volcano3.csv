@@ -1,0 +1,54 @@
+table_nr,ACC,desc,group
+1,AT5G23140,CLPP2,Knock Out
+2,AT1G51980,mitochondrial-processing peptidase subunit alpha,Chaperone / Protease
+3,AT3G02090,mitochondrial-processing peptidase subunit beta,Chaperone / Protease
+4,AT3G16480,mitochondrial processing peptidase alpha subunit,Chaperone / Protease
+5,AT3G19170,presequence protease 1 (PREP1),Chaperone / Protease
+6,AT4G37910,mitochondrial heat shock protein 70-1,Chaperone / Protease
+7,AT5G48030,molecular chaperone DnaJ,Chaperone / Protease
+8,AT5G53350,CLP protease regulatory subunit X,Chaperone / Protease
+9,AT5G55200,Co-chaperone GrpE family protein,Chaperone / Protease
+10,AT1G15120,Ubiquinol-cytochrome C reductase hinge protein,Energy Metabolism
+11,AT1G22450,CYTOCHROME C OXIDASE 6B (COX6B),Energy Metabolism
+12,AT2G26080,glycine decarboxylase P-protein 2,Energy Metabolism
+13,AT3G12260,Complex I Subunit B14,Energy Metabolism
+14,AT3G17240,lipoamide dehydrogenase 2,Energy Metabolism
+15,AT4G02580,Complex I 24 kDa subunit,Energy Metabolism
+16,AT4G29480,Mitochondrial ATP synthase subunit G protein,Energy Metabolism
+17,AT5G08530,Complex I 51 kDa subunit,Energy Metabolism
+18,AT5G08690,ATP synthase alpha/beta family protein,Energy Metabolism
+19,AT5G37510,Complex I 75 kDa subunit,Energy Metabolism
+20,AT5G40660,ATP synthase mitochondrial F1 complex assembly factor 2,Energy Metabolism
+21,AT5G47890,Complex I B8 subunit,Energy Metabolism
+22,AT1G10270,pentatricopeptide (PPR) repeat-containing protein,Mitochondrial Protein Synthesis
+23,AT1G19520,pentatricopeptide (PPR) repeat-containing protein,Mitochondrial Protein Synthesis
+24,AT1G26460,Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11),Mitochondrial Protein Synthesis
+25,AT1G31817,Ribosomal L18p/L5e family protein,Mitochondrial Protein Synthesis
+26,AT1G61870,pentatricopeptide repeat 336,Mitochondrial Protein Synthesis
+27,AT1G64880,small subunit ribosomal protein S5,Mitochondrial Protein Synthesis
+28,AT2G31060,EMBRYO DEFECTIVE 2785 (EMB2785),Mitochondrial Protein Synthesis
+29,AT2G31240,Tetratricopeptide repeat (TPR)-like superfamily protein,Mitochondrial Protein Synthesis
+30,AT2G37250,adenosine kinase,Mitochondrial Protein Synthesis
+31,AT2G45030,elongation factor G,Mitochondrial Protein Synthesis
+32,AT3G02650,Tetratricopeptide repeat (TPR)-like superfamily protein,Mitochondrial Protein Synthesis
+33,AT3G15000,RNA-EDITING FACTOR INTERACTING PROTEIN 1,Mitochondrial Protein Synthesis
+34,AT3G22310,putative mitochondrial RNA helicase 1,Mitochondrial Protein Synthesis
+35,AT3G22330,putative mitochondrial RNA helicase 2,Mitochondrial Protein Synthesis
+36,AT3G49240,Pentatricopeptide repeat (PPR) superfamily protein,Mitochondrial Protein Synthesis
+37,AT4G09730,RNA helicase 39,Mitochondrial Protein Synthesis
+38,AT4G11010,nucleoside diphosphate kinase 3,Mitochondrial Protein Synthesis
+39,AT4G11120,translation elongation factor Ts (EF-Ts),Mitochondrial Protein Synthesis
+40,AT4G30930,Ribosomal protein L21,Mitochondrial Protein Synthesis
+41,AT5G60960,Pentatricopeptide repeat (PPR) superfamily protein,Mitochondrial Protein Synthesis
+42,AT5G62270,ribosomal protein L20,Mitochondrial Protein Synthesis
+43,AT5G63400,adenylate kinase 1,Mitochondrial Protein Synthesis
+44,AT5G64670,large subunit ribosomal protein L15,Mitochondrial Protein Synthesis
+45,AT1G61570,TRANSLOCASE OF THE INNER MITOCHONDRIAL MEMBRANE 13 (TIM13),Ungrouped
+46,AT1G72170,MICOS complex subunit,Ungrouped
+47,AT2G43360,biotin synthase,Ungrouped
+48,AT3G22200,4-aminobutyrate---pyruvate transaminase,Ungrouped
+49,AT4G15640,adenylyl cyclase,Ungrouped
+50,AT4G21020,Late embryogenesis abundant protein (LEA) family protein,Ungrouped
+51,AT5G19760,dicarboxylate/tricarboxylate carrier,Ungrouped
+52,AT5G20080,NADH-cytochrome b5 reductase,Ungrouped
+53,AT5G67500,voltage dependent anion channel 2,Ungrouped

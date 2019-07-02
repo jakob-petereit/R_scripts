@@ -1,0 +1,107 @@
+"","fraction","group","table_nr","AGI","desc","clp1 ratio","clp2 ratio","clp1 p.adj","clp2 p.adj"
+"1","membrane","Chaperone / Protease",2,"AT1G51980","mitochondrial-processing peptidase subunit alpha",0.72,0.9,0.05,0.01
+"2","membrane","Chaperone / Protease",3,"AT3G02090","mitochondrial-processing peptidase subunit beta",0.52,0.55,0.05,0.04
+"3","membrane","Chaperone / Protease",4,"AT3G16480","mitochondrial processing peptidase alpha subunit",0.92,0.78,0,0
+"4","membrane","Chaperone / Protease",5,"AT3G19170","presequence protease 1 (PREP1)",0.8,0.85,0,0
+"5","membrane","Chaperone / Protease",6,"AT4G37910","mitochondrial heat shock protein 70-1",0.56,0.67,0,0
+"6","membrane","Chaperone / Protease",7,"AT5G48030","molecular chaperone DnaJ",1.74,1.71,0,0
+"7","membrane","Chaperone / Protease",8,"AT5G53350","CLP protease regulatory subunit X",0.84,0.79,0,0
+"8","membrane","Chaperone / Protease",9,"AT5G55200","Co-chaperone GrpE family protein",0.66,0.71,0,0
+"9","membrane","Energy Metabolism",10,"AT1G15120","Ubiquinol-cytochrome C reductase hinge protein",-1.63,-1.09,0,0.03
+"10","membrane","Energy Metabolism",11,"AT1G22450","CYTOCHROME C OXIDASE 6B (COX6B)",-1.06,-1.35,0.03,0
+"11","membrane","Energy Metabolism",12,"AT2G26080","glycine decarboxylase P-protein 2",0.6,0.5,0,0.02
+"12","membrane","Energy Metabolism",13,"AT3G12260","Complex I Subunit B14",4.01,4.21,0,0
+"13","membrane","Energy Metabolism",14,"AT3G17240","lipoamide dehydrogenase 2",-0.28,-0.24,0.26,0.28
+"14","membrane","Energy Metabolism",15,"AT4G02580","Complex I 24 kDa subunit",1.91,1.92,0,0
+"15","membrane","Energy Metabolism",16,"AT4G29480","Mitochondrial ATP synthase subunit G protein",-1.46,-1.73,0.05,0.02
+"16","membrane","Energy Metabolism",17,"AT5G08530","Complex I 51 kDa subunit",3.64,3.89,0,0
+"17","membrane","Energy Metabolism",18,"AT5G08690","ATP synthase alpha/beta family protein",1.39,1.52,0,0
+"18","membrane","Energy Metabolism",19,"AT5G37510","Complex I 75 kDa subunit",2.8,2.96,0,0
+"19","membrane","Energy Metabolism",20,"AT5G40660","ATP synthase mitochondrial F1 complex assembly factor 2",1.34,1.41,0.01,0.01
+"20","membrane","Energy Metabolism",21,"AT5G47890","Complex I B8 subunit",3,2.08,0,0.05
+"21","membrane","Knock Out",1,"AT5G23140","CLPP2",-5.3,-5.81,0,0
+"22","membrane","Mitochondrial Protein Synthesis",22,"AT1G10270","pentatricopeptide (PPR) repeat-containing protein",1.39,1.41,0,0
+"23","membrane","Mitochondrial Protein Synthesis",23,"AT1G19520","pentatricopeptide (PPR) repeat-containing protein",0.78,0.58,0,0.02
+"24","membrane","Mitochondrial Protein Synthesis",24,"AT1G26460","Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11)",0.49,0.58,0.01,0
+"25","membrane","Mitochondrial Protein Synthesis",25,"AT1G31817","Ribosomal L18p/L5e family protein",1.15,0.91,0.01,0.05
+"26","membrane","Mitochondrial Protein Synthesis",26,"AT1G61870","pentatricopeptide repeat 336",1.28,1.27,0,0
+"27","membrane","Mitochondrial Protein Synthesis",27,"AT1G64880","small subunit ribosomal protein S5",1.16,0.97,0,0
+"28","membrane","Mitochondrial Protein Synthesis",28,"AT2G31060","EMBRYO DEFECTIVE 2785 (EMB2785)",0.48,0.42,0.03,0.07
+"29","membrane","Mitochondrial Protein Synthesis",29,"AT2G31240","Tetratricopeptide repeat (TPR)-like superfamily protein",0.88,0.76,0.02,0.05
+"30","membrane","Mitochondrial Protein Synthesis",30,"AT2G37250","adenosine kinase",2.38,2.38,0,0
+"31","membrane","Mitochondrial Protein Synthesis",31,"AT2G45030","elongation factor G",2,2.3,0,0
+"32","membrane","Mitochondrial Protein Synthesis",32,"AT3G02650","Tetratricopeptide repeat (TPR)-like superfamily protein",0.87,0.68,0,0
+"33","membrane","Mitochondrial Protein Synthesis",33,"AT3G15000","RNA-EDITING FACTOR INTERACTING PROTEIN 1",0.59,0.73,0.01,0
+"34","membrane","Mitochondrial Protein Synthesis",34,"AT3G22310","putative mitochondrial RNA helicase 1",2.34,1.93,0,0
+"35","membrane","Mitochondrial Protein Synthesis",35,"AT3G22330","putative mitochondrial RNA helicase 2",1.58,1.45,0,0.01
+"36","membrane","Mitochondrial Protein Synthesis",36,"AT3G49240","Pentatricopeptide repeat (PPR) superfamily protein",0.7,0.75,0.04,0.03
+"37","membrane","Mitochondrial Protein Synthesis",37,"AT4G09730","RNA helicase 39",0.62,0.76,0.17,0.07
+"38","membrane","Mitochondrial Protein Synthesis",38,"AT4G11010","nucleoside diphosphate kinase 3",-0.71,-0.83,0.01,0
+"39","membrane","Mitochondrial Protein Synthesis",39,"AT4G11120","translation elongation factor Ts (EF-Ts)",0.55,0.55,0,0.01
+"40","membrane","Mitochondrial Protein Synthesis",40,"AT4G30930","Ribosomal protein L21",1.44,1.43,0.05,0.05
+"41","membrane","Mitochondrial Protein Synthesis",41,"AT5G60960","Pentatricopeptide repeat (PPR) superfamily protein",1.28,1.11,0,0.01
+"42","membrane","Mitochondrial Protein Synthesis",42,"AT5G62270","ribosomal protein L20",0.66,0.45,0,0.05
+"43","membrane","Mitochondrial Protein Synthesis",43,"AT5G63400","adenylate kinase 1",-0.72,-0.6,0,0.01
+"44","membrane","Mitochondrial Protein Synthesis",44,"AT5G64670","large subunit ribosomal protein L15",0.42,0.98,0.56,0.11
+"45","membrane","Ungrouped",45,"AT1G61570","TRANSLOCASE OF THE INNER MITOCHONDRIAL MEMBRANE 13 (TIM13)",-0.6,-0.7,0,0
+"46","membrane","Ungrouped",46,"AT1G72170","MICOS complex subunit",-0.88,-0.8,0.03,0.05
+"47","membrane","Ungrouped",47,"AT2G43360","biotin synthase",2.2,2.03,0,0
+"48","membrane","Ungrouped",48,"AT3G22200","4-aminobutyrate---pyruvate transaminase",-0.46,-0.65,0.04,0
+"49","membrane","Ungrouped",49,"AT4G15640","adenylyl cyclase",2.55,2.23,0,0
+"50","membrane","Ungrouped",50,"AT4G21020","Late embryogenesis abundant protein (LEA) family protein",1.89,1.76,0,0
+"51","membrane","Ungrouped",51,"AT5G19760","dicarboxylate/tricarboxylate carrier",-2.93,-2.76,0.02,0.03
+"52","membrane","Ungrouped",52,"AT5G20080","NADH-cytochrome b5 reductase",-0.7,-0.72,0,0
+"53","membrane","Ungrouped",53,"AT5G67500","voltage dependent anion channel 2",-2.58,-2.97,0.03,0.01
+"54","soluble","Chaperone / Protease",2,"AT1G51980","mitochondrial-processing peptidase subunit alpha",0.15,0.22,0.77,0.89
+"55","soluble","Chaperone / Protease",3,"AT3G02090","mitochondrial-processing peptidase subunit beta",0.13,0.11,0.74,0.91
+"56","soluble","Chaperone / Protease",4,"AT3G16480","mitochondrial processing peptidase alpha subunit",0.19,0.07,0.48,0.92
+"57","soluble","Chaperone / Protease",5,"AT3G19170","presequence protease 1 (PREP1)",1.1,0.99,0,0
+"58","soluble","Chaperone / Protease",6,"AT4G37910","mitochondrial heat shock protein 70-1",0.55,0.57,0,0.01
+"59","soluble","Chaperone / Protease",7,"AT5G48030","molecular chaperone DnaJ",1.29,1.37,0,0.08
+"60","soluble","Chaperone / Protease",8,"AT5G53350","CLP protease regulatory subunit X",0.72,0.89,0,0
+"61","soluble","Chaperone / Protease",9,"AT5G55200","Co-chaperone GrpE family protein",0.55,0.59,0.01,0.16
+"62","soluble","Energy Metabolism",10,"AT1G15120","Ubiquinol-cytochrome C reductase hinge protein",-0.25,-0.24,0.73,0.9
+"63","soluble","Energy Metabolism",11,"AT1G22450","CYTOCHROME C OXIDASE 6B (COX6B)",-0.32,0.1,0.66,0.93
+"64","soluble","Energy Metabolism",12,"AT2G26080","glycine decarboxylase P-protein 2",0.56,0.43,0,0.25
+"65","soluble","Energy Metabolism",13,"AT3G12260","Complex I Subunit B14",0.42,0.36,0.64,0.89
+"66","soluble","Energy Metabolism",14,"AT3G17240","lipoamide dehydrogenase 2",-0.43,-0.75,0.03,0.01
+"67","soluble","Energy Metabolism",15,"AT4G02580","Complex I 24 kDa subunit",0.69,0.72,0.01,0.2
+"68","soluble","Energy Metabolism",16,"AT4G29480","Mitochondrial ATP synthase subunit G protein",-0.11,-0.05,0.84,0.94
+"69","soluble","Energy Metabolism",17,"AT5G08530","Complex I 51 kDa subunit",0.63,0.59,0.63,0.88
+"70","soluble","Energy Metabolism",18,"AT5G08690","ATP synthase alpha/beta family protein",0.43,0.36,0.11,0.71
+"71","soluble","Energy Metabolism",19,"AT5G37510","Complex I 75 kDa subunit",0.35,0.35,0.72,0.9
+"72","soluble","Energy Metabolism",20,"AT5G40660","ATP synthase mitochondrial F1 complex assembly factor 2",-0.94,-0.75,0.06,0.65
+"73","soluble","Energy Metabolism",21,"AT5G47890","Complex I B8 subunit",1.44,1.3,0.16,0.71
+"74","soluble","Knock Out",1,"AT5G23140","CLPP2",-4.89,-4.49,0,0
+"75","soluble","Mitochondrial Protein Synthesis",22,"AT1G10270","pentatricopeptide (PPR) repeat-containing protein",2.1,2.02,0,0
+"76","soluble","Mitochondrial Protein Synthesis",23,"AT1G19520","pentatricopeptide (PPR) repeat-containing protein",0.62,0.72,0,0.04
+"77","soluble","Mitochondrial Protein Synthesis",24,"AT1G26460","Tetratricopeptide repeat (TPR)-like superfamily protein;(source:Araport11)",0.16,0.28,0.58,0.66
+"78","soluble","Mitochondrial Protein Synthesis",25,"AT1G31817","Ribosomal L18p/L5e family protein",0.61,0.55,0.17,0.72
+"79","soluble","Mitochondrial Protein Synthesis",26,"AT1G61870","pentatricopeptide repeat 336",0.27,0.02,0.61,0.94
+"80","soluble","Mitochondrial Protein Synthesis",27,"AT1G64880","small subunit ribosomal protein S5",1.01,1.22,0,0
+"81","soluble","Mitochondrial Protein Synthesis",28,"AT2G31060","EMBRYO DEFECTIVE 2785 (EMB2785)",0.67,0.69,0,0.02
+"82","soluble","Mitochondrial Protein Synthesis",29,"AT2G31240","Tetratricopeptide repeat (TPR)-like superfamily protein",-0.2,0.04,0.73,0.94
+"83","soluble","Mitochondrial Protein Synthesis",30,"AT2G37250","adenosine kinase",2.78,2.97,0,0
+"84","soluble","Mitochondrial Protein Synthesis",31,"AT2G45030","elongation factor G",3.93,3.84,0,0
+"85","soluble","Mitochondrial Protein Synthesis",32,"AT3G02650","Tetratricopeptide repeat (TPR)-like superfamily protein",0.78,0.82,0,0
+"86","soluble","Mitochondrial Protein Synthesis",33,"AT3G15000","RNA-EDITING FACTOR INTERACTING PROTEIN 1",1.05,0.92,0,0
+"87","soluble","Mitochondrial Protein Synthesis",34,"AT3G22310","putative mitochondrial RNA helicase 1",3.33,3.38,0,0
+"88","soluble","Mitochondrial Protein Synthesis",35,"AT3G22330","putative mitochondrial RNA helicase 2",1.77,1.73,0,0.02
+"89","soluble","Mitochondrial Protein Synthesis",36,"AT3G49240","Pentatricopeptide repeat (PPR) superfamily protein",-0.06,0.45,0.84,0.66
+"90","soluble","Mitochondrial Protein Synthesis",37,"AT4G09730","RNA helicase 39",1.88,1.84,0,0
+"91","soluble","Mitochondrial Protein Synthesis",38,"AT4G11010","nucleoside diphosphate kinase 3",-0.06,0,0.82,0.94
+"92","soluble","Mitochondrial Protein Synthesis",39,"AT4G11120","translation elongation factor Ts (EF-Ts)",0.47,0.22,0.01,0.78
+"93","soluble","Mitochondrial Protein Synthesis",40,"AT4G30930","Ribosomal protein L21",1.32,1.47,0.04,0.24
+"94","soluble","Mitochondrial Protein Synthesis",41,"AT5G60960","Pentatricopeptide repeat (PPR) superfamily protein",1.65,1.89,0,0
+"95","soluble","Mitochondrial Protein Synthesis",42,"AT5G62270","ribosomal protein L20",0.5,0.45,0.01,0.26
+"96","soluble","Mitochondrial Protein Synthesis",43,"AT5G63400","adenylate kinase 1",-0.03,-0.02,0.84,0.94
+"97","soluble","Mitochondrial Protein Synthesis",44,"AT5G64670","large subunit ribosomal protein L15",1.64,1.71,0,0.04
+"98","soluble","Ungrouped",45,"AT1G61570","TRANSLOCASE OF THE INNER MITOCHONDRIAL MEMBRANE 13 (TIM13)",0.02,0,0.85,0.94
+"99","soluble","Ungrouped",46,"AT1G72170","MICOS complex subunit",-0.25,-0.19,0.67,0.9
+"100","soluble","Ungrouped",47,"AT2G43360","biotin synthase",1.96,1.8,0,0.06
+"101","soluble","Ungrouped",48,"AT3G22200","4-aminobutyrate---pyruvate transaminase",-0.35,-0.42,0.1,0.34
+"102","soluble","Ungrouped",49,"AT4G15640","adenylyl cyclase",2.04,0.97,0,0.73
+"103","soluble","Ungrouped",50,"AT4G21020","Late embryogenesis abundant protein (LEA) family protein",1.26,1.09,0,0.23
+"104","soluble","Ungrouped",51,"AT5G19760","dicarboxylate/tricarboxylate carrier",-0.16,-0.25,0.84,0.93
+"105","soluble","Ungrouped",52,"AT5G20080","NADH-cytochrome b5 reductase",-0.09,-0.06,0.77,0.92
+"106","soluble","Ungrouped",53,"AT5G67500","voltage dependent anion channel 2",-0.12,-0.24,0.85,0.93

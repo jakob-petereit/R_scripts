@@ -1,0 +1,92 @@
+Locus Identifier	Gene Model Name	Gene Model Description	Gene Model Type	Primary Gene Symbol	All Gene Symbols
+AT2G05914	AT2G05914.1	Potential natural antisense gene, locus overlaps with AT2G05915	antisense_long_noncoding_rna			
+AT2G07706	AT2G07706.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT1G40133	AT1G40133.1	transposable_element_gene;(source:Araport11);similar to unknown protein [Arabidopsis thaliana] (TAIR:AT4G06603.1);(source:TAIR10)	transposable_element_gene			
+AT1G40130	AT1G40130.1	transposable_element_gene;(source:Araport11);pseudogene, hypothetical protein;(source:TAIR10)	transposable_element_gene			
+AT2G07811	AT2G07811.1	pseudogene of mitochondrial protein	pseudogene			
+AT2G07726	AT2G07726.1	pseudogene of mitochondrial ribosomal protein S14;(source:Araport11)	pseudogene			
+AT4G04223	AT4G04223.1	other_RNA;(source:Araport11)	other_rna			
+AT2G07667	AT2G07667.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT2G17845	AT2G17845.1	NAD(P)-binding Rossmann-fold superfamily protein;(source:Araport11)	protein_coding			
+AT2G07708	AT2G07708.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT1G40137	AT1G40137.1	transposable_element_gene;(source:Araport11);gypsy-like retrotransposon family, has a 6.0e-165 P-value blast match to GB:AAD11615 prpol (gypsy_Ty3-element) (Zea mays);(source:TAIR10)	transposable_element_gene			
+AT1G40113	AT1G40113.1	transposable_element_gene;(source:Araport11);gypsy-like retrotransposon family, has a 2.1e-155 P-value blast match to GB:AAD19359 polyprotein (gypsy_Ty3-element) (Sorghum bicolor);(source:TAIR10)	transposable_element_gene			
+AT2G07683	AT2G07683.1	transposable_element_gene;(source:Araport11);copia-like retrotransposon family, has a 2.2e-110 P-value blast match to GB:AAA57005 Hopscotch polyprotein (Ty1_Copia-element) (Zea mays);(source:TAIR10)	transposable_element_gene			
+AT2G07715	AT2G07715.1	Nucleic acid-binding, OB-fold-like protein;(source:Araport11)	protein_coding			
+AT2G07671	AT2G07671.1	ATP synthase subunit C family protein;(source:Araport11)	protein_coding			
+AT2G07725	AT2G07725.1	Ribosomal L5P family protein;(source:Araport11)	protein_coding			
+AT1G40136	AT1G40136.1	transposable_element_gene;(source:Araport11);gypsy-like retrotransposon family, has a 2.7e-116 P-value blast match to GB:AAD19359 polyprotein (gypsy_Ty3-element) (Sorghum bicolor);(source:TAIR10)	transposable_element_gene			
+AT1G40106	AT1G40106.1	transposable_element_gene;(source:Araport11);pseudogene, hypothetical protein;(source:TAIR10)	transposable_element_gene			
+AT2G07723	AT2G07723.1	pseudogene of cytochrome C biogenesis 452;(source:Araport11)	pseudogene			
+AT2G05915	AT2G05915.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT1G67105	AT1G67105.1	other_RNA;(source:Araport11)	other_rna			
+AT5G35935	AT5G35935.1	transposable_element_gene;(source:Araport11);copia-like retrotransposon family, has a 2.0e-232 P-value blast match to GB:CAA72989 open reading frame 1 (Ty1_Copia-element) (Brassica oleracea);(source:TAIR10)	transposable_element_gene			
+AT2G07709	AT2G07709.1	pseudogene of NADH dehydrogenase subunit 7;(source:Araport11)	pseudogene			
+AT2G07779	AT2G07779.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT2G07774	AT2G07774.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT1G40135	AT1G40135.1	transposable_element_gene;(source:Araport11);CACTA-like transposase family (Ptta/En/Spm), has a 2.0e-40 P-value blast match to At5g29026.1/8-244 CACTA-like transposase family (Ptta/En/Spm) (CACTA-element) (Arabidopsis thaliana);(source:TAIR10)	transposable_element_gene			
+AT5G43570	AT5G43570.1	Predicted to encode a PR (pathogenesis-related) peptide that belongs to the PR-6 proteinase inhibitor family.  Six putative PR-6-type protein encoding genes are found in Arabidopsis: At2g38900, At2g38870, At5g43570, At5g43580, At3g50020 and At3g46860.	protein_coding			
+AT2G07733	AT2G07733.1	pseudogene of NADH dehydrogenase 2B;(source:Araport11)	pseudogene			
+AT2G07783	AT2G07783.1	pseudogene of cytochrome C biogenesis 382;(source:Araport11)	pseudogene			
+AT2G07747	AT2G07747.1	pseudogene of Intron maturase;(source:Araport11)	pseudogene			
+AT2G31945	AT2G31945.1	transmembrane protein;(source:Araport11)	protein_coding			
+AT4G23420	AT4G23420.3	NAD(P)-binding Rossmann-fold superfamily protein;(source:Araport11)	protein_coding			
+AT2G07815	AT2G07815.1	LOW protein: cytochrome C biogenesis ccmF-like protein;(source:Araport11)	protein_coding			
+AT2G07786	AT2G07786.1	pseudogene of NADH dehydrogenase 1A;(source:Araport11)	pseudogene			
+AT2G07704	AT2G07704.1	transposable_element_gene;(source:Araport11);copia-like retrotransposon family, has a 5.8e-50 P-value blast match to GB:CAA72989 open reading frame 1 (Ty1_Copia-element) (Brassica oleracea);(source:TAIR10)	transposable_element_gene			
+AT2G07775	AT2G07775.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT2G07719	AT2G07719.1	Putative membrane lipoprotein;(source:Araport11)	protein_coding			
+AT2G07684	AT2G07684.1	hypothetical protein;(source:Araport11)	protein_coding			
+AT2G07776	AT2G07776.2	hypothetical protein;(source:Araport11)	protein_coding			
+AT2G32150	AT2G32150.1	Haloacid dehalogenase-like hydrolase (HAD) superfamily protein;(source:Araport11)	protein_coding			
+AT2G07711	AT2G07711.1	pseudogene of NADH dehydrogenase 5B;(source:Araport11)	pseudogene			
+AT2G07751	AT2G07751.1	NADH:ubiquinone/plastoquinone oxidoreductase, chain 3 protein;(source:Araport11)	protein_coding			
+AT2G07698	AT2G07698.1	ATPase, F1 complex, alpha subunit protein;(source:Araport11)	protein_coding			
+AT2G06980	AT2G06980.1	transposable_element_gene;(source:Araport11);pseudogene, hypothetical protein;(source:TAIR10)	transposable_element_gene			
+ATMG00520	ATMG00520.1	Intron maturase, type II family protein;(source:Araport11)	protein_coding	 (MATR)	 (MATR)	
+ATCG01080	ATCG01080.1	NADH dehydrogenase ND6	protein_coding	 (NDHG)	 (NDHG)	
+ATMG01210	ATMG01210.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF101B)	 (ORF101B)	
+ATMG01130	ATMG01130.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF106F)	 (ORF106F)	
+ATMG00030	ATMG00030.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF107A)	 (ORF107A)	
+ATMG00490	ATMG00490.1	Mitovirus RNA-dependent RNA polymerase;(source:Araport11)	protein_coding	 (ORF107C)	 (ORF107C)	
+ATMG00530	ATMG00530.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF109)	 (ORF109)	
+ATMG01220	ATMG01220.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF113)	 (ORF113)	
+ATMG01000	ATMG01000.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF114)	 (ORF114)	
+ATMG01010	ATMG01010.1	Unknown conserved protein;(source:Araport11)	protein_coding	 (ORF118)	 (ORF118)	
+ATMG00660	ATMG00660.1	hypothetical protein;(source:Araport11)	protein_coding	 (ORF149)	 (ORF149)	
+ATMG01020	ATMG01020.1	transmembrane protein;(source:Araport11)	protein_coding	 (ORF153B)	 (ORF153B)	
+ATMG00690	ATMG00690.1	FO-ATPase subunit;(source:Araport11)	protein_coding	 (ORF240A)	 (ORF240A)	
+ATMG00810	ATMG00810.1	DNA/RNA polymerases superfamily protein;(source:Araport11)	protein_coding	 (ORF240B)	 (ORF240B)	
+ATMG01090	ATMG01090.1	ATP synthase 9 mitochondrial;(source:Araport11)	protein_coding	 (ORF262)	 (ORF262)	
+ATMG00670	ATMG00670.1	transmembrane protein;(source:Araport11)	protein_coding	 (ORF275)	 (ORF275)	
+ATMG01280	ATMG01280.1	encodes a cytochrome c oxidase subunit II	protein_coding	 (ORF291)	 (ORF291)	
+ATMG01200	ATMG01200.1	ATPase, F1 complex, alpha subunit;(source:Araport11)	protein_coding	 (ORF294)	 (ORF294)	
+ATMG00040	ATMG00040.1	ATP synthase subunit C family protein;(source:Araport11)	protein_coding	 (ORF315)	 (ORF315)	
+ATMG00480	ATMG00480.1	Encodes subunit 8 of the mitochondrial F(O) ATP synthase complex.	protein_coding	 (ORFB)	ATP SYNTHASE 8 (ATP8); (ORFB)	
+ATMG00980	ATMG00980.1	ribosomal protein L2	protein_coding	 (RPSL2)	 (RPSL2)	
+AT3G14770	AT3G14770.1	Nodulin MtN3 family protein;(source:Araport11)	protein_coding	 (SWEET2)	 (AtSWEET2); (SWEET2)	
+ATMG00330	ATMG00330.1	tRNA-Ser	pre_trna	 (TRNS.2)	 (TRNS.2)	
+AT3G16150	AT3G16150.1	Encodes an asparaginase that catalyzes the degradation of L-asparagine to L-aspartic acid and ammonia. The mRNA is cell-to-cell mobile.	protein_coding	ASPARAGINASE B1 (ASPGB1)	ASPARAGINASE B1 (ASPGB1)	
+ATMG01190	ATMG01190.1	ATPase subunit 1	protein_coding	ATP SYNTHASE SUBUNIT 1 (ATP1)	ATP SYNTHASE SUBUNIT 1 (ATP1)	
+ATMG00900	ATMG00900.1	cytochrome c biogenesis orf256	protein_coding	ATP-BINDING CASSETTE I3 (ABCI3)	ATP-BINDING CASSETTE I3 (ABCI3);CYTOCHROME C BIOGENESIS 256 (CCB256)	
+ATMG00410	ATMG00410.1	ATPase subunit 6	protein_coding	ATPASE SUBUNIT 6-1 (ATP6-1)	ATPASE SUBUNIT 6 (ATP6);ATPASE SUBUNIT 6-1 (ATP6-1)	
+AT1G05340	AT1G05340.1	cysteine-rich TM module stress tolerance protein;(source:Araport11)	protein_coding	CYSTEINE-RICH TRANSMEMBRANE MODULE 1 (ATHCYSTM1)	CYSTEINE-RICH TRANSMEMBRANE MODULE 1 (ATHCYSTM1)	
+ATMG01360	ATMG01360.1	cytochrome c oxidase subunit 1	protein_coding	CYTOCHROME  OXIDASE (COX1)	CYTOCHROME  OXIDASE (COX1)	
+ATMG00180	ATMG00180.1	cytochrome c biogenesis orf452	protein_coding	CYTOCHROME C BIOGENESIS 452 (CCB452)	CCMF HOMOLOG C-TERMINUS (CCMFC);CYTOCHROME C BIOGENESIS 452 (CCB452)	
+ATMG00730	ATMG00730.1	Encodes cytochrome c oxidase subunit 3.	protein_coding	CYTOCHROME C OXIDASE SUBUNIT 3 (COX3)	CYTOCHROME C OXIDASE SUBUNIT 3 (COX3)	
+ATMG00160	ATMG00160.1	cytochrome c oxidase subunit 2	protein_coding	CYTOCHROME OXIDASE 2 (COX2)	CYTOCHROME OXIDASE 2 (COX2)	
+AT5G51190	AT5G51190.1	encodes a member of the ERF (ethylene response factor) subfamily B-3 of ERF/AP2 transcription factor family. The protein contains one AP2 domain. There are 18 members in this subfamily including ATERF-1, ATERF-2, AND ATERF-5.	protein_coding	ETHYLENE RESPONSE FACTOR 105 (ERF105)	ETHYLENE RESPONSE FACTOR 105 (ERF105)	
+AT5G41080	AT5G41080.1	Encodes a member of the glycerophosphodiester phosphodiesterase (GDPD) family.	protein_coding	GLYCEROPHOSPHODIESTER PHOSPHODIESTERASE 2 (GDPD2)	 (AtGDPD2);GLYCEROPHOSPHODIESTER PHOSPHODIESTERASE 2 (GDPD2)	
+AT1G80160	AT1G80160.1	Vicinal oxygen chelate (VOC) superfamily member.	protein_coding	GLYOXYLASE I 7 (GLYI7)	GLYOXYLASE I 7 (GLYI7)	
+ATMG01080	ATMG01080.1	subunit 9 of mitochondrial F0-ATPase	protein_coding	MITOCHONDRIAL F0-ATPASE SUBUNIT 9 (ATP9)	MITOCHONDRIAL F0-ATPASE SUBUNIT 9 (ATP9)	
+ATCG01110	ATCG01110.1	Encodes the 49KDa plastid NAD(P)H dehydrogenase subunit H protein.  Its transcription is regulated by an ndhF-specific plastid sigma factor, SIG4.	protein_coding	NAD(P)H DEHYDROGENASE SUBUNIT H (NDHH)	NAD(P)H DEHYDROGENASE SUBUNIT H (NDHH)	
+ATMG00516	ATMG00516.1	Encodes subunit of mitochondrial NAD(P)H dehydrogenase that is trans-spliced from three precursors, NAD1A, NAD1B, and NAD1C.	protein_coding	NADH DEHYDROGENASE 1C (NAD1C)	NADH DEHYDROGENASE 1 (NAD1);NADH DEHYDROGENASE 1C (NAD1C)	
+ATMG00060	ATMG00060.1	Mitochondrial NADH dehydrogenase subunit 5. The gene is trans-spliced from the three different pre-cursors, NAD5a, NAD5b and NAD5c.	protein_coding	NADH DEHYDROGENASE SUBUNIT 5C (NAD5C)	NADH DEHYDROGENASE SUBUNIT 5C (NAD5C);NADH DEHYDROGENASE SUBUNIT 5.3 (NAD5.3);NADH DEHYDROGENASE SUBUNIT 5 (NAD5)	
+ATMG00510	ATMG00510.1	NADH dehydrogenase subunit 7	protein_coding	NADH DEHYDROGENASE SUBUNIT 7 (NAD7)	NADH DEHYDROGENASE SUBUNIT 7 (NAD7)	
+AT5G23140	AT5G23140.1	One of several nuclear-encoded ClpPs (caseinolytic protease). Contains a highly conserved catalytic triad of Ser-type proteases (Ser-His-Asp). The name reflects nomenclature described in Adam et. al (2001).	protein_coding	NUCLEAR-ENCODED CLP PROTEASE P7 (NCLPP7)	 (CLPP2);NUCLEAR-ENCODED CLP PROTEASE P7 (NCLPP7)	
+ATCG00280	ATCG00280.1	chloroplast gene encoding a CP43 subunit of  the photosystem II reaction center. promoter contains a blue-light responsive element.	protein_coding	PHOTOSYSTEM II REACTION CENTER PROTEIN C (PSBC)	PHOTOSYSTEM II REACTION CENTER PROTEIN C (PSBC)	
+AT3G30720	AT3G30720.1	QQS is an orphan gene that arose recently in the Arabidopsis thaliana lineage. It was first identified in a screen for genes with altered expression pattern in SS3 mutants which make an abundance of starch. Overexpression of QQS in Arabidopsis increases protein content and decreases total starch content. Thus it appears to function to modulate carbon/nitrogen allocation in Arabidopsis. Over expression of QQS in soybean, rice and maize also results in an increase in protein and decrease in starch levels suggesting that QQS affects similar pathways in a wide range of plants. QQS interacts with NF-YC4 in Arabidopsis and NF-YC4 homologs in rice, soybean and maize. In Arabidopsis QQS is localized the the cytoplasm and when complexed with NF-YC4 , it localizes to the nucleus.	protein_coding	QUA-QUINE STARCH (QQS)	QUA-QUINE STARCH (QQS)	
+AT3G42658	AT3G42658.1	Member of Sadhu non-coding retrotransposon family.In some natural accessions the allele is  methylated and silenced.	transposable_element_gene	SADHU NON-CODING RETROTRANSPOSON 3-2 (SADHU3-2)	SADHU NON-CODING RETROTRANSPOSON 3-2 (SADHU3-2)	
+AT3G45010	AT3G45010.1	serine carboxypeptidase-like 48;(source:Araport11)	protein_coding	SERINE CARBOXYPEPTIDASE-LIKE 48 (scpl48)	SERINE CARBOXYPEPTIDASE-LIKE 48 (scpl48)	
+AT1G45145	AT1G45145.1	encodes a cytosolic thioredoxin that reduces disulfide bridges of target proteins by the reversible formation of a disulfide bridge between two neighboring Cys residues present in the active site. Thioredoxins have been found to regulate a variety of biological reactions in prokaryotic and eukaryotic cells.	protein_coding	THIOREDOXIN H-TYPE 5 (TRX5)	THIOREDOXIN H-TYPE 5 (ATTRX5);THIOREDOXIN H-TYPE 5 (ATH5);THIOREDOXIN H-TYPE 5 (TRX-H5);THIOREDOXIN H-TYPE 5 (TRX5);LOCUS OF INSENSITIVITY TO VICTORIN 1 (LIV1)	
+The query for the following terms resulted in no hits: AT2G07674  AT5G07842  

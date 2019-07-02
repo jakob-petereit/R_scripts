@@ -1,0 +1,13 @@
+{
+    "salmon_version": "0.14.0",
+    "index": "/home/jpetereit/salmon2/index/athal_index",
+    "libType": "A",
+    "unmatedReads": "WT-I_1.fq.gz",
+    "threads": "8",
+    "validateMappings": [],
+    "output": "/home/jpetereit/salmon2/data/quants/WT-I_1.fq.gz_quant",
+    "numBootstraps": "100",
+    "seqBias": [],
+    "gcBias": [],
+    "auxDir": "aux_info"
+}

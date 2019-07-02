@@ -1,0 +1,108 @@
+substrate_ID	AGI	bitscore	Description	n
+AHPF_STAA8	AT2G41680	164	NADPH-dependent thioredoxin reductase C;Encodes a NADPH thioredoxin reductase involved in chloroplast protection against oxidative damage.	2
+ALDH_STAA8	AT3G48170	339	aldehyde dehydrogenase 10A9;Arabidopsis thaliana putative betaine aldehyde dehydrogenase	2
+ATPA_STAA8	ATCG00120	598	ATP synthase subunit alpha;Encodes the ATPase alpha subunit, which is a subunit of ATP synthase and part of the CF1 portion which catalyzes the conversion of ADP to ATP using the proton motive force. This complex is located in the thylakoid membrane of the chloroplast.	1
+CH60_STAA8	AT2G33210	536	heat shock protein 60-2;	2
+CLPC_STAA8	AT5G50920	917	CLPC homologue 1;Encodes a protein that is similar to ATP-dependent Clp protease ATP-binding subunit / ClpC. Involved in protein import into the chloroplast. May provide ATP source that drives the TIC (Translocon at the Inner envelope membrane of Chloroplasts) translocation machinery.	1
+CLPX_STAA8	AT5G53350	370	CLP protease regulatory subunit X;CLP protease regulatory subunit CLPX mRNA, nuclear gene	2
+DNAJ_STAA8	AT2G22360	281	DNAJ heat shock family protein;	1
+DNAK_STAA8	AT5G09590	662	mitochondrial HSO70 2;heat shock protein 70 (Hsc70-5); nuclear	2
+EFTS_STAA8	AT4G11120	166	translation elongation factor Ts (EF-Ts), putative;	1
+Electron	AT1G50940	284	electron transfer flavoprotein alpha;Encodes the electron transfer flavoprotein ETF alpha, a putative subunit of the mitochondrial electron transfer flavoprotein complex (ETF beta is At5g43430.1) in Arabidopsis.  Mutations of the ETF beta gene results in accelerated senescence and early death compared to wild-type during extended darkness.	1
+LIPA_STAA8	AT5G08415	253	Radical SAM superfamily protein;	1
+O35857	AT2G36070	95.5	translocase inner membrane subunit 44-2;One of two genes in Arabidopsis that encode a putative subunit of the mitochondrial inner membrane translocase complex. TIM44 subunit is thought to provide the energy for translocation via hydrolysis of ATP.	1
+O55028	AT3G06483	224	pyruvate dehydrogenase kinase;Pyruvate dehydrogenase kinase (PDK) specifically phosphorylates the E1&#945; subunit of the pyruvate dehydrogenase complex (PDC) on a Ser residue using ATP as a phosphate donor.  PDK is a unique type of protein kinase having a His-kinase-like sequence but Ser-kinase activity. Site-directed mutagenesis and structural analysis indicate that PDK belongs to the GHKL superfamily.	1
+P00405	ATMG00160	221	cytochrome oxidase 2;cytochrome c oxidase subunit 2	1
+P05852	AT2G45270	247	glycoprotease 1;Mitochondrial protein essential for embryo development.	1
+P0CAX1	AT5G04130	513	DNA GYRASE B2;	2
+P12999	AT1G78140	47.4	S-adenosyl-L-methionine-dependent methyltransferases superfamily protein;	1
+P13035	AT3G10370	169	FAD-dependent oxidoreductase family protein;mitochondrial FAD-dependent glycerol-3-phosphate dehydrogenase. possibly involved in storage lipid catabolism and glycerol assimilation, and in glycerol-3-phosphate shuttle which transports reducing power from cytosol to mitochondrion.	2
+P16676	AT1G65410	122	non-intrinsic ABC protein 11;Encodes a member of NAP subfamily of transporters.  Mutations in this gene suppress the low temperature-induced phenotype of Arabidopsis tocopherol-deficient mutant vte2.	2
+P17710	AT2G19860	258	hexokinase 2;Encodes a protein with hexokinase activity (AtHXK2) and acts as a sensor for plant sugar responses.	1
+P21599	AT5G56350	246	Pyruvate kinase family protein;	1
+P21599	AT1G32440	246	plastidial pyruvate kinase 3;encodes a chloroplast pyruvate kinase beta subunit. The enzyme is less active than the other chloroplast pyruvate kinase beta subunit encoded by AT5G52920. Involved in seed oil biosynthesis. Can partially complement the AT5G52920 mutant.	1
+P25553	AT1G79440	323	aldehyde dehydrogenase 5F1;Encodes a mitochondrial succinic semialdehyde dehydrogenase (SSADH).  Nomenclature according to Kirch, et al (2004).	2
+P25665	AT5G20980	713	methionine synthase 3;encodes a plastidic methionine synthase, involved in methionine de novo synthesis in the chloroplast	2
+P30745	AT2G31955	194	cofactor of nitrate reductase and xanthine dehydrogenase 2;COFACTOR OF NITRATE REDUCTASE AND XANTHINE DEHYDROGENASE 2. Encodes a protein involved in molybdenum cofactor biosynthesis. Homologous to E.coli moaA. Expression is abundant in all tissues examined, particularly in roots. Appears to have targeting signals for chloroplast or mitochondria.	3
+P35486	AT1G59900	370	NA	2
+P39451	AT5G63620	153	GroES-like zinc-binding alcohol dehydrogenase family protein;	1
+P45952	AT3G45300	197	isovaleryl-CoA-dehydrogenase;Encodes isovaleryl-coenzyme a dehydrogenase.  Mutants have increases in 12 seed free amino acids, accumulation of seed homomethionine and 3-isovaleroyloxypropyl-glucosinolate, with a concomitant decrease in seed 3-benzoyloxypropyl-glucosinolate.	3
+P52503	AT3G03070	50.8	NADH-ubiquinone oxidoreductase-related;	1
+P60723	AT2G20060	122	Ribosomal protein L4/L1 family;	1
+P60785	AT5G08650	669	Small GTP-binding protein;	1
+P76658	AT2G38670	67	phosphorylethanolamine cytidylyltransferase 1;Encodes a mitochondrial ethanolamine-phosphate cytidylyltransferase, involved in phosphatidylethanolamine (PE) biosynthesis.	1
+P77475	AT1G56500	80.1	NA	2
+Pa_1_22300	AT2G26080	958	glycine decarboxylase P-protein 2;	1
+Pa_1_3450	AT1G24360	109	NAD(P)-binding Rossmann-fold superfamily protein;	2
+Pa_1_7660	AT2G14170	577	aldehyde dehydrogenase  6B2;Arabidopsis thaliana methylmalonate-semialdehyde dehydrogenase	2
+Pa_1_8620	ATMG00510	532	NADH dehydrogenase subunit 7;NADH dehydrogenase subunit 7	2
+Pa_2_10580	AT3G20000	86.3	translocase of the outer mitochondrial membrane 40;Encodes a component of the TOM receptor complex responsible for the recognition and translocation of cytosolically synthesized mitochondrial preproteins. With TOM22, functions as the transit peptide receptor at the surface of the mitochondrial outer membrane and facilitates the movement of preproteins into the translocation pore.	1
+Pa_2_12010	AT4G02930	476	GTP binding Elongation factor Tu family protein;	1
+Pa_2_12760	AT3G27280	328	prohibitin 4;Part of protein complexes that are necessary for proficient mitochondrial function or  biogenesis, thereby supporting cell division and differentiation in apical tissues	2
+Pa_2_12760	AT5G40770	328	prohibitin 3;prohibitin 3	1
+Pa_2_430	AT5G65720	567	nitrogen fixation S (NIFS)-like 1;cysteine desulfurase whose activity is dependent on AtSufE activation.	2
+Pa_2_6200	AT2G35120	117	Single hybrid motif superfamily protein;	1
+Pa_2_9700	AT1G56440	70.1	Tetratricopeptide repeat (TPR)-like superfamily protein;	2
+Pa_3_10790	AT1G53580	84	glyoxalase II  3;Mononuclear Fe(II)-containing member of  the b-lactamase fold superfamily. ETHE1 is homodimeric in  solution, exhibits low-level esterase activity, and specifically binds  a single Fe(II) atom in the active site.	1
+Pa_3_11290	AT2G30970	444	aspartate aminotransferase 1;ASPARTATE AMINOTRANSFERASE 1	2
+Pa_3_1420	AT5G20080	162	FAD/NAD(P)-binding oxidoreductase;	1
+Pa_3_2310	AT1G54220	355	Dihydrolipoamide acetyltransferase, long form protein;	2
+Pa_3_2600	AT1G53240	333	Lactate/malate dehydrogenase family protein;	1
+Pa_3_6780	AT2G44350	526	NA	8
+Pa_3_7700	AT2G20420	414	ATP citrate lyase (ACL) family protein;	2
+Pa_4_3040	AT1G65930	566	cytosolic NADP+-dependent isocitrate dehydrogenase;Encodes a NADP+-isocitrate dehydrogenase that is believed to function in the cytosol. It appears to contribute to NADPH production under oxidative stress, and thereby to participate in redox signalling linked to defense responses.	1
+Pa_4_660	AT4G37930	614	serine transhydroxymethyltransferase 1;Encodes a protein with mitochondrial serine hydroxymethyltransferase activity, which functions in the photorespiratory pathway, catalyzes the conversion of serine and tetrahydrofolate to glycine and 5,10-methylene tetrahydrofolate.  Involved in controlling cell damage caused by abiotic stress, such as high light and salt and the hypersensitive defense response of plants.	1
+Pa_4_7160	ATMG00070	182	NADH dehydrogenase subunit 9;NADH dehydrogenase subunit 9	1
+Pa_4_8600	AT5G65780	188	branched-chain amino acid aminotransferase 5 / branched-chain amino acid transaminase 5 (BCAT5);encodes a chloroplast branched-chain amino acid aminotransferase, can complement the yeast leu/iso-leu/val auxotrophy mutant	1
+Pa_5_11920	AT4G16800	181	ATP-dependent caseinolytic (Clp) protease/crotonase family protein;	2
+Pa_5_5970	AT4G35830	205	aconitase 1;Encodes an aconitase that can catalyze the conversion of citrate to isocitrate through a cis-aconitate intermediate, indicating that it may participate in the TCA cycle and other primary metabolic pathways. The protein is believed to accumulate in the mitochondria and the cytosol. It affects CSD2 (At2g28190 - a superoxide dismutase) transcript levels and may play a role in the response to oxidative stress. This enzyme can also specifically bind to the 5' UTR of CSD2 in vitro.	1
+Pa_5_7500	AT1G65290	96.3	mitochondrial acyl carrier protein 2;Encodes a member of the mitochondrial acyl carrier protein (ACP) family.  As part of the mitochondrial matrix, it is likely to be involved in fatty acid or lipoic acid biogenesis.	2
+Pa_5_8240	AT1G65970	94	thioredoxin-dependent peroxidase 2;thioredoxin-dependent peroxidase 2	1
+Pa_6_240	AT5G13430	222	Ubiquinol-cytochrome C reductase iron-sulfur subunit;	1
+Pa_6_2730	AT5G03290	396	isocitrate dehydrogenase V;Encodes a catalytic subunit of the mitochondrially-localized NAD+- dependent isocitrate dehydrogenase.	1
+PNP_STAA8	AT5G14580	528	polyribonucleotide nucleotidyltransferase, putative;	2
+Q05920	AT5G35360	392	acetyl Co-enzyme a carboxylase biotin carboxylase subunit;Encodes biotin carboxylase subunit (CAC2).	2
+Q2FWD7_STAA8	AT5G08690	45.4	ATP synthase alpha/beta family protein;Encodes the mitochondrial ATP synthase beta-subunit.  This subunit is encoded by a multigene family of three members (At5g08670, At5g08680, At5g08690) that shared 98% sequence identity at the amino acid level.	1
+Q2FWD7_STAA8	AT5G08670	45.4	ATP synthase alpha/beta family protein;Encodes the mitochondrial ATP synthase beta-subunit.  This subunit is encoded by a multigene family of three members (At5g08670, At5g08680, At5g08690) that shared 98% sequence identity at the amino acid level.	1
+Q2FZ09_STAA8	AT1G79050	357	recA DNA recombination family protein;	2
+Q2FZS8_STAA8	AT5G15450	887	casein lytic proteinase B3;Encodes a chloroplast-targeted Hsp101 homologue.  Functions as a molecular chaperone involved in plastid differentiation mediating internal thylakoid membrane formation and conferring thermotolerance to chloroplasts during heat stress.  APG6 is constitutively expressed in the root tips, the organ boundary region, the reproductive tissues of mature plants where plastids exist as proplastids, and slightly in the stems and leaves.  APG6 expression is upregulated in response to heat shock in various organs, but not in response to other abiotic stresses.  Apg6 mutants have a pale-green phenotype.	1
+Q2FZU5_STAA8	AT5G07440	379	glutamate dehydrogenase 2;Encodes the beta-subunit of the glutamate dehydrogenase. The enzyme is almost exclusively found in the mitochondria of stem and leaf companion cells.	2
+Q2G1U3_STAA8	AT5G51540	42.4	Zincin-like metalloproteases family protein;	1
+Q2G2A3_STAA8	AT1G48030	344	NA	5
+Q2G2A4_STAA8	AT3G06850	238	2-oxoacid dehydrogenases acyltransferase family protein;dihydrolipoamide branched chain acyltransferase	2
+Q3ULD5	AT4G34030	663	3-methylcrotonyl-CoA carboxylase;MCC-B is involved in leucine degradation in mitochondria. The active protein is a dimer of MCC-A and MCC-B. MCC-A is biotinylated whereas MCC-B is not.	2
+Q60597	AT3G55410	937	2-oxoglutarate dehydrogenase, E1 component;	2
+Q61102	AT5G58270	682	ABC transporter of the mitochondrion 3;Encodes a mitochondrial half-molecule ABC transporter, a member of ATM subfamily.  Mutants are dwarfed, chlorotic plants with altered leaf morphology. ATM3 transcription is induced by Cd(II) or Pb(II). Involved in heavy metal resistance. Arabidopsis thaliana has three ATM genes, namely ATM1, ATM2 and ATM3. Only ATM3 has an important function for plant growth. Role in Moco biosynthesis.	1
+Q80X85	ATCG01240	82.4	ribosomal protein S7;30S chloroplast ribosomal protein S7	1
+Q80X85	ATCG00900	82.4	Ribosomal protein S7p/S5e family protein;encodes a chloroplast ribosomal protein S7, a constituent of the small subunit of the ribosomal complex	1
+Q8CGK3	AT5G26860	838	lon protease 1;Encodes a member of the Lon protease-like proteins (Lon1/At5g26860, Lon2/At5g47040, Lon3/At3g05780, Lon4/At3g05790).  Lon is a multifunctional ATP-dependent protease which exists in bacteria, archaea and within organelles in eukaryotic cells.  Lon proteases are responsible for the degradation of abnormal, damaged and unstable proteins.	1
+Q8K009	AT3G48000	456	aldehyde dehydrogenase 2B4;Encodes a putative (NAD+) aldehyde dehydrogenase.	1
+Q8K0D5	AT1G45332	820	Translation elongation factor EFG/EF2 protein;	1
+Q8K2B3	AT5G66760	838	succinate dehydrogenase 1-1;One of two genes in Arabidopsis that encode a flavoprotein subunit of the  mitochondrial succinate dehydrogenase complex.	2
+Q8K2Y7	AT1G07830	74.3	ribosomal protein L29 family protein;	1
+Q8K411	AT3G19170	432	presequence protease 1;Zinc metalloprotease pitrilysin subfamily A. Signal peptide degrading enzyme targeted to mitochondria and chloroplasts. Expressed only in siliques and flowers	1
+Q8R1I1	AT3G52730	39.3	ubiquinol-cytochrome C reductase UQCRX/QCR9-like family protein;	1
+Q91VD9	AT5G37510	751	NADH-ubiquinone dehydrogenase, mitochondrial, putative;Encodes a subunit of the 400 kDa subcomplex of the mitochondrial NADH dehydrogenase (complex I).  The protein has been isolated in the male gametophyte.	1
+Q91ZA3	AT1G03090	491	methylcrotonyl-CoA carboxylase alpha chain, mitochondrial / 3-methylcrotonyl-CoA carboxylase 1 (MCCA);MCCA is the biotinylated subunit of the dimer MCCase, which is involved in leucine degradation. Both subunits are nuclear coded and the active enzyme is located in the mitochondrion.	2
+Q921G7	AT2G43400	608	electron-transfer flavoprotein:ubiquinone oxidoreductase;Encodes a unique electron-transfer flavoprotein:ubiquinone oxidoreductase that is localized to the mitochondrion. Mutants are more sensitive to sugar starvation when plants are kept in the dark for long periods.	1
+Q99N87	AT1G64880	90.5	Ribosomal protein S5 family protein;	1
+Q9A2V8	AT4G04640	165	ATPase, F1 complex, gamma subunit protein;One of two genes (with ATPC2) encoding the gamma subunit of Arabidopsis chloroplast ATP synthase.	1
+Q9A5H9	AT3G48870	536	Clp ATPase;Encodes a nuclear encoded protein with similarity to Clpa regulatory subunit of CLP protease complex. The protein is localized to the chloroplast stroma.  May function redundantly with TIC complex  in chloroplast protein import.	1
+Q9CPR5	AT5G64670	97.8	Ribosomal protein L18e/L15 superfamily protein;	1
+Q9CQ62	AT3G12800	100	short-chain dehydrogenase-reductase B;	1
+Q9CWG8	AT3G28700	279	Protein of unknown function (DUF185);	2
+Q9CXT8	AT3G02090	483	Insulinase (Peptidase family M16) protein;	1
+Q9CYF5	AT5G63860	113	Regulator of chromosome condensation (RCC1) family protein;UV-B-specific signaling component that orchestrates expression of a range of genes with vital UV-protective functions. Located in the nucleus and the cytosol. Associates with chromatin via histones. UV-B light promotes URV8 protein accumulation in the nucleus.	1
+Q9CZL5	AT1G29810	50.4	NA	1
+Q9CZU4	AT1G30960	153	GTP-binding family protein;	1
+Q9D0M3	AT5G40810	301	Cytochrome C1 family;	1
+Q9D0Q7	AT5G27395	45.1	Mitochondrial inner membrane translocase complex, subunit Tim44-related protein;	1
+Q9D6J6	AT4G02580	219	NADH-ubiquinone oxidoreductase 24 kDa subunit, putative;	1
+Q9DC71	AT1G15810	51.6	S15/NS1, RNA-binding protein;	1
+Q9QXX4	AT1G25380	133	NA	2
+Q9QZD8	AT4G24570	206	dicarboxylate carrier 2;Encodes one of the mitochondrial dicarboxylate carriers (DIC): DIC1 (AT2G22500), DIC2 (AT4G24570), DIC3 (AT5G09470).	1
+Q9WV84	AT5G63310	174	nucleoside diphosphate kinase 2;Maintains intracellular dNTP levels except ATP. Plays a role in response to oxidative stress and UV. Involved in phytochrome-mediated light signaling. Participates in auxin-regulated processes, partly through the modulation of auxin transport. H-bonding with His-197 inside the nucleotide-binding pocket is critical for NDPK2 functioning.	1
+Q9Z1Q9	AT1G14610	966	valyl-tRNA synthetase / valine--tRNA ligase (VALRS);Required for proper proliferation of basal cells.	1
+RL19_STAA8	AT5G11750	85.1	NA	1
+RL21_STAA8	AT4G30930	62.4	Ribosomal protein L21;Encodes a ribosomal RPL21M protein that is localized to the mitochondrion and is involved in karyogamy during female gametophyte development and fertilization. Mutants display defects in both male and female gametophyte development (i.e.collapsed pollen and female gametophytes with unfused central cells).	1
+RL7_STAA8	AT4G37660	71.2	Ribosomal protein L12/ ATP-dependent Clp protease adaptor protein ClpS family protein;	1
