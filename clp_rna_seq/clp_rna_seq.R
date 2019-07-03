@@ -1,3 +1,5 @@
+# libraries ----
+
 library(DESeq2)
 library(data.table)
 library(tidyverse)
@@ -5,6 +7,8 @@ library(tximport)
 library(AnnotationHub)
 library(ggrepel)
 
+
+# load  db and quant from salmon ----
 #arabidopsis reference transcripts (tx2gene)
 ## Load the annotation resource.
 
@@ -30,6 +34,8 @@ names(files) <- c('clp1_1','clp1_2','clp1_3',
 txi.salmon <- tximport(files, type = "salmon", tx2gene = tx2gene)
 head(txi.salmon$counts)
 
+# make deseq dataset ----
+
 coldata <- tibble(rowname=names(files)) %>% 
   mutate(genotype=sapply(strsplit(rowname,'_'),'[',1)) %>% 
   column_to_rownames()
@@ -41,7 +47,7 @@ dds <- DESeqDataSetFromTximport(txi.salmon,
 
 
 
-### Prefiltering
+# Prefiltering----
 
 keep <- rowSums(counts(dds)) >= 10
 dds <- dds[keep,]
@@ -50,12 +56,14 @@ dds <- dds[keep,]
 
 dds$genotype <- factor(dds$genotype, levels = c('col0','clp1','clp2'))
 
-#Differential expression analysis
+# Differential expression analysis----
 dds <- DESeq(dds)
 
 res <- results(dds)
 res
 
+
+# DESEQ workflow from guide ----
 #Log fold change shrinkage for visualization and ranking
 resultsNames(dds)
 resLFC <- lfcShrink(dds, coef="genotype_clp2_vs_col0", type="apeglm")
@@ -180,9 +188,9 @@ ggplot(pcaData, aes(PC1, PC2, color=genotype)) +
 
 
 
-## data Visualisation
+# data Visualisation----
 
-#Overlap volcano
+#Overlap volcano====
 
 ## custom mutant overlap volcano
 
@@ -290,20 +298,39 @@ ggsave(filename = paste0('volcano','.png'),path = 'images',device = 'png',dpi=10
 
 
 
-########################################################################
-###           single count plots for genes of interest      ############
-########################################################################
-#CLPp and control Genes for paper figure 1
+
+#single count plots for genes of interest ====
+#complex I (incomplete) ####
+
+#select Genes
+cI_anno <- fread('data/complex I annotation.csv', header = T) %>% dplyr::select(1:3) %>% as_tibble()
+
+cI_anno <- cI_anno %>% 
+  mutate(ACC=gsub(pattern = ', ',replacement = '/',x = ACC)) %>% 
+  mutate(ACC1=sapply(strsplit(ACC,'/'),'[',1),
+         ACC2=sapply(strsplit(ACC,'/'),'[',2),
+         ACC3=sapply(strsplit(ACC,'/'),'[',3)) %>% 
+  dplyr::select(-ACC) %>% 
+  gather(nr,ACC,ACC1:ACC3) %>% 
+  dplyr::select(-nr) %>% 
+  na.omit() %>% 
+  mutate(ACC=toupper(substr(ACC,1,9))) %>% 
+  dplyr::select(-group)
+#Plot counts
+
+d <- plotCounts(dds, gene=toupper('AT1G49630'), intgroup="genotype", 
+                returnData=TRUE)
+# ggplot(d, aes(x=genotype, y=count)) + 
+#   geom_point(position=position_jitter(w=0.1,h=0)) + 
+#   scale_y_log10()
 
 
-
-#complex I
-################
-
-
-
-
-
+ggplot(d, aes(genotype, count, color=genotype)) + 
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", size = 0.5)+
+  geom_point(size=3,color='black')+
+  expand_limits(y=0)+
+  labs(title='Raw Count comparison')
+#CLPp and control Genes for paper figure 1 ####
 #Gene selection
 #clpp
 clpp <- 'AT5G23140'
@@ -396,34 +423,6 @@ ggsave('RNA_KO_figure1.pdf',device = 'pdf',dpi=1080,plot = p,height = 6.52,width
 
 
 
-#select Genes
-cI_anno <- fread('data/complex I annotation.csv', header = T) %>% dplyr::select(1:3) %>% as_tibble()
-
-cI_anno <- cI_anno %>% 
-  mutate(ACC=gsub(pattern = ', ',replacement = '/',x = ACC)) %>% 
-  mutate(ACC1=sapply(strsplit(ACC,'/'),'[',1),
-         ACC2=sapply(strsplit(ACC,'/'),'[',2),
-         ACC3=sapply(strsplit(ACC,'/'),'[',3)) %>% 
-  dplyr::select(-ACC) %>% 
-  gather(nr,ACC,ACC1:ACC3) %>% 
-  dplyr::select(-nr) %>% 
-  na.omit() %>% 
-  mutate(ACC=toupper(substr(ACC,1,9))) %>% 
-  dplyr::select(-group)
-#Plot counts
-
-d <- plotCounts(dds, gene=toupper('AT1G49630'), intgroup="genotype", 
-                returnData=TRUE)
-# ggplot(d, aes(x=genotype, y=count)) + 
-#   geom_point(position=position_jitter(w=0.1,h=0)) + 
-#   scale_y_log10()
-
-
-ggplot(d, aes(genotype, count, color=genotype)) + 
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", size = 0.5)+
-  geom_point(size=3,color='black')+
-  expand_limits(y=0)+
-  labs(title='Raw Count comparison')
 
 #proteases
 
@@ -431,16 +430,13 @@ ggplot(d, aes(genotype, count, color=genotype)) +
 
 
 #########################################
-#mito encoded
-
-
-
+#mito encoded ####
 #Gene selection
 
 
 #selction
 
-sel <- str_detect(rownames(dds),'AT4G00850')==T
+sel <- str_detect(rownames(dds),'ATM')==T
 
 #Plot counts
 #custom selection, Plotcounts() doesn't work on multiple Genes
