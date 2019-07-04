@@ -301,7 +301,6 @@ ggsave(filename = paste0('volcano','.png'),path = 'images',device = 'png',dpi=10
 
 
 
-#single count plots for genes of interest ====
 #complex I (incomplete) ####
 
 #select Genes
@@ -637,3 +636,69 @@ write.csv(reslfc,'data/rnaseq_table_v1.csv')
 
 
 
+
+# count plots for organelles====
+#Start with table, make long, facet for organelles and coding
+
+results <- fread('data/rnaseq_table_v1.csv') %>% 
+  gather(type,value,clp1_lognfc:clp2_padj) %>% 
+  mutate(genotype=sapply(strsplit(type,'_'),'[',1),
+         type=sapply(strsplit(type,'_'),'[',2)) %>% 
+  spread(type,value) %>% 
+  mutate(lognfc=as.numeric(lognfc),
+         padj=as.numeric(padj)) %>% 
+  na.omit() %>% 
+  mutate(location_consensus=gsub('endoplasmic,reticulum','endoplasmic reticulum',location_consensus),
+         location_consensus=gsub('plasma,membrane','plasma membrane',location_consensus)) %>% 
+  rowwise() %>% 
+  mutate(location_consensus=paste(sort(unlist(strsplit(location_consensus,','))),collapse = ',')) %>% 
+  dplyr::filter(str_detect(location_consensus,',')==F) %>% 
+  mutate(regulation=ifelse(lognfc > 0.5 & padj <= 0.05,'up',
+                           ifelse(lognfc < -0.5 & padj <= 0.05,'down',
+                                  ifelse(padj > 0.05 | lognfc == 0 ,'none','failsave'))))
+
+
+total <- results %>% 
+  xtabs(formula = ~ genotype + encoded) %>%
+  as.data.frame()
+regulation <- results %>% 
+  xtabs(formula = ~ genotype + encoded + regulation) %>%
+  as.data.frame()
+
+
+#add median as ref y axis point 
+y_ref <- subset %>% group_by(genotype,desc) %>% 
+  summarise(median=median(count),max=max(count))
+res <- res %>% 
+  left_join(y_ref)
+
+#levels
+subset$genotype <- factor(subset$genotype, levels = c('WT','clp1','clp2'))
+subset$desc <- factor(subset$desc, levels = c('CLPP2','Tubulin6','ATVDAC1'))
+
+res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
+res$desc <- factor(res$desc, levels = c('CLPP2','Tubulin6','ATVDAC1'))
+
+
+
+#plot
+p <- ggplot(results, aes(encoded, lognfc,fill=genotype,col=genotype)) + 
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar",col='black', size = 0.3,position = position_dodge(width=1))+
+  geom_jitter(pch = 21,size=2,color='black',alpha=0.05,position = position_jitterdodge(jitter.width = 0.1,
+                                                                            dodge.width = 1))+
+  geom_text(data=dplyr::filter(regulation,regulation=='up'),aes(encoded,5,label=Freq),size=4,col='black', lineheight = 0.25,position = position_dodge(width=1))+
+  geom_text(data=dplyr::filter(regulation,regulation=='down'),aes(encoded,-5,label=Freq),size=4,col='black', lineheight = 0.25,position = position_dodge(width=1))+
+  geom_text(data=dplyr::filter(regulation,regulation=='none'),aes(encoded,0.8,label=Freq),size=4, col='black',lineheight = 0.25,position = position_dodge(width=1))+
+  expand_limits(y=0)+
+  scale_colour_manual(values=c('#3399cc','#3366cc'))+
+  scale_fill_manual(values=c('#3399cc','#3366cc'))+
+  labs(title='Total transcript abundance',y='lognFC',x='encoding origin')+
+  theme(axis.title.x = element_text(face='bold',size='8'),
+        axis.text.x = element_text(face=c('plain','italic','italic'),size=8,angle=30),
+        axis.title.y = element_text(face='bold',size='8'),
+        axis.text.y = element_text(face='bold',size=8),
+        strip.text = element_text(face='bold',size=8),
+        title=element_text(size=10))
+
+#save
+ggsave('transcript per origin.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,units = 'cm')
