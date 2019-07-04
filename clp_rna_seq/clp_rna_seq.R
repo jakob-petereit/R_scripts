@@ -20,7 +20,7 @@ ahDb <- query(ah, pattern = c("thaliana"))
 ahEdb <- ahDb[[4]]
 k <- keys(ahEdb, keytype = "TXNAME")
 tx2gene <- select(ahEdb, k, "GENEID", "TXNAME")
-
+detach("package:ensembldb", unload=TRUE)
 
 ##import reads after running Salmon
 # dir is path/to/dir
@@ -60,9 +60,14 @@ dds$genotype <- factor(dds$genotype, levels = c('col0','clp1','clp2'))
 # Differential expression analysis----
 dds <- DESeq(dds)
 
-res <- results(dds)
-res
 
+res_clp1 <- results(dds,name = 'genotype_clp1_vs_col0')
+res_clp1
+res_clp2 <- results(dds,name = 'genotype_clp2_vs_col0')
+res_clp2
+
+summary(res_clp1)
+summary(res_clp2)
 
 #stand alone sections
 # DESEQ workflow from guide ----
@@ -209,7 +214,7 @@ resLFC_clp2 <- lfcShrink(dds, coef="genotype_clp2_vs_col0", type="apeglm") %>%
   as.data.frame() %>% 
   rownames_to_column() %>%  
   as_tibble() %>% 
-  mutate(genotype='clp1')
+  mutate(genotype='clp2')
 
 
 #combine and make long format
@@ -498,7 +503,7 @@ res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
 
 
 #plot
-p <- ggplot(dplyr::filter(subset,str_detect(desc,'ORF',negate = T)), aes(genotype, count,bg=genotype)) + 
+p <- ggplot(dplyr::filter(subset,str_detect(desc,'ORF')), aes(genotype, count,bg=genotype)) + 
   facet_wrap(~strip,scales = 'free_y')+
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar",col='black', size = 0.3)+
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "bar",col='black', size = 0.15,alpha= 0.6)+
@@ -702,3 +707,118 @@ p <- ggplot(results, aes(encoded, lognfc,fill=genotype,col=genotype)) +
 
 #save
 ggsave('transcript per origin.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,units = 'cm')
+
+detach("package:GenomicFeatures", unload=TRUE)
+
+# count plots for oxphos complex subunits ---------------------------------
+oxphos <- fread('data/rnaseq_table_v1.csv')
+oxphos_list <- fread('data/oxphos_list.txt',header = F)
+oxphos_list <- dplyr::filter(oxphos_list,str_detect(V1,'ArthC')==F) %>% 
+  mutate(V1=paste0('ath:',V1))
+
+translated <- fread('data/uniprot-yourlist_M201907046746803381A1F0E0DB47453E0216320D4AE9758.tab.gz') %>% 
+  separate_rows(`Gene names`) %>% 
+  filter(str_detect(`Gene names`,'At')) %>% 
+  dplyr::select(6,5) %>% 
+  mutate(`Gene names`=toupper(`Gene names`))
+
+oxphos <- oxphos %>% 
+  left_join(translated, by=c('AGI'='Gene names')) %>% 
+  na.omit()
+    
+#Gene selection
+sel <- oxphos$AGI
+
+#Plot counts
+#custom selection, Plotcounts() doesn't work on multiple Genes
+subset <- assay(dds[sel]) %>% 
+  as.data.frame() %>% 
+  rownames_to_column(var='gene') %>% 
+  as_tibble() %>% 
+  gather(sample,count,2:10) %>% 
+  mutate(genotype=sapply(strsplit(sample,'_'),'[',1),
+         genotype=ifelse(genotype=='col0','WT',genotype))
+#description
+desc_sel <- fread('data/desc_atm.csv')
+
+
+#join desc onto pvalue
+
+#join desc and pvalue to subset
+subset <- subset %>% 
+  left_join(desc_sel, by=c('gene'='AGI'))
+
+#make pvalue frame and get descriptions
+#resultsNames(dds)
+resclp1 <- results(dds[sel], name = 'genotype_clp1_vs_col0',tidy = T) %>% as_tibble() %>% 
+  dplyr::select(row,padj) %>% 
+  dplyr::rename(gene=row) %>% 
+  mutate(genotype='clp1')
+resclp2 <- results(dds[sel], name = 'genotype_clp2_vs_col0',tidy = T) %>% as_tibble() %>% 
+  dplyr::select(row,padj) %>% 
+  dplyr::rename(gene=row) %>% 
+  mutate(genotype='clp2')
+
+res <- bind_rows(resclp1,resclp2) %>% 
+  left_join(desc_sel,by=c('gene'='AGI')) %>% 
+  dplyr::select(-gene) %>% 
+  mutate(sig_level=ifelse(padj > 0.01,'',
+                          ifelse(padj <= 0.01 & padj > 0.001,'*',
+                                 ifelse(padj <= 0.001,'*\n*','failsave'))))
+#transform into thousands 'K'
+subset <- subset %>% 
+  mutate(count=count/1000)
+
+
+#add median as ref y axis point 
+y_ref <- subset %>% group_by(genotype,desc) %>% 
+  summarise(median=median(count),max=max(count))
+res <- res %>% 
+  left_join(y_ref)
+
+
+#atg on facet
+subset <- subset %>% 
+  mutate(strip=paste0(gene,'\n',desc))
+
+#levels
+subset$genotype <- factor(subset$genotype, levels = c('WT','clp1','clp2'))
+
+res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
+
+
+
+#plot
+p <- ggplot(subset, aes(genotype, count,bg=genotype)) + 
+  facet_wrap(~strip,scales = 'free_y')+
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar",col='black', size = 0.3)+
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "bar",col='black', size = 0.15,alpha= 0.6)+
+  geom_point(pch = 21,size=2,color='black',alpha=0.5)+
+  expand_limits(y=0)+
+  scale_colour_manual(values=c('#339900','#3399cc','#3366cc'))+
+  scale_fill_manual(values=c('#339900','#3399cc','#3366cc'))+
+  labs(title='Total transcript abundance',y='Normalised counts [k]')+
+  theme(axis.title.x = element_blank(),legend.position = 'none',
+        axis.text.x = element_text(face=c('plain','italic','italic'),size=8, angle = 30),
+        axis.title.y = element_text(face='bold',size='8'),
+        axis.text.y = element_text(face='bold',size=8),
+        strip.text = element_text(face='bold',size=12),
+        title=element_text(size=10))
+
+#save
+ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,units = 'in')   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  )
