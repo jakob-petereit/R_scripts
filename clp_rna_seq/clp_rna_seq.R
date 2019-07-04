@@ -1,24 +1,25 @@
 # libraries ----
-
 library(DESeq2)
 library(data.table)
 library(tidyverse)
 library(tximport)
 library(AnnotationHub)
 library(ggrepel)
+library(ensembldb)
+library(Biostrings)
+
+
 
 
 # load  db and quant from salmon ----
 #arabidopsis reference transcripts (tx2gene)
 ## Load the annotation resource.
 
-library(ensembldb)
 ah <- AnnotationHub()
 ahDb <- query(ah, pattern = c("thaliana"))
 ahEdb <- ahDb[[4]]
 k <- keys(ahEdb, keytype = "TXNAME")
 tx2gene <- select(ahEdb, k, "GENEID", "TXNAME")
-
 
 
 ##import reads after running Salmon
@@ -63,6 +64,7 @@ res <- results(dds)
 res
 
 
+#stand alone sections
 # DESEQ workflow from guide ----
 #Log fold change shrinkage for visualization and ranking
 resultsNames(dds)
@@ -429,7 +431,6 @@ ggsave('RNA_KO_figure1.pdf',device = 'pdf',dpi=1080,plot = p,height = 6.52,width
 ##GO term analysis
 
 
-#########################################
 #mito encoded ####
 #Gene selection
 
@@ -516,6 +517,123 @@ p <- ggplot(dplyr::filter(subset,str_detect(desc,'ORF',negate = T)), aes(genotyp
 
 #save
 ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,units = 'in')
+
+
+
+
+# results table with annotation, location and chromosome position
+#tables
+#clp1
+resLFC_clp1 <- lfcShrink(dds, coef="genotype_clp1_vs_col0", type="apeglm") %>% 
+  as.data.frame() %>% 
+  rownames_to_column() %>%  
+  as_tibble() %>% 
+  mutate(genotype='clp1')
+#clp2
+resLFC_clp2 <- lfcShrink(dds, coef="genotype_clp2_vs_col0", type="apeglm") %>% 
+  as.data.frame() %>% 
+  rownames_to_column() %>%  
+  as_tibble() %>% 
+  mutate(genotype='clp2')
+
+
+#combine and make long format
+
+reslfc <- bind_rows(resLFC_clp1,resLFC_clp2)
+
+# Table -------------------------------------------------------------------
+
+#work with result files for clp1 and clp2 by using different resultsnames
+
+#clp1
+resLFC_clp1 <- lfcShrink(dds, coef="genotype_clp1_vs_col0", type="apeglm") %>% 
+  as.data.frame() %>% 
+  rownames_to_column() %>%  
+  as_tibble() %>% 
+  mutate(genotype='clp1')
+#clp2
+resLFC_clp2 <- lfcShrink(dds, coef="genotype_clp2_vs_col0", type="apeglm") %>% 
+  as.data.frame() %>% 
+  rownames_to_column() %>%  
+  as_tibble() %>% 
+  mutate(genotype='clp2')
+
+
+#combine and wide format
+
+reslfc <- bind_rows(resLFC_clp1,resLFC_clp2) %>% 
+  dplyr::select(rowname,log2FoldChange,padj,genotype) %>% 
+  mutate(comb=paste(log2FoldChange,padj,sep='_')) %>% 
+  dplyr::select(-log2FoldChange,-padj) %>% 
+  spread(genotype,comb) %>% 
+  mutate(clp1_lognfc=sapply(strsplit(clp1,'_'),'[',1),
+         clp1_padj=sapply(strsplit(clp1,'_'),'[',2),
+         clp2_lognfc=sapply(strsplit(clp2,'_'),'[',1),
+         clp2_padj=sapply(strsplit(clp2,'_'),'[',2)) %>% 
+  dplyr::select(-clp1,-clp2)
+
+#add suba
+#extra descriptions for the ones that got away (to suba description)
+extra <- fread('data/extra desc for table.txt') %>% 
+  dplyr::select(1,3)
+
+
+suba <- fread('data/1-7-19_SUBA4_display.csv') %>% 
+  dplyr::select(1,3,40) %>% 
+  mutate(locus = substr(locus,1,9)) %>% 
+  left_join(extra, by=c('locus'='V1')) %>% 
+  distinct(.keep_all = T) %>% 
+  mutate(description=ifelse(description==';',`Gene Model Name`,description)) %>% 
+  dplyr::select(-`Gene Model Name`) %>% 
+  group_by(locus) %>% 
+  mutate(location_consensus=paste0(location_consensus,collapse = ',')) %>% 
+  ungroup() %>% 
+  distinct(locus,.keep_all = T)%>%
+  mutate(location_consensus=gsub('plasma membrane','plasma_membrane',location_consensus),
+         location_consensus=gsub('endoplasmic reticulum','endoplasmic_reticulum',location_consensus)) %>% 
+  separate_rows(location_consensus) %>% 
+  distinct (locus,location_consensus,.keep_all = T) %>% 
+  group_by(locus,description) %>% 
+  summarise(location_consensus = paste(location_consensus, collapse=","))
+
+
+
+reslfc <- reslfc %>% 
+  left_join(suba, by=c('rowname'='locus'))
+
+#extract position from tair db fasta
+pos <- readAAStringSet('data/Arabidopsis_thaliana.TAIR10.pep.all.fa') %>% 
+  as.data.frame() %>% 
+  rownames_to_column() %>% 
+  as_tibble() %>% 
+  dplyr::select(1) %>% 
+  mutate(AGI=sapply(strsplit(rowname,'[.]'),'[',1),
+         left=sapply(strsplit(rowname,':'),'[',5),
+         right=sapply(strsplit(rowname,':'),'[',6),
+         direction=substr(sapply(strsplit(rowname,':'),'[',7),1,2),
+         direction=ifelse(direction=='1 ','forward','reverse'),
+         encoded=ifelse(str_detect(AGI,'ATM')==T,'Mitochondrion',
+                                   ifelse(str_detect(AGI,'ATC')==T,'Plastid','Nucleus'))) %>% 
+  dplyr::select(-1) %>% 
+  distinct(AGI,.keep_all = T)
+
+
+reslfc <- reslfc %>% 
+  left_join(pos, by=c('rowname'='AGI'))
+
+reslfc <- reslfc %>% 
+  dplyr::rename(AGI=rowname)
+
+
+#write table
+
+write.csv(reslfc,'data/rnaseq_table_v1.csv')
+
+
+
+
+
+
 
 
 
