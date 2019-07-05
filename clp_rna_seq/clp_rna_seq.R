@@ -7,6 +7,43 @@ library(AnnotationHub)
 library(ggrepel)
 
 
+# remove mito genes copied to nulceus from index file----
+
+#laod original indexing file from ensemble (here version arabidopsis assembly v48 from ensemble)
+library(Biostrings)
+athal.fa <- readDNAStringSet('data/athal.fa')
+dss2df <- function(dss) data.frame(width=width(dss), seq=as.character(dss), names=names(dss))
+athal.fa <- dss2df(athal.fa)
+athal.fa <- as_tibble(athal.fa)
+#query for blast ist the mitochondrial encoded genome
+query <- filter(athal.fa, str_detect(names,'ATMG0')) %>% 
+  mutate(AGI=substr(sapply(strsplit(as.character(names),' '),'[',1),1,9)) %>% 
+  filter(str_detect(AGI,'ATM'))
+#convert into fasta format for blast++ stand alone version
+query_names <- query$AGI  
+query <- query$seq
+query <- DNAStringSet(query, use.names = T)
+names(query) <- query_names
+writeXStringSet(query,'data/query.fa')
+#run blast standalone (blastn,query versus -db athal.fa)
+
+
+#read blast of mito (query.fa) vs atha'.fa
+numt <- fread('data/numt.csv') %>% 
+  filter(str_detect(V2,'AT2G')) %>% 
+  distinct(V2,.keep_all = T)
+
+#remove numtDNA from athal.fa
+clean <- athal.fa %>% 
+  mutate(match=sapply(strsplit(as.character(names),' '),'[',1)) %>% 
+  filter(!(match %in% numt$V2)) %>% 
+  select(-match)
+clean_names <- clean$names  
+clean <- clean$seq
+clean <- DNAStringSet(clean, use.names = T)
+names(clean) <- clean_names
+writeXStringSet(clean,'data/clean_athal.fa')
+#run new quant on salmon
 
 
 
@@ -711,6 +748,8 @@ detach("package:GenomicFeatures", unload=TRUE)
 
 # count plots for oxphos complex subunits ---------------------------------
 
+library(tidyverse)
+library(data.table)
 
 oxphos <- fread('data/rnaseq_table_v1.csv')
 oxphos_list <- fread('data/oxphos_list.txt',header = F)
