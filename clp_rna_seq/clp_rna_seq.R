@@ -5,8 +5,7 @@ library(tidyverse)
 library(tximport)
 library(AnnotationHub)
 library(ggrepel)
-library(ensembldb)
-library(Biostrings)
+
 
 
 
@@ -15,12 +14,12 @@ library(Biostrings)
 #arabidopsis reference transcripts (tx2gene)
 ## Load the annotation resource.
 
+library(ensembldb)
 ah <- AnnotationHub()
 ahDb <- query(ah, pattern = c("thaliana"))
 ahEdb <- ahDb[[4]]
 k <- keys(ahEdb, keytype = "TXNAME")
 tx2gene <- select(ahEdb, k, "GENEID", "TXNAME")
-detach("package:ensembldb", unload=TRUE)
 
 ##import reads after running Salmon
 # dir is path/to/dir
@@ -546,7 +545,7 @@ resLFC_clp2 <- lfcShrink(dds, coef="genotype_clp2_vs_col0", type="apeglm") %>%
 reslfc <- bind_rows(resLFC_clp1,resLFC_clp2)
 
 # Table -------------------------------------------------------------------
-
+library(Biostrings)
 #work with result files for clp1 and clp2 by using different resultsnames
 
 #clp1
@@ -711,6 +710,8 @@ ggsave('transcript per origin.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,
 detach("package:GenomicFeatures", unload=TRUE)
 
 # count plots for oxphos complex subunits ---------------------------------
+
+
 oxphos <- fread('data/rnaseq_table_v1.csv')
 oxphos_list <- fread('data/oxphos_list.txt',header = F)
 oxphos_list <- dplyr::filter(oxphos_list,str_detect(V1,'ArthC')==F) %>% 
@@ -725,9 +726,24 @@ translated <- fread('data/uniprot-yourlist_M201907046746803381A1F0E0DB47453E0216
 oxphos <- oxphos %>% 
   left_join(translated, by=c('AGI'='Gene names')) %>% 
   na.omit()
-    
+#new oxphos set from ettiene
+library(readxl)
+complexI <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>% 
+  mutate(match=Arabidopsis) %>% 
+  separate_rows(Arabidopsis) %>% 
+  dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
+  mutate(Arabidopsis=toupper(substr(Arabidopsis,1,9))) %>% 
+  dplyr::select(-1,-2) %>% 
+  dplyr::rename(AGI=Arabidopsis) %>% 
+  mutate(AGI=gsub(' ','',AGI)) %>% 
+  dplyr::filter(AGI !='ATMG00665') %>% 
+  dplyr::rename(desc=`Other name used in Arabidopsis`)
+
+
+
+# Gene selction and Plot====
+sel <- complexI$AGI
 #Gene selection
-sel <- oxphos$AGI
 
 #Plot counts
 #custom selection, Plotcounts() doesn't work on multiple Genes
@@ -738,15 +754,24 @@ subset <- assay(dds[sel]) %>%
   gather(sample,count,2:10) %>% 
   mutate(genotype=sapply(strsplit(sample,'_'),'[',1),
          genotype=ifelse(genotype=='col0','WT',genotype))
+
+
+
+
 #description
-desc_sel <- fread('data/desc_atm.csv')
+desc_sel <- complexI
 
 
-#join desc onto pvalue
 
 #join desc and pvalue to subset
 subset <- subset %>% 
   left_join(desc_sel, by=c('gene'='AGI'))
+
+#sum isoforms
+subset <- subset %>% 
+  group_by(match,sample,genotype,desc) %>% 
+  summarise(count=sum(count))
+
 
 #make pvalue frame and get descriptions
 #resultsNames(dds)
@@ -779,12 +804,13 @@ res <- res %>%
 
 #atg on facet
 subset <- subset %>% 
-  mutate(strip=paste0(gene,'\n',desc))
+  mutate(strip=paste0(match,'\n',desc))
 
 #levels
 subset$genotype <- factor(subset$genotype, levels = c('WT','clp1','clp2'))
 
 res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
+
 
 
 
@@ -821,4 +847,4 @@ ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,
     
     
     
-  )
+  
