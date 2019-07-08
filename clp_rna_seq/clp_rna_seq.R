@@ -97,7 +97,8 @@ dds$genotype <- factor(dds$genotype, levels = c('col0','clp1','clp2'))
 dds <- DESeq(dds)
 
 
-res_clp1 <- results(dds,name = 'genotype_clp1_vs_col0')
+res_clp1 <- results(dds,name = 'genotype_clp1_vs_col0',tidy=T)
+res_clp1_apeglm <- lfcShrink(dds, coef="genotype_clp1_vs_col0", type="apeglm")
 res_clp1
 res_clp2 <- results(dds,name = 'genotype_clp2_vs_col0')
 res_clp2
@@ -750,24 +751,25 @@ detach("package:GenomicFeatures", unload=TRUE)
 
 library(tidyverse)
 library(data.table)
-
-oxphos <- fread('data/rnaseq_table_v1.csv')
-oxphos_list <- fread('data/oxphos_list.txt',header = F)
-oxphos_list <- dplyr::filter(oxphos_list,str_detect(V1,'ArthC')==F) %>% 
-  mutate(V1=paste0('ath:',V1))
-
-translated <- fread('data/uniprot-yourlist_M201907046746803381A1F0E0DB47453E0216320D4AE9758.tab.gz') %>% 
-  separate_rows(`Gene names`) %>% 
-  filter(str_detect(`Gene names`,'At')) %>% 
-  dplyr::select(6,5) %>% 
-  mutate(`Gene names`=toupper(`Gene names`))
-
-oxphos <- oxphos %>% 
-  left_join(translated, by=c('AGI'='Gene names')) %>% 
-  na.omit()
-#new oxphos set from ettiene
+# #kegg data set, no good
+# oxphos <- fread('data/rnaseq_table_v1.csv')
+# oxphos_list <- fread('data/oxphos_list.txt',header = F)
+# oxphos_list <- dplyr::filter(oxphos_list,str_detect(V1,'ArthC')==F) %>% 
+#   mutate(V1=paste0('ath:',V1))
+# 
+# translated <- fread('data/uniprot-yourlist_M201907046746803381A1F0E0DB47453E0216320D4AE9758.tab.gz') %>% 
+#   separate_rows(`Gene names`) %>% 
+#   filter(str_detect(`Gene names`,'At')) %>% 
+#   dplyr::select(6,5) %>% 
+#   mutate(`Gene names`=toupper(`Gene names`))
+# 
+# oxphos <- oxphos %>% 
+#   left_join(translated, by=c('AGI'='Gene names')) %>% 
+#   na.omit()
+#new oxphos set from ettiene (good) ----
 library(readxl)
-complexI <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>% 
+#complex I ====
+Complex_I <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>% 
   mutate(match=Arabidopsis) %>% 
   separate_rows(Arabidopsis) %>% 
   dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
@@ -776,91 +778,258 @@ complexI <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>%
   dplyr::rename(AGI=Arabidopsis) %>% 
   mutate(AGI=gsub(' ','',AGI)) %>% 
   dplyr::filter(AGI !='ATMG00665') %>% 
-  dplyr::rename(desc=`Other name used in Arabidopsis`)
+  dplyr::rename(desc=`Other name used in Arabidopsis`) %>% 
+  mutate(complex='complex_I')
+#complex II ====
+Complex_II<- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=3,skip=2) %>% 
+  mutate(match=Arabidopsis) %>% 
+  separate_rows(Arabidopsis) %>% 
+  dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
+  mutate(Arabidopsis=toupper(substr(Arabidopsis,1,9))) %>% 
+  dplyr::select(-1,-2) %>% 
+  dplyr::rename(AGI=Arabidopsis) %>% 
+  mutate(AGI=gsub(' ','',AGI)) %>% 
+  dplyr::rename(desc=`Other name used in Arabidopsis`) %>% 
+  mutate(complex='complex_II')
+#complex III ====
+Complex_III<- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=4,skip=2) %>% 
+  mutate(match=Arabidopsis) %>% 
+  separate_rows(Arabidopsis) %>% 
+  dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
+  mutate(Arabidopsis=toupper(substr(Arabidopsis,1,9))) %>% 
+  dplyr::select(-1,-2) %>% 
+  dplyr::rename(AGI=Arabidopsis) %>% 
+  mutate(AGI=gsub(' ','',AGI)) %>% 
+  dplyr::rename(desc=`Other name used in Arabidopsis`) %>% 
+  mutate(complex='complex_III')
 
 
-
+#complex IV ====
+Complex_IV<- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=5,skip=2) %>% 
+  mutate(match=Arabidopsis) %>% 
+  separate_rows(Arabidopsis) %>% 
+  dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
+  mutate(Arabidopsis=toupper(substr(Arabidopsis,1,9))) %>% 
+  dplyr::select(-1,-2) %>% 
+  dplyr::rename(AGI=Arabidopsis) %>% 
+  mutate(AGI=gsub(' ','',AGI)) %>% 
+  dplyr::rename(desc=`Other name used in Arabidopsis`) %>% 
+  mutate(complex='complex_IV')
+#complex V ====
+Complex_V<- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=6,skip=2) %>% 
+  mutate(match=Arabidopsis) %>% 
+  separate_rows(Arabidopsis) %>% 
+  dplyr::filter(str_detect(Arabidopsis,'At')) %>% 
+  mutate(Arabidopsis=toupper(substr(Arabidopsis,1,9))) %>% 
+  dplyr::select(-1,-2) %>% 
+  dplyr::rename(AGI=Arabidopsis) %>% 
+  mutate(AGI=gsub(' ','',AGI)) %>% 
+  dplyr::rename(desc=`Other name used in Arabidopsis`) %>% 
+  mutate(complex='complex_V')
+#oxphos from ettienne combined ====
+oxphos <- bind_rows(complex_I,Complex_II,Complex_III,Complex_IV,Complex_V)
 # RNA data ====
-sel <- complexI$AGI
-#Gene selection
+#use fold chang from reslfc
+#start from here
+library(tidyverse)
+filter <- dplyr::filter
+select <- dplyr::select
+library(data.table)
 
-#Plot counts
-#custom selection, Plotcounts() doesn't work on multiple Genes
-subset <- assay(dds[sel]) %>% 
-  as.data.frame() %>% 
-  rownames_to_column(var='gene') %>% 
-  as_tibble() %>% 
-  gather(sample,count,2:10) %>% 
-  mutate(genotype=sapply(strsplit(sample,'_'),'[',1),
-         genotype=ifelse(genotype=='col0','WT',genotype))
-
-
-
-
-#description
-desc_sel <- complexI
-
-
-
-#join desc and pvalue to subset
-subset <- subset %>% 
-  left_join(desc_sel, by=c('gene'='AGI'))
-
-#sum isoforms
-subset <- subset %>% 
-  group_by(match,sample,genotype,desc) %>% 
-  summarise(count=sum(count))
-
-
-#make pvalue frame and get descriptions
-#resultsNames(dds)
-resclp1 <- results(dds[sel], name = 'genotype_clp1_vs_col0',tidy = T) %>% as_tibble() %>% 
-  dplyr::select(row,padj) %>% 
-  dplyr::rename(gene=row) %>% 
-  mutate(genotype='clp1')
-resclp2 <- results(dds[sel], name = 'genotype_clp2_vs_col0',tidy = T) %>% as_tibble() %>% 
-  dplyr::select(row,padj) %>% 
-  dplyr::rename(gene=row) %>% 
-  mutate(genotype='clp2')
-
-res <- bind_rows(resclp1,resclp2) %>% 
-  left_join(desc_sel,by=c('gene'='AGI')) %>% 
-  dplyr::select(-gene) %>% 
-  mutate(sig_level=ifelse(padj > 0.01,'',
-                          ifelse(padj <= 0.01 & padj > 0.001,'*',
-                                 ifelse(padj <= 0.001,'*\n*','failsave'))))
-#transform into thousands 'K'
-subset <- subset %>% 
-  mutate(count=count/1000)
-
-
-#add median as ref y axis point 
-y_ref <- subset %>% group_by(genotype,desc) %>% 
-  summarise(median=median(count),max=max(count))
-res <- res %>% 
-  left_join(y_ref)
-
-
-#atg on facet
-subset <- subset %>% 
-  mutate(strip=paste0(match,'\n',desc))
+reslfc_combined <- fread('data/rnaseq_table_v1.csv') %>% 
+  gather(type,value,3:6) %>% 
+  mutate(genotype=sapply(strsplit(type,'_'),'[',1),
+         spread=sapply(strsplit(type,'_'),'[',2),
+         fraction='RNA') %>% 
+  select(-type,-V1) %>% 
+  spread(spread,value) %>% 
+  mutate(padj=as.numeric(padj),
+         lognfc=log2(exp(1)^as.numeric(lognfc))) %>% 
+  dplyr::rename(log2fc=lognfc)
 
 
 
-#protein abundacne ====
+
+
+#protein abundance ====
 
 prot <- fread('data/prot_results.csv') %>% 
   gather(type,value,4:11) %>% 
   mutate(genotype=sapply(strsplit(type,'__'),'[',1),
          spread=sapply(strsplit(type,'__'),'[',3),
-         fraction=ifelse(genotype %in% c('clp1p','clp2p'),'membrane','soluble'),
+         fraction=ifelse(genotype %in% c('clp1p','clp2p'),'Protein_membrane','Protein_soluble'),
          genotype=substr(genotype,1,4),
-         data='prot',
          ID=substr(ID,1,9)) %>% 
   dplyr::select(-type,-V1) %>% 
-  dplyr::rename(AGI=ID) %>% 
-  spread(spread,value)
+  dplyr::rename(AGI=ID, description=name) %>% 
+  spread(spread,value) %>% 
+  mutate(p.adj=as.numeric(p.adj)) %>% 
+  dplyr::rename(padj=p.adj, log2fc=ratio) %>% 
+  distinct(AGI,genotype,fraction,padj,log2fc,.keep_all = T)
   
+#combine RNA and Protein data ====
+
+omics <- bind_rows(reslfc_combined,prot) %>% 
+  mutate(spread=paste(log2fc,padj,sep='_'),
+         type=paste(genotype,fraction,sep='_')) %>% 
+  select(-fraction,-log2fc,-padj,-genotype) %>% 
+  spread(type,spread) 
+
+coalesce_all_columns <- function(df) {
+  
+  tibble(
+    description=df$description[1],
+    location_consensus=na.omit(df$location_consensus),
+    left=na.omit(df$left),
+    right=na.omit(df$right),
+    direction=na.omit(df$direction),
+    encoded=na.omit(df$encoded),
+    clp1_Protein_membrane=na.omit(df$clp1_Protein_membrane),
+    clp1_Protein_soluble=na.omit(df$clp1_Protein_soluble),
+    clp1_RNA=na.omit(df$clp1_RNA),
+    clp2_Protein_membrane=na.omit(df$clp2_Protein_membrane),
+    clp2_Protein_soluble=na.omit(df$clp2_Protein_soluble),
+    clp2_RNA=na.omit(df$clp2_RNA)
+)
+}
+
+omics_prot_and_rna <- omics %>% 
+  group_by(AGI) %>%
+  do(coalesce_all_columns(.)) %>%
+  ungroup()
+
+omics_rna <- omics %>% 
+  filter(is.na(clp1_RNA)==F)
+
+omics <- omics_prot_and_rna %>% 
+  bind_rows(omics_rna)
+
+omics <- omics %>% 
+  mutate(clp1_RNA_log2fc=as.numeric(sapply(strsplit(clp1_RNA,'_'),'[',1)),
+         clp1_RNA_padj=as.numeric(sapply(strsplit(clp1_RNA,'_'),'[',2)),
+         clp1_Protein_membrane_log2fc=as.numeric(sapply(strsplit(clp1_Protein_membrane,'_'),'[',1)),
+         clp1_Protein_membrane_padj=as.numeric(sapply(strsplit(clp1_Protein_membrane,'_'),'[',2)),
+         clp1_Protein_soluble_log2fc=as.numeric(sapply(strsplit(clp1_Protein_soluble,'_'),'[',1)),
+         clp1_Protein_soluble_padj=as.numeric(sapply(strsplit(clp1_Protein_soluble,'_'),'[',2)),
+         clp2_RNA_log2fc=as.numeric(sapply(strsplit(clp2_RNA,'_'),'[',1)),
+         clp2_RNA_padj=as.numeric(sapply(strsplit(clp2_RNA,'_'),'[',2)),
+         clp2_Protein_membrane_log2fc=as.numeric(sapply(strsplit(clp2_Protein_membrane,'_'),'[',1)),
+         clp2_Protein_membrane_padj=as.numeric(sapply(strsplit(clp2_Protein_membrane,'_'),'[',2)),
+         clp2_Protein_soluble_log2fc=as.numeric(sapply(strsplit(clp2_Protein_soluble,'_'),'[',1)),
+         clp2_Protein_soluble_padj=as.numeric(sapply(strsplit(clp2_Protein_soluble,'_'),'[',2))) %>% 
+  select(-c('clp1_RNA','clp1_Protein_membrane','clp1_Protein_soluble',
+            'clp2_RNA','clp2_Protein_membrane','clp2_Protein_soluble'))
+
+#remove any genes with any NAs
+omics <- omics %>% group_by(AGI) %>% 
+  na.omit()
+
+#duplicated genes names from different protein isoforms, retrieve the mapping from protein frame and adjust deciption
+
+isoforms <- prot %>% mutate(AGI=substr(AGI,1,9)) %>% filter(AGI %in% omics$AGI[which(duplicated(omics$AGI)==T)]) %>% 
+  distinct(AGI,description,.keep_all = T) %>% 
+  select(AGI,description) %>% 
+  dplyr::rename(name=description) %>% 
+  group_by(AGI) %>% 
+  mutate(isoform = row_number())
+
+
+
+omics <- omics %>% 
+  group_by(AGI) %>% 
+  mutate(isoform = row_number()) %>% 
+  left_join(isoforms) %>% 
+  ungroup() %>% 
+  mutate(description=ifelse(is.na(name)==F,name,description),
+         AGI=paste(AGI,isoform,sep='.')) %>% 
+  select(-name,-isoform)
+
+#write table
+#write.csv(omics,'data/omics_without_na.csv')
+#join RNA for data with missing values
+
+omics_rna <- omics_rna %>% 
+  mutate(clp1_RNA_log2fc=as.numeric(sapply(strsplit(clp1_RNA,'_'),'[',1)),
+         clp1_RNA_padj=as.numeric(sapply(strsplit(clp1_RNA,'_'),'[',2)),
+         clp1_Protein_membrane_log2fc=as.numeric(sapply(strsplit(clp1_Protein_membrane,'_'),'[',1)),
+         clp1_Protein_membrane_padj=as.numeric(sapply(strsplit(clp1_Protein_membrane,'_'),'[',2)),
+         clp1_Protein_soluble_log2fc=as.numeric(sapply(strsplit(clp1_Protein_soluble,'_'),'[',1)),
+         clp1_Protein_soluble_padj=as.numeric(sapply(strsplit(clp1_Protein_soluble,'_'),'[',2)),
+         clp2_RNA_log2fc=as.numeric(sapply(strsplit(clp2_RNA,'_'),'[',1)),
+         clp2_RNA_padj=as.numeric(sapply(strsplit(clp2_RNA,'_'),'[',2)),
+         clp2_Protein_membrane_log2fc=as.numeric(sapply(strsplit(clp2_Protein_membrane,'_'),'[',1)),
+         clp2_Protein_membrane_padj=as.numeric(sapply(strsplit(clp2_Protein_membrane,'_'),'[',2)),
+         clp2_Protein_soluble_log2fc=as.numeric(sapply(strsplit(clp2_Protein_soluble,'_'),'[',1)),
+         clp2_Protein_soluble_padj=as.numeric(sapply(strsplit(clp2_Protein_soluble,'_'),'[',2))) %>% 
+  select(-c('clp1_RNA','clp1_Protein_membrane','clp1_Protein_soluble',
+            'clp2_RNA','clp2_Protein_membrane','clp2_Protein_soluble'))
+omics_rna <- omics_rna %>% 
+  filter(!(AGI %in% substr(omics$AGI,1,9)))
+
+
+
+omics <- bind_rows(omics, omics_rna)
+#adjust deseq fitlered counts (cooks cutoff and independant filtering) to be 1
+#this removes problems with NA, but will still mark genes as insignificant
+
+omics <- omics %>% 
+  mutate(clp1_RNA_padj=ifelse(is.na(clp1_RNA_padj),1,clp1_RNA_padj),
+         clp2_RNA_padj=ifelse(is.na(clp2_RNA_padj),1,clp2_RNA_padj)) %>% 
+  mutate(AGI=substr(AGI,1,9)) %>% 
+  group_by(AGI) %>% 
+  mutate(isoform = row_number()) %>% 
+  ungroup() %>% 
+  mutate(AGI=paste(AGI,isoform,sep='.')) %>% 
+  select(-isoform)
+
+
+
+write.csv(omics,'data/omics_with_na.csv')
+
+#heatmap data----
+
+omics_join <- omics %>% 
+  mutate(isoform=AGI,
+         AGI=substr(AGI,1,9))
+
+oxphos <- oxphos %>% 
+  left_join(omics_join,by='AGI') %>% 
+  filter(is.na(complex)==F) %>% 
+  mutate(AGI=isoform) %>% 
+  select(-isoform) 
+#remove isoforms (keep longest protein, as the fragemets are probably double counted)
+oxphos <- oxphos %>% 
+  mutate(AGI=substr(AGI,1,9)) %>% 
+  distinct(AGI,.keep_all = T)
+
+#need long format for heatmap
+#save <- oxphos
+oxphos <- save
+oxphos <- oxphos %>% 
+  gather(condition,value,11:22) %>% 
+  mutate(type=ifelse(str_detect(condition,'log2fc'),'log2fc','padj'),
+         condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
+                          paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
+  spread(type,value) %>% 
+  mutate(Identifier=paste(AGI,desc,sep='_'))
+#levels
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1_RNA','clp2_RNA',
+                                                       'clp1_Protein_membrane','clp2_Protein_membrane',
+                                                       'clp1_Protein_soluble','clp2_Protein_soluble'))
+
+
+#plot heatmap---
+#complex I ====
+ggplot(data = filter(oxphos,complex=='complex_I'), aes(x = condition, y = Identifier)) +
+  geom_tile(aes(fill = log2fc))+
+  scale_fill_gradient2(low='#ff3300',mid = '#ffff33',high = '#006600')+
+  labs(title='',y='Gene',x='')+
+  theme(axis.title.x = element_blank(),legend.position = 'none',
+        axis.text.x = element_text(face=c('plain','italic','italic'),size=8),
+        axis.title.y = element_text(face='bold',size='8'),
+        axis.text.y = element_text(face='bold',size=8),
+        strip.text = element_text(face='bold',size=12),
+        title=element_text(size=10))
 
 
 #plotting====
