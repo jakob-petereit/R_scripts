@@ -7,43 +7,43 @@ library(AnnotationHub)
 library(ggrepel)
 
 
-# remove mito genes copied to nulceus from index file----
-
-#laod original indexing file from ensemble (here version arabidopsis assembly v48 from ensemble)
-library(Biostrings)
-athal.fa <- readDNAStringSet('data/athal.fa')
-dss2df <- function(dss) data.frame(width=width(dss), seq=as.character(dss), names=names(dss))
-athal.fa <- dss2df(athal.fa)
-athal.fa <- as_tibble(athal.fa)
-#query for blast ist the mitochondrial encoded genome
-query <- filter(athal.fa, str_detect(names,'ATMG0')) %>% 
-  mutate(AGI=substr(sapply(strsplit(as.character(names),' '),'[',1),1,9)) %>% 
-  filter(str_detect(AGI,'ATM'))
-#convert into fasta format for blast++ stand alone version
-query_names <- query$AGI  
-query <- query$seq
-query <- DNAStringSet(query, use.names = T)
-names(query) <- query_names
-writeXStringSet(query,'data/query.fa')
-#run blast standalone (blastn,query versus -db athal.fa)
-
-
-#read blast of mito (query.fa) vs atha'.fa
-numt <- fread('data/numt.csv') %>% 
-  filter(str_detect(V2,'AT2G')) %>% 
-  distinct(V2,.keep_all = T)
-
-#remove numtDNA from athal.fa
-clean <- athal.fa %>% 
-  mutate(match=sapply(strsplit(as.character(names),' '),'[',1)) %>% 
-  filter(!(match %in% numt$V2)) %>% 
-  select(-match)
-clean_names <- clean$names  
-clean <- clean$seq
-clean <- DNAStringSet(clean, use.names = T)
-names(clean) <- clean_names
-writeXStringSet(clean,'data/clean_athal.fa')
-#run new quant on salmon
+# # remove mito genes copied to nulceus from index file (commented out) ----
+#  ()
+# #laod original indexing file from ensemble (here version arabidopsis assembly v48 from ensemble)
+# library(Biostrings)
+# athal.fa <- readDNAStringSet('data/athal.fa')
+# dss2df <- function(dss) data.frame(width=width(dss), seq=as.character(dss), names=names(dss))
+# athal.fa <- dss2df(athal.fa)
+# athal.fa <- as_tibble(athal.fa)
+# #query for blast ist the mitochondrial encoded genome
+# query <- filter(athal.fa, str_detect(names,'ATMG0')) %>% 
+#   mutate(AGI=substr(sapply(strsplit(as.character(names),' '),'[',1),1,9)) %>% 
+#   filter(str_detect(AGI,'ATM'))
+# #convert into fasta format for blast++ stand alone version
+# query_names <- query$AGI  
+# query <- query$seq
+# query <- DNAStringSet(query, use.names = T)
+# names(query) <- query_names
+# writeXStringSet(query,'data/query.fa')
+# #run blast standalone (blastn,query versus -db athal.fa)
+# 
+# 
+# #read blast of mito (query.fa) vs atha'.fa
+# numt <- fread('data/numt.csv') %>% 
+#   filter(str_detect(V2,'AT2G')) %>% 
+#   distinct(V2,.keep_all = T)
+# 
+# #remove numtDNA from athal.fa
+# clean <- athal.fa %>% 
+#   mutate(match=sapply(strsplit(as.character(names),' '),'[',1)) %>% 
+#   filter(!(match %in% numt$V2)) %>% 
+#   select(-match)
+# clean_names <- clean$names  
+# clean <- clean$seq
+# clean <- DNAStringSet(clean, use.names = T)
+# names(clean) <- clean_names
+# writeXStringSet(clean,'data/clean_athal.fa')
+# #run new quant on salmon
 
 
 
@@ -780,7 +780,7 @@ complexI <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>%
 
 
 
-# Gene selction and Plot====
+# RNA data ====
 sel <- complexI$AGI
 #Gene selection
 
@@ -845,11 +845,28 @@ res <- res %>%
 subset <- subset %>% 
   mutate(strip=paste0(match,'\n',desc))
 
+
+
+#protein abundacne ====
+
+prot <- fread('data/prot_results.csv') %>% 
+  gather(type,value,4:11) %>% 
+  mutate(genotype=sapply(strsplit(type,'__'),'[',1),
+         spread=sapply(strsplit(type,'__'),'[',3),
+         fraction=ifelse(genotype %in% c('clp1p','clp2p'),'membrane','soluble'),
+         genotype=substr(genotype,1,4),
+         data='prot',
+         ID=substr(ID,1,9)) %>% 
+  dplyr::select(-type,-V1) %>% 
+  dplyr::rename(AGI=ID) %>% 
+  spread(spread,value)
+  
+
+
+#plotting====
 #levels
 subset$genotype <- factor(subset$genotype, levels = c('WT','clp1','clp2'))
-
 res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
-
 
 
 
@@ -887,3 +904,27 @@ ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,
     
     
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
