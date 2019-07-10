@@ -2,6 +2,7 @@
 library(DESeq2)
 library(data.table)
 library(tidyverse)
+library(extrafont)
 library(tximport)
 library(AnnotationHub)
 library(ggrepel)
@@ -56,7 +57,7 @@ ah <- AnnotationHub()
 ahDb <- query(ah, pattern = c("thaliana"))
 ahEdb <- ahDb[[4]]
 k <- keys(ahEdb, keytype = "TXNAME")
-tx2gene <- select(ahEdb, k, "GENEID", "TXNAME")
+tx2gene <- ensembldb::select(ahEdb, k, "GENEID", "TXNAME")
 
 ##import reads after running Salmon
 # dir is path/to/dir
@@ -96,15 +97,6 @@ dds$genotype <- factor(dds$genotype, levels = c('col0','clp1','clp2'))
 # Differential expression analysis----
 dds <- DESeq(dds)
 
-
-res_clp1 <- results(dds,name = 'genotype_clp1_vs_col0',tidy=T)
-res_clp1_apeglm <- lfcShrink(dds, coef="genotype_clp1_vs_col0", type="apeglm")
-res_clp1
-res_clp2 <- results(dds,name = 'genotype_clp2_vs_col0')
-res_clp2
-
-summary(res_clp1)
-summary(res_clp2)
 
 #stand alone sections
 # DESEQ workflow from guide ----
@@ -325,20 +317,35 @@ data_volcano <- data_volcano %>%
 data_volcano <- data_volcano %>% 
   mutate(pch=ifelse(is.na(pch),16,pch))
 
+
+
 #Write_data
 write.csv(data_volcano,'data/data_voclano_rnaseq.csv')
 
-p <- ggplot(data_volcano, aes(x=ratio_adj,y=-log(max_p_adj,10),col=sig))+
-  geom_point(pch=data_volcano$pch,size=data_volcano$size,alpha=0.75)+
-  geom_text_repel(data=dplyr::filter(data_volcano,sig=='sig'),aes(label=desc2),col='black',size=2.5, fontface='bold')+
-  scale_colour_manual(values=c('#990000','#99ccff'))+
+#get oxphos from later section
+
+data_volcano <- data_volcano %>% 
+  mutate(col=ifelse(sig=='sig' & (rowname %in% oxphos$AGI)==T,3,
+                    ifelse(sig=='sig' & (rowname %in% oxphos$AGI)==F,2,1)))
+
+#volcano
+p <- ggplot(data_volcano, aes(x=ratio_adj,y=-log10(max_p_adj),col=col,fill=col))+
+  geom_point(pch=data_volcano$pch,size=3,alpha=0.75)+
+  geom_text_repel(data=filter(data_volcano,sig=='sig'),aes(label=desc2),col='black',size=2.5, fontface='bold')+
+  geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_text(aes(x=4,y=-log10(0.05)-0.2,label='P = 0.05'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=-0.4-0.5,y=60,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=0.4+0.5,y=60,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  #scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
   theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
         axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
         title = element_text(face='bold',size=18))+
-  labs(title='Clp vs col-O', x='log2 fold change', y='-log10 p-value')
+  labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
 p
 
-ggsave(filename = paste0('volcano','.png'),path = 'images',device = 'png',dpi=1080,plot = p)
+
+ggsave('RNA_volcano.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 13,units = 'in')
 
 
 
@@ -922,6 +929,7 @@ omics <- omics %>%
   select(-c('clp1_RNA','clp1_Protein_membrane','clp1_Protein_soluble',
             'clp2_RNA','clp2_Protein_membrane','clp2_Protein_soluble'))
 
+
 #remove any genes with any NAs
 omics <- omics %>% group_by(AGI) %>% 
   na.omit()
@@ -986,7 +994,8 @@ omics <- omics %>%
 
 
 
-write.csv(omics,'data/omics_with_na.csv')
+#write.csv(omics,'data/omics_with_na.csv')
+
 
 #complex I heatmap data----
 
@@ -1013,11 +1022,20 @@ oxphos <- oxphos %>%
          condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
                           paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
   spread(type,value)
-  
-#levels
-oxphos$condition <- factor(oxphos$condition,levels = c('clp1_RNA','clp2_RNA',
-                                                       'clp1_Protein_membrane','clp2_Protein_membrane',
-                                                       'clp1_Protein_soluble','clp2_Protein_soluble'))
+
+#rename conditions
+oxphos <- oxphos %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
+                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
+                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+
+#levels  
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
+                                                       'clp1 \nHMW','clp2 \nHMW',
+                                                       'clp1 \nLMW','clp2 \nLMW'))
 
 
 
@@ -1031,15 +1049,31 @@ oxphos <- oxphos %>%
                                               ifelse(AGI=='AT1G18320','Tim17L',
                                                      ifelse(AGI=='AT3G10110','Tim17L',
                                                             ifelse(AGI=='AT1G72180','noMito',
-                                                                   ifelse(AGI=='AT2G28430','noFunc',desc))))))))),
-         Identifier=paste(AGI,desc,sep='_'))
+                                                                   ifelse(AGI=='AT2G28430','noFunc',desc))))))))))
+
+#make y labels pretty
+
+CI_pretty <- filter(oxphos,complex=='complex_I',condition=='clp1 \nRNA') %>% 
+  select(1,2) %>% 
+  rowwise() %>% 
+  mutate(length=nchar(desc)) %>% 
+  ungroup() %>% 
+  mutate(max=max(length),
+         diff=max-length) %>% 
+  rowwise() %>% 
+  mutate(filler=paste(rep('-',1+diff),collapse = ''),
+         Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+  select(AGI,Identifier)
+
+oxphos <- oxphos %>% left_join(CI_pretty)
 
 AGI_order1 <- oxphos %>% 
-  filter(condition=='clp1_RNA',complex=='complex_I',encoded=='Mitochondrion') %>% 
+  filter(condition=='clp1 \nRNA',complex=='complex_I',encoded=='Mitochondrion') %>% 
   arrange(log2fc)
 
+
 AGI_order2 <- oxphos %>% 
-  filter(condition=='clp1_Protein_membrane',complex=='complex_I',encoded=='Nucleus') %>% 
+  filter(condition=='clp1 \nHMW',complex=='complex_I',encoded=='Nucleus') %>% 
   arrange(log2fc)
 AGI_order <- bind_rows(AGI_order2,AGI_order1)
 
@@ -1047,23 +1081,35 @@ oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
   
 
     
+#adjust upper limits of foldchange
+oxphos <- oxphos %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
+
 #complex I heatmap ====
 p <- ggplot(data = filter(oxphos,complex=='complex_I'), aes(x = condition, y = Identifier)) +
   geom_tile(aes(fill = log2fc))+
-  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900')+
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
   labs(title='Complex I',y='',x='')+
-  theme(axis.title.x = element_blank(),legend.position = 'none',
-        axis.text.x = element_text(face=c('plain','italic','italic'),size=8,angle=90),
-        axis.title.y = element_text(face='bold',size=8),
-        axis.text.y = element_text(face='plain',size=6,hjust = 0),
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
-        title=element_text(size=10))
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1))
+p
+ggsave('complex_i_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 12,width = 8,units = 'cm')
 
-ggsave('complex_i_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 15,width = 6,units = 'cm')
 
 
 #complex II heatmap data----
 
+#need long format for heatmap
+#save <- oxphos
 oxphos <- save
 oxphos <- oxphos %>% 
   gather(condition,value,11:22) %>% 
@@ -1072,10 +1118,19 @@ oxphos <- oxphos %>%
                           paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
   spread(type,value)
 
-#levels
-oxphos$condition <- factor(oxphos$condition,levels = c('clp1_RNA','clp2_RNA',
-                                                       'clp1_Protein_membrane','clp2_Protein_membrane',
-                                                       'clp1_Protein_soluble','clp2_Protein_soluble'))
+#rename conditions
+oxphos <- oxphos %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
+                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
+                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+
+#levels  
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
+                                                       'clp1 \nHMW','clp2 \nHMW',
+                                                       'clp1 \nLMW','clp2 \nLMW'))
 
 
 
@@ -1089,14 +1144,32 @@ oxphos <- oxphos %>%
                                                  ifelse(AGI=='AT1G18320','Tim17L',
                                                         ifelse(AGI=='AT3G10110','Tim17L',
                                                                ifelse(AGI=='AT1G72180','noMito',
-                                                                      ifelse(AGI=='AT2G28430','noFunc',desc))))))))),
-         Identifier=paste(AGI,desc,sep='_'))
+                                                                      ifelse(AGI=='AT2G28430','noFunc',desc))))))))))
+
+#make y labels pretty
+
+CII_pretty <- filter(oxphos,complex=='complex_II',condition=='clp1 \nRNA') %>% 
+  select(1,2) %>% 
+  na.omit() %>% 
+  rowwise() %>% 
+  mutate(length=nchar(desc)) %>% 
+  ungroup() %>% 
+  mutate(max=max(length),
+         diff=max-length) %>% 
+  rowwise() %>% 
+  mutate(filler=paste(rep('-',1+diff),collapse = ''),
+         Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+  select(AGI,Identifier)
+
+oxphos <- oxphos %>% left_join(CII_pretty)
+
 AGI_order1 <- oxphos %>% 
-  filter(condition=='clp1_RNA',complex=='complex_II',encoded=='Mitochondrion') %>% 
+  filter(condition=='clp1 \nRNA',complex=='complex_II',encoded=='Mitochondrion') %>% 
   arrange(log2fc)
 
+
 AGI_order2 <- oxphos %>% 
-  filter(condition=='clp1_Protein_membrane',complex=='complex_II',encoded=='Nucleus') %>% 
+  filter(condition=='clp1 \nHMW',complex=='complex_II',encoded=='Nucleus') %>% 
   arrange(log2fc)
 AGI_order <- bind_rows(AGI_order2,AGI_order1)
 
@@ -1104,67 +1177,323 @@ oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
 
 
 
+
+#adjust upper limits of foldchange
+oxphos <- oxphos %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
 #complex II heatmap ====
-p <- ggplot(data = filter(oxphos,complex=='complex_II'), aes(x = condition, y = Identifier)) +
+p <- ggplot(data = filter(oxphos,complex=='complex_II' & is.na(AGI)==F), aes(x = condition, y = Identifier)) +
   geom_tile(aes(fill = log2fc))+
-  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900')+
-  labs(title='Complex I',y='',x='')+
-  theme(axis.title.x = element_blank(),legend.position = 'none',
-        axis.text.x = element_text(face=c('plain','italic','italic'),size=8,angle=90),
-        axis.title.y = element_text(face='bold',size=8),
-        axis.text.y = element_text(face='plain',size=6,hjust = 0),
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
+  labs(title='Complex II',y='',x='')+
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
-        title=element_text(size=10))
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1))
 
-ggsave('complex_i_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 15,width = 6,units = 'cm')
-
-
-#plotting====
-#levels
-subset$genotype <- factor(subset$genotype, levels = c('WT','clp1','clp2'))
-res$genotype <- factor(res$genotype, levels = c('WT','clp1','clp2'))
+ggsave('complex_ii_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
 
 
 
-#plot
-p <- ggplot(subset, aes(genotype, count,bg=genotype)) + 
-  facet_wrap(~strip,scales = 'free_y')+
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar",col='black', size = 0.3)+
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "bar",col='black', size = 0.15,alpha= 0.6)+
-  geom_point(pch = 21,size=2,color='black',alpha=0.5)+
-  expand_limits(y=0)+
-  scale_colour_manual(values=c('#339900','#3399cc','#3366cc'))+
-  scale_fill_manual(values=c('#339900','#3399cc','#3366cc'))+
-  labs(title='Total transcript abundance',y='Normalised counts [k]')+
-  theme(axis.title.x = element_blank(),legend.position = 'none',
-        axis.text.x = element_text(face=c('plain','italic','italic'),size=8, angle = 30),
-        axis.title.y = element_text(face='bold',size='8'),
-        axis.text.y = element_text(face='bold',size=8),
+
+#complex III heatmap data----
+
+#need long format for heatmap
+#save <- oxphos
+oxphos <- save
+oxphos <- oxphos %>% 
+  gather(condition,value,11:22) %>% 
+  mutate(type=ifelse(str_detect(condition,'log2fc'),'log2fc','padj'),
+         condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
+                          paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
+  spread(type,value)
+
+#rename conditions
+oxphos <- oxphos %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
+                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
+                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+
+#levels  
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
+                                                       'clp1 \nHMW','clp2 \nHMW',
+                                                       'clp1 \nLMW','clp2 \nLMW'))
+
+
+
+#hand curate annotation a little
+oxphos <- oxphos %>% 
+  mutate(desc=ifelse(AGI=='AT1G19580','ca1',
+                     ifelse(AGI=='AT1G47260','ca2',
+                            ifelse(AGI=='AT5G66510','ca3',
+                                   ifelse(AGI=='AT5G63510','cal1',
+                                          ifelse(AGI=='AT3G48680','cal2',
+                                                 ifelse(AGI=='AT1G18320','Tim17L',
+                                                        ifelse(AGI=='AT3G10110','Tim17L',
+                                                               ifelse(AGI=='AT1G72180','noMito',
+                                                                      ifelse(AGI=='AT2G28430','noFunc',desc))))))))))
+
+#make y labels pretty
+
+CIII_pretty <- filter(oxphos,complex=='complex_III',condition=='clp1 \nRNA') %>% 
+  select(1,2) %>% 
+  na.omit() %>% 
+  rowwise() %>% 
+  mutate(length=nchar(desc)) %>% 
+  ungroup() %>% 
+  mutate(max=max(length),
+         diff=max-length) %>% 
+  rowwise() %>% 
+  mutate(filler=paste(rep('-',1+diff),collapse = ''),
+         Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+  select(AGI,Identifier)
+
+oxphos <- oxphos %>% left_join(CIII_pretty)
+
+AGI_order1 <- oxphos %>% 
+  filter(condition=='clp1 \nRNA',complex=='complex_III',encoded=='Mitochondrion') %>% 
+  arrange(log2fc)
+
+
+AGI_order2 <- oxphos %>% 
+  filter(condition=='clp1 \nHMW',complex=='complex_III',encoded=='Nucleus') %>% 
+  arrange(log2fc)
+AGI_order <- bind_rows(AGI_order2,AGI_order1)
+
+oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
+
+
+
+
+#adjust upper limits of foldchange
+oxphos <- oxphos %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
+#complex III heatmap ====
+p <- ggplot(data = filter(oxphos,complex=='complex_III' & is.na(AGI)==F), aes(x = condition, y = Identifier)) +
+  geom_tile(aes(fill = log2fc))+
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
+  labs(title='Complex III',y='',x='')+
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
-        title=element_text(size=10))
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1))
 
-#save
-ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,units = 'in')   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
+ggsave('complex_III_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
 
 
 
 
 
+#complex IV heatmap data----
+
+#need long format for heatmap
+#save <- oxphos
+oxphos <- save
+oxphos <- oxphos %>% 
+  gather(condition,value,11:22) %>% 
+  mutate(type=ifelse(str_detect(condition,'log2fc'),'log2fc','padj'),
+         condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
+                          paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
+  spread(type,value)
+
+#rename conditions
+oxphos <- oxphos %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
+                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
+                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+
+#levels  
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
+                                                       'clp1 \nHMW','clp2 \nHMW',
+                                                       'clp1 \nLMW','clp2 \nLMW'))
+
+
+
+#hand curate annotation a little
+oxphos <- oxphos %>% 
+  mutate(desc=ifelse(AGI=='AT1G19580','ca1',
+                     ifelse(AGI=='AT1G47260','ca2',
+                            ifelse(AGI=='AT5G66510','ca3',
+                                   ifelse(AGI=='AT5G63510','cal1',
+                                          ifelse(AGI=='AT3G48680','cal2',
+                                                 ifelse(AGI=='AT1G18320','Tim17L',
+                                                        ifelse(AGI=='AT3G10110','Tim17L',
+                                                               ifelse(AGI=='AT1G72180','noMito',
+                                                                      ifelse(AGI=='AT2G28430','noFunc',desc))))))))))
+
+#make y labels pretty
+
+CIV_pretty <- filter(oxphos,complex=='complex_IV',condition=='clp1 \nRNA') %>% 
+  select(1,2) %>% 
+  na.omit() %>% 
+  rowwise() %>% 
+  mutate(length=nchar(desc)) %>% 
+  ungroup() %>% 
+  mutate(max=max(length),
+         diff=max-length) %>% 
+  rowwise() %>% 
+  mutate(filler=paste(rep('-',1+diff),collapse = ''),
+         Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+  select(AGI,Identifier)
+
+oxphos <- oxphos %>% left_join(CIV_pretty)
+
+AGI_order1 <- oxphos %>% 
+  filter(condition=='clp1 \nRNA',complex=='complex_IV',encoded=='Mitochondrion') %>% 
+  arrange(log2fc)
+
+
+AGI_order2 <- oxphos %>% 
+  filter(condition=='clp1 \nHMW',complex=='complex_IV',encoded=='Nucleus') %>% 
+  arrange(log2fc)
+AGI_order <- bind_rows(AGI_order2,AGI_order1)
+
+oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
+
+
+
+
+#adjust upper limits of foldchange
+oxphos <- oxphos %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
+#complex IV heatmap ====
+p <- ggplot(data = filter(oxphos,complex=='complex_IV' & is.na(AGI)==F), aes(x = condition, y = Identifier)) +
+  geom_tile(aes(fill = log2fc))+
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
+  labs(title='Complex IV',y='',x='')+
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
+        strip.text = element_text(face='bold',size=12),
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1))
+
+ggsave('complex_IV_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
+
+
+
+
+
+
+
+
+#complex V heatmap data----
+
+#need long format for heatmap
+#save <- oxphos
+oxphos <- save
+oxphos <- oxphos %>% 
+  gather(condition,value,11:22) %>% 
+  mutate(type=ifelse(str_detect(condition,'log2fc'),'log2fc','padj'),
+         condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
+                          paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
+  spread(type,value)
+
+#rename conditions
+oxphos <- oxphos %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
+                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
+                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+
+#levels  
+oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
+                                                       'clp1 \nHMW','clp2 \nHMW',
+                                                       'clp1 \nLMW','clp2 \nLMW'))
+
+
+
+#hand curate annotation a little
+oxphos <- oxphos %>% 
+  mutate(desc=ifelse(AGI=='AT1G19580','ca1',
+                     ifelse(AGI=='AT1G47260','ca2',
+                            ifelse(AGI=='AT5G66510','ca3',
+                                   ifelse(AGI=='AT5G63510','cal1',
+                                          ifelse(AGI=='AT3G48680','cal2',
+                                                 ifelse(AGI=='AT1G18320','Tim17L',
+                                                        ifelse(AGI=='AT3G10110','Tim17L',
+                                                               ifelse(AGI=='AT1G72180','noMito',
+                                                                      ifelse(AGI=='AT2G28430','noFunc',desc))))))))))
+
+#make y labels pretty
+
+CV_pretty <- filter(oxphos,complex=='complex_V',condition=='clp1 \nRNA') %>% 
+  select(1,2) %>% 
+  na.omit() %>% 
+  rowwise() %>% 
+  mutate(length=nchar(desc)) %>% 
+  ungroup() %>% 
+  mutate(max=max(length),
+         diff=max-length) %>% 
+  rowwise() %>% 
+  mutate(filler=paste(rep('-',1+diff),collapse = ''),
+         Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+  select(AGI,Identifier)
+
+oxphos <- oxphos %>% left_join(CV_pretty)
+
+AGI_order1 <- oxphos %>% 
+  filter(condition=='clp1 \nRNA',complex=='complex_V',encoded=='Mitochondrion') %>% 
+  arrange(log2fc)
+
+
+AGI_order2 <- oxphos %>% 
+  filter(condition=='clp1 \nHMW',complex=='complex_V',encoded=='Nucleus') %>% 
+  arrange(log2fc)
+AGI_order <- bind_rows(AGI_order2,AGI_order1)
+
+oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
+
+#adjust upper limits of foldchange
+oxphos <- oxphos %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
+
+
+#complex V heatmap ====
+p <- ggplot(data = filter(oxphos,complex=='complex_V'), aes(x = condition, y = Identifier)) +
+  geom_tile(aes(fill = log2fc))+
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
+  labs(title='Complex V',y='',x='')+
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
+        strip.text = element_text(face='bold',size=12),
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1))
+
+ggsave('complex_V_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
 
 
 
@@ -1183,4 +1512,25 @@ ggsave('atm_no_ORF.pdf',device = 'pdf',dpi=1080,plot = p,height = 10,width = 16,
 
 
 
+
+
+
+
+
+
+
+#heatmap data as table====
+oxphos <- save
+
+colnames(oxphos)[c(2,3,11:22)] <- c('symbol','group',
+                                    'clp1 RNA log2fc','clp1 RNA padj',
+                                    'clp1 HMW log2fc','clp1 HMW padj',
+                                    'clp1 LMW log2fc','clp1 LMW padj',
+                                    'clp2 RNA log2fc','clp2 RNA padj',
+                                    'clp2 HMW log2fc','clp2 HMW padj',
+                                    'clp2 LMW log2fc','clp2 LMW padj')
+
+oxphos <- oxphos[,c(4,1,3,2,5,6:22)]
+
+write.csv(oxphos,'data/oxphos_heatmap_table.csv')
 
