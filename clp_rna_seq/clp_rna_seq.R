@@ -1534,3 +1534,52 @@ oxphos <- oxphos[,c(4,1,3,2,5,6:22)]
 
 write.csv(oxphos,'data/oxphos_heatmap_table.csv')
 
+
+#volcano poster (RNA and Membrane)----
+library(tidyverse)
+library(data.table)
+# use omics data with na
+#data prep
+omics <- fread('data/omics_with_na.csv') %>% 
+  select_if(str_detect(colnames(.),'soluble')==F) %>% 
+  gather(type,value,9:16) %>% 
+  mutate(type=gsub('_membrane','',type),
+         genotype=sapply(strsplit(type,'_'),'[',1),
+         source=sapply(strsplit(type,'_'),'[',2),
+         type=sapply(strsplit(type,'_'),'[',3)) %>% 
+  spread(type,value)
+
+#look for overlapping significant genes and use highest pvalue and lowest foldchange for high  confidence genes
+#remove isoforms first, will get too confusing, as RNA seq doesn't discern between them (and then jsut use all.1)
+omics <- omics %>% 
+  as_tibble() %>% 
+  filter(str_detect(AGI,'[.]1')) %>% 
+  group_by(AGI,source) %>% 
+  mutate(colour_p=ifelse(max(padj) <= 0.1,'red','blue')) %>% 
+  mutate(min_ratio=min(abs(log2fc)),
+         max_p=max(padj)) %>% 
+  dplyr::filter(abs(log2fc)==min_ratio) %>% 
+  dplyr::select(-min_ratio) %>% 
+  mutate(colour_r=ifelse(log2fc <=-0.4 | log2fc >= 0.4,'red','blue')) %>% 
+  mutate(sig=ifelse(colour_p=='blue'|colour_r=='blue','non_sig','sig')) %>% 
+  distinct(AGI,source, .keep_all = T)
+
+#plot volcano
+p <- ggplot(omics, aes(x=log2fc,y=-log10(max_p),col=sig,fill=sig))+
+  facet_wrap(~source,scales='free')+
+  geom_point(size=3,alpha=0.75)+
+  geom_text_repel(data=filter(data_volcano,sig=='sig'),aes(label=desc2),col='black',size=2.5, fontface='bold')+
+  geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_text(aes(x=4,y=-log10(0.05)-0.2,label='P = 0.05'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=-0.4-0.5,y=60,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=0.4+0.5,y=60,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  #scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
+        axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
+        title = element_text(face='bold',size=18))+
+  labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
+p
+
+
+ggsave('RNA_volcano.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 13,units = 'in')
