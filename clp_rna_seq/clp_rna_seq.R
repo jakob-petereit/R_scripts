@@ -1534,47 +1534,92 @@ oxphos <- oxphos[,c(4,1,3,2,5,6:22)]
 
 write.csv(oxphos,'data/oxphos_heatmap_table.csv')
 
-
 #volcano poster (RNA and Membrane)----
 library(tidyverse)
 library(data.table)
-# use omics data with na
-#data prep
-omics <- fread('data/omics_with_na.csv') %>% 
-  select_if(str_detect(colnames(.),'soluble')==F) %>% 
-  gather(type,value,9:16) %>% 
-  mutate(type=gsub('_membrane','',type),
-         genotype=sapply(strsplit(type,'_'),'[',1),
-         source=sapply(strsplit(type,'_'),'[',2),
-         type=sapply(strsplit(type,'_'),'[',3)) %>% 
-  spread(type,value)
+library(ggrepel)
 
-#look for overlapping significant genes and use highest pvalue and lowest foldchange for high  confidence genes
-#remove isoforms first, will get too confusing, as RNA seq doesn't discern between them (and then jsut use all.1)
-omics <- omics %>% 
+# #use omics data with na
+# #data prep
+# omics <- fread('data/omics_with_na.csv') %>%
+#   select_if(str_detect(colnames(.),'soluble')==F) %>%
+#   gather(type,value,9:16) %>%
+#   mutate(type=gsub('_membrane','',type),
+#          genotype=sapply(strsplit(type,'_'),'[',1),
+#          source=sapply(strsplit(type,'_'),'[',2),
+#          type=sapply(strsplit(type,'_'),'[',3)) %>%
+#   spread(type,value) %>% 
+#   select(-1)
+# 
+# #look for overlapping significant genes and use highest pvalue and lowest foldchange for high  confidence genes
+# #remove isoforms first, will get too confusing, as RNA seq doesn't discern between them (and then jsut use all.1)
+# omics <- omics %>%
+#   as_tibble() %>%
+#   filter(str_detect(AGI,'[.]1')) %>%
+#   group_by(AGI,source) %>%
+#   mutate(colour_p=ifelse(max(padj) <= 0.05,'red','blue')) %>%
+#   mutate(min_ratio=min(abs(log2fc)),
+#          max_p=max(padj)) %>%
+#   dplyr::filter(abs(log2fc)==min_ratio) %>%
+#   dplyr::select(-min_ratio) %>%
+#   mutate(colour_r=ifelse(log2fc <=-0.4 | log2fc >= 0.4,'red','blue')) %>%
+#   mutate(sig=ifelse(colour_p=='blue'|colour_r=='blue','non_sig','sig')) %>%
+#   distinct(AGI,source, .keep_all = T)
+# write.csv(omics,'data/data_volano_omics.csv',row.names = F)
+
+#start with dataframe made before (ran for about 30 minutes, probably column error makes it slow. frame had two columns 'V1',
+# removed them manually and handling the frame became 5x faster)
+
+#start with premade volcano data
+
+omics <- fread('data/data_volano_omics.csv') %>% 
+  mutate(AGI=substr(AGI,1,9))
+
+##make annotations
+# 
+# oxphos <- fread('data/oxphos_heatmap_table.csv') %>%
+#   select(AGI,symbol)
+# 
+# sig <- filter(omics, sig=='sig') %>%
+#   ungroup() %>% 
+#   select(AGI,description) %>%
+#   mutate(AGI=substr(AGI,1,9)) %>%
+#   left_join(oxphos) %>%
+#   mutate(description=ifelse(is.na(symbol)==F,symbol,description)) %>%
+#   select(-symbol)
+# #write the current annotation and look up annotation in suba, tair kegg and so on ...
+# write.csv(sig,'data/volcano_omics_annotation.csv')
+#retrieve hand annotated new annotation
+sig <- fread('data/volcano_omics_annotation_mod.csv')
+
+omics <- omics %>%
+  left_join(sig) %>% 
+  mutate(pch=ifelse(is.na(pch)==T,21,
+                    ifelse(pch==1,21,1)))
+#separate volcanos for protein and RNA
+#protein####
+#shrink max foldchange and pvalue
+omics_prot <- filter(omics,source=='Protein') %>%
   as_tibble() %>% 
-  filter(str_detect(AGI,'[.]1')) %>% 
-  group_by(AGI,source) %>% 
-  mutate(colour_p=ifelse(max(padj) <= 0.1,'red','blue')) %>% 
-  mutate(min_ratio=min(abs(log2fc)),
-         max_p=max(padj)) %>% 
-  dplyr::filter(abs(log2fc)==min_ratio) %>% 
-  dplyr::select(-min_ratio) %>% 
-  mutate(colour_r=ifelse(log2fc <=-0.4 | log2fc >= 0.4,'red','blue')) %>% 
-  mutate(sig=ifelse(colour_p=='blue'|colour_r=='blue','non_sig','sig')) %>% 
-  distinct(AGI,source, .keep_all = T)
+  ungroup() %>% 
+  mutate(lfc_mod=ifelse(AGI=='AT5G23140',-4,log2fc),
+         p_mod=ifelse(-log10(max_p) > 5 , 1e-5,max_p),
+         symbol=ifelse(sig=='non_sig',NA,symbol))
+
+
 
 #plot volcano
-p <- ggplot(omics, aes(x=log2fc,y=-log10(max_p),col=sig,fill=sig))+
-  facet_wrap(~source,scales='free')+
-  geom_point(size=3,alpha=0.75)+
-  geom_text_repel(data=filter(data_volcano,sig=='sig'),aes(label=desc2),col='black',size=2.5, fontface='bold')+
+p <- ggplot(omics_prot, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+  facet_wrap(~source)+
+  geom_jitter(pch=omics_prot$pch,size=3,alpha=0.75)+
+  geom_text_repel(data=filter(omics_prot,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
   geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
   geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
-  geom_text(aes(x=4,y=-log10(0.05)-0.2,label='P = 0.05'), size = 2.5, colour='#003366')+
-  geom_text(aes(x=-0.4-0.5,y=60,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
-  geom_text(aes(x=0.4+0.5,y=60,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
-  #scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  geom_text(aes(x=4,y=-log10(0.05)-0.1,label='P = 0.05'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=-0.4-0.5,y=5.5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=0.4+0.5,y=5.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
   theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
         axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
         title = element_text(face='bold',size=18))+
@@ -1582,4 +1627,63 @@ p <- ggplot(omics, aes(x=log2fc,y=-log10(max_p),col=sig,fill=sig))+
 p
 
 
-ggsave('RNA_volcano.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 13,units = 'in')
+ggsave('Prot_volcano.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
+
+#RNA####
+#shrink max foldchange and pvalue
+omics_rna <- filter(omics,source=='RNA') %>%
+  as_tibble() %>% 
+  ungroup() %>% 
+  mutate(p_mod=ifelse(-log10(max_p) > 15 , 1e-15,max_p),
+         symbol=ifelse(sig=='non_sig',NA,symbol)) %>% 
+  mutate(lfc_mod=ifelse(log2fc > 4,4,log2fc),
+         stroke=ifelse(encoded=='Mitochondrion',2,1)) %>% 
+  filter(is.na(stroke)==F)
+
+
+#break volcano into a pdf for editing description and legend texts and a PNG with the points (or it breaks illustrator)
+#plot volcano_description
+p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+  facet_wrap(~source)+
+  #geom_jitter(pch=omics_rna$pch,size=3,alpha=0.75,stroke=omics_rna$stroke)+
+  geom_text_repel(data=filter(omics_rna,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
+  geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  geom_text(aes(x=4,y=-log10(0.05)-0.1,label='P = 0.05'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=-0.4-0.5,y=15.5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=0.4+0.5,y=15.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
+  theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
+        axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
+        title = element_text(face='bold',size=18))+
+  labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
+p
+
+
+ggsave('RNA_volcano_desc.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
+#plot volcano_data
+p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+  facet_wrap(~source)+
+  geom_jitter(pch=omics_rna$pch,size=3,alpha=0.75,stroke=omics_rna$stroke)+
+  #geom_text_repel(data=filter(omics_rna,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
+  # geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  # geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  # geom_text(aes(x=4,y=-log10(0.05)-0.1,label='P = 0.05'), size = 2.5, colour='#003366')+
+  # geom_text(aes(x=-0.4-0.5,y=15.5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  # geom_text(aes(x=0.4+0.5,y=15.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
+  theme(legend.position = 'none', 
+        axis.title = element_text(face='bold',size = 18,colour='#FFFFFF'),
+        axis.text = element_text(face='bold',size = 16,colour='#FFFFFF'), 
+        strip.text = element_text(face='bold',size=18,colour='#FFFFFF'),
+        title = element_text(face='bold',size=18,colour='#FFFFFF'))+
+  labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
+p
+
+
+ggsave('RNA_volcano_data.png',device = 'png',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
+
+
+
