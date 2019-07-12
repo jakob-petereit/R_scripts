@@ -775,6 +775,8 @@ library(data.table)
 #   na.omit()
 #new oxphos set from ettiene (good) ----
 library(readxl)
+library(tidyverse)
+library(data.table)
 #complex I ====
 Complex_I <- read_xlsx('data/pp70_meyer_suptable1.xlsx',sheet=2,skip=2) %>% 
   mutate(match=Arabidopsis) %>% 
@@ -1025,17 +1027,17 @@ oxphos <- oxphos %>%
 
 #rename conditions
 oxphos <- oxphos %>% 
-  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
-                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
-                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
-                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
-                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
-                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+  mutate(condition=ifelse(condition=='clp1_RNA','clpp2-1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clpp2-2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clpp2-1 \nProtein',
+                                        ifelse(condition=='clp2_Protein_membrane','clpp2-2 \nProtein',
+                                               ifelse(condition=='clp1_Protein_soluble','clpp2-1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clpp2-2 \nLMW','failsave')))))))
 
 #levels  
-oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
-                                                       'clp1 \nHMW','clp2 \nHMW',
-                                                       'clp1 \nLMW','clp2 \nLMW'))
+oxphos$condition <- factor(oxphos$condition,levels = c('clpp2-1 \nRNA','clpp2-2 \nRNA',
+                                                       'clpp2-1 \nProtein','clpp2-2 \nProtein',
+                                                       'clpp2-1 \nLMW','clpp2-2 \nLMW'))
 
 
 
@@ -1053,7 +1055,7 @@ oxphos <- oxphos %>%
 
 #make y labels pretty
 
-CI_pretty <- filter(oxphos,complex=='complex_I',condition=='clp1 \nRNA') %>% 
+CI_pretty <- filter(oxphos,complex=='complex_I',condition=='clpp2-1 \nRNA') %>% 
   select(1,2) %>% 
   rowwise() %>% 
   mutate(length=nchar(desc)) %>% 
@@ -1068,12 +1070,12 @@ CI_pretty <- filter(oxphos,complex=='complex_I',condition=='clp1 \nRNA') %>%
 oxphos <- oxphos %>% left_join(CI_pretty)
 
 AGI_order1 <- oxphos %>% 
-  filter(condition=='clp1 \nRNA',complex=='complex_I',encoded=='Mitochondrion') %>% 
+  filter(condition=='clpp2-1 \nRNA',complex=='complex_I',encoded=='Mitochondrion') %>% 
   arrange(log2fc)
 
 
 AGI_order2 <- oxphos %>% 
-  filter(condition=='clp1 \nHMW',complex=='complex_I',encoded=='Nucleus') %>% 
+  filter(condition=='clpp2-1 \nProtein',complex=='complex_I',encoded=='Nucleus') %>% 
   arrange(log2fc)
 AGI_order <- bind_rows(AGI_order2,AGI_order1)
 
@@ -1086,13 +1088,27 @@ oxphos <- oxphos %>%
   mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
          log2fc=ifelse(log2fc < -2,-2,log2fc))
 
+#add stars for pvalues
+oxphos <- oxphos %>% 
+  mutate(sig_level=ifelse(padj <= 0.05 & padj > 0.01 ,'*',
+                          ifelse(padj <= 0.01 & padj > 0.001,'**',
+                                 ifelse(padj <= 0.001 ,'***',
+                                        ifelse(is.na(padj),'',
+                                               ifelse(padj>0.05,'','failsave'))))))
+
+#remove NA - AGIs
+oxphos <- oxphos %>% 
+  filter(is.na(AGI)==F)
+
+
 #complex I heatmap ====
-p <- ggplot(data = filter(oxphos,complex=='complex_I'), aes(x = condition, y = Identifier)) +
+p <- ggplot(data = filter(oxphos,complex=='complex_I',str_detect(condition,'LMW',negate = T)), aes(x = condition, y = Identifier)) +
   geom_tile(aes(fill = log2fc))+
+  geom_text(aes(label=sig_level),size=4,alpha=0.5,vjust=0.8)+
   scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
   labs(title='Complex I',y='',x='')+
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=5,family='mono',hjust = 0.4),
         axis.title.y = element_text(face='bold',size=4),
         axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
@@ -1100,7 +1116,9 @@ p <- ggplot(data = filter(oxphos,complex=='complex_I'), aes(x = condition, y = I
         legend.position = 'right',
         legend.key.size = unit(0.25,'cm'),
         legend.title=element_text(size=4),
-        legend.text=element_text(size=4,hjust=1))
+        legend.text=element_text(size=4,hjust=1),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
 p
 ggsave('complex_i_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 12,width = 8,units = 'cm')
 
@@ -1120,17 +1138,17 @@ oxphos <- oxphos %>%
 
 #rename conditions
 oxphos <- oxphos %>% 
-  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
-                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
-                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
-                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
-                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
-                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+  mutate(condition=ifelse(condition=='clp1_RNA','clpp2-1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clpp2-2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clpp2-1 \nProtein',
+                                        ifelse(condition=='clp2_Protein_membrane','clpp2-2 \nProtein',
+                                               ifelse(condition=='clp1_Protein_soluble','clpp2-1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clpp2-2 \nLMW','failsave')))))))
 
 #levels  
-oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
-                                                       'clp1 \nHMW','clp2 \nHMW',
-                                                       'clp1 \nLMW','clp2 \nLMW'))
+oxphos$condition <- factor(oxphos$condition,levels = c('clpp2-1 \nRNA','clpp2-2 \nRNA',
+                                                       'clpp2-1 \nProtein','clpp2-2 \nProtein',
+                                                       'clpp2-1 \nLMW','clpp2-2 \nLMW'))
 
 
 
@@ -1148,9 +1166,8 @@ oxphos <- oxphos %>%
 
 #make y labels pretty
 
-CII_pretty <- filter(oxphos,complex=='complex_II',condition=='clp1 \nRNA') %>% 
+CII_pretty <- filter(oxphos,complex=='complex_II',condition=='clpp2-1 \nRNA') %>% 
   select(1,2) %>% 
-  na.omit() %>% 
   rowwise() %>% 
   mutate(length=nchar(desc)) %>% 
   ungroup() %>% 
@@ -1164,12 +1181,12 @@ CII_pretty <- filter(oxphos,complex=='complex_II',condition=='clp1 \nRNA') %>%
 oxphos <- oxphos %>% left_join(CII_pretty)
 
 AGI_order1 <- oxphos %>% 
-  filter(condition=='clp1 \nRNA',complex=='complex_II',encoded=='Mitochondrion') %>% 
+  filter(condition=='clpp2-1 \nRNA',complex=='complex_II',encoded=='Mitochondrion') %>% 
   arrange(log2fc)
 
 
 AGI_order2 <- oxphos %>% 
-  filter(condition=='clp1 \nHMW',complex=='complex_II',encoded=='Nucleus') %>% 
+  filter(condition=='clpp2-1 \nProtein',complex=='complex_II',encoded=='Nucleus') %>% 
   arrange(log2fc)
 AGI_order <- bind_rows(AGI_order2,AGI_order1)
 
@@ -1177,18 +1194,32 @@ oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
 
 
 
-
 #adjust upper limits of foldchange
 oxphos <- oxphos %>% 
   mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
          log2fc=ifelse(log2fc < -2,-2,log2fc))
+
+#add stars for pvalues
+oxphos <- oxphos %>% 
+  mutate(sig_level=ifelse(padj <= 0.05 & padj > 0.01 ,'*',
+                          ifelse(padj <= 0.01 & padj > 0.001,'**',
+                                 ifelse(padj <= 0.001 ,'***',
+                                        ifelse(is.na(padj),'',
+                                               ifelse(padj>0.05,'','failsave'))))))
+
+#remove NA - AGIs
+oxphos <- oxphos %>% 
+  filter(is.na(AGI)==F)
+
+
 #complex II heatmap ====
-p <- ggplot(data = filter(oxphos,complex=='complex_II' & is.na(AGI)==F), aes(x = condition, y = Identifier)) +
+p <- ggplot(data = filter(oxphos,complex=='complex_II',str_detect(condition,'LMW',negate = T)), aes(x = condition, y = Identifier)) +
   geom_tile(aes(fill = log2fc))+
+  geom_text(aes(label=sig_level),size=4,alpha=0.5,vjust=0.8)+
   scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
-  labs(title='Complex II',y='',x='')+
+  labs(title='Complex I',y='',x='')+
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=5,family='mono',hjust = 0.4),
         axis.title.y = element_text(face='bold',size=4),
         axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
@@ -1196,8 +1227,10 @@ p <- ggplot(data = filter(oxphos,complex=='complex_II' & is.na(AGI)==F), aes(x =
         legend.position = 'right',
         legend.key.size = unit(0.25,'cm'),
         legend.title=element_text(size=4),
-        legend.text=element_text(size=4,hjust=1))
-
+        legend.text=element_text(size=4,hjust=1),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+p
 ggsave('complex_ii_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
 
 
@@ -1416,17 +1449,17 @@ oxphos <- oxphos %>%
 
 #rename conditions
 oxphos <- oxphos %>% 
-  mutate(condition=ifelse(condition=='clp1_RNA','clp1 \nRNA',
-                          ifelse(condition=='clp2_RNA','clp2 \nRNA',
-                                 ifelse(condition=='clp1_Protein_membrane','clp1 \nHMW',
-                                        ifelse(condition=='clp2_Protein_membrane','clp2 \nHMW',
-                                               ifelse(condition=='clp1_Protein_soluble','clp1 \nLMW',
-                                                      ifelse(condition=='clp2_Protein_soluble','clp2 \nLMW','failsave')))))))
+  mutate(condition=ifelse(condition=='clp1_RNA','clpp2-1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clpp2-2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clpp2-1 \nProtein',
+                                        ifelse(condition=='clp2_Protein_membrane','clpp2-2 \nProtein',
+                                               ifelse(condition=='clp1_Protein_soluble','clpp2-1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clpp2-2 \nLMW','failsave')))))))
 
 #levels  
-oxphos$condition <- factor(oxphos$condition,levels = c('clp1 \nRNA','clp2 \nRNA',
-                                                       'clp1 \nHMW','clp2 \nHMW',
-                                                       'clp1 \nLMW','clp2 \nLMW'))
+oxphos$condition <- factor(oxphos$condition,levels = c('clpp2-1 \nRNA','clpp2-2 \nRNA',
+                                                       'clpp2-1 \nProtein','clpp2-2 \nProtein',
+                                                       'clpp2-1 \nLMW','clpp2-2 \nLMW'))
 
 
 
@@ -1444,9 +1477,8 @@ oxphos <- oxphos %>%
 
 #make y labels pretty
 
-CV_pretty <- filter(oxphos,complex=='complex_V',condition=='clp1 \nRNA') %>% 
+CV_pretty <- filter(oxphos,complex=='complex_V',condition=='clpp2-1 \nRNA') %>% 
   select(1,2) %>% 
-  na.omit() %>% 
   rowwise() %>% 
   mutate(length=nchar(desc)) %>% 
   ungroup() %>% 
@@ -1460,30 +1492,44 @@ CV_pretty <- filter(oxphos,complex=='complex_V',condition=='clp1 \nRNA') %>%
 oxphos <- oxphos %>% left_join(CV_pretty)
 
 AGI_order1 <- oxphos %>% 
-  filter(condition=='clp1 \nRNA',complex=='complex_V',encoded=='Mitochondrion') %>% 
+  filter(condition=='clpp2-1 \nRNA',complex=='complex_V',encoded=='Mitochondrion') %>% 
   arrange(log2fc)
 
 
 AGI_order2 <- oxphos %>% 
-  filter(condition=='clp1 \nHMW',complex=='complex_V',encoded=='Nucleus') %>% 
+  filter(condition=='clpp2-1 \nProtein',complex=='complex_V',encoded=='Nucleus') %>% 
   arrange(log2fc)
 AGI_order <- bind_rows(AGI_order2,AGI_order1)
 
 oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
+
+
 
 #adjust upper limits of foldchange
 oxphos <- oxphos %>% 
   mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
          log2fc=ifelse(log2fc < -2,-2,log2fc))
 
+#add stars for pvalues
+oxphos <- oxphos %>% 
+  mutate(sig_level=ifelse(padj <= 0.05 & padj > 0.01 ,'*',
+                          ifelse(padj <= 0.01 & padj > 0.001,'**',
+                                 ifelse(padj <= 0.001 ,'***',
+                                        ifelse(is.na(padj),'',
+                                               ifelse(padj>0.05,'','failsave'))))))
+
+#remove NA - AGIs
+oxphos <- oxphos %>% 
+  filter(is.na(AGI)==F)
 
 #complex V heatmap ====
-p <- ggplot(data = filter(oxphos,complex=='complex_V'), aes(x = condition, y = Identifier)) +
+p <- ggplot(data = filter(oxphos,complex=='complex_V',str_detect(condition,'LMW',negate = T)), aes(x = condition, y = Identifier)) +
   geom_tile(aes(fill = log2fc))+
+  geom_text(aes(label=sig_level),size=4,alpha=0.5,vjust=0.8)+
   scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
   labs(title='Complex V',y='',x='')+
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(face=c('italic','italic','italic'),size=6,family='mono',hjust = 0.4),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=5,family='mono',hjust = 0.4),
         axis.title.y = element_text(face='bold',size=4),
         axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
         strip.text = element_text(face='bold',size=12),
@@ -1491,8 +1537,10 @@ p <- ggplot(data = filter(oxphos,complex=='complex_V'), aes(x = condition, y = I
         legend.position = 'right',
         legend.key.size = unit(0.25,'cm'),
         legend.title=element_text(size=4),
-        legend.text=element_text(size=4,hjust=1))
-
+        legend.text=element_text(size=4,hjust=1),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+p
 ggsave('complex_V_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 5,width = 8,units = 'cm')
 
 
@@ -1598,28 +1646,31 @@ omics <- omics %>%
                     ifelse(pch==1,21,1)))
 #separate volcanos for protein and RNA
 #protein####
-#shrink max foldchange and pvalue
 omics_prot <- filter(omics,source=='Protein') %>%
   as_tibble() %>% 
   ungroup() %>% 
-  mutate(lfc_mod=ifelse(AGI=='AT5G23140',-4,log2fc),
-         p_mod=ifelse(-log10(max_p) > 5 , 1e-5,max_p),
-         symbol=ifelse(sig=='non_sig',NA,symbol))
+  mutate(p_mod=ifelse(-log10(max_p) > 5 , 1e-05,max_p),
+         symbol=ifelse(sig=='non_sig',NA,symbol)) %>% 
+  mutate(lfc_mod=ifelse(log2fc > 4,4,log2fc),
+         lfc_mod=ifelse(AGI=='AT5G23140',-4,log2fc),
+         stroke=ifelse(encoded=='Mitochondrion',2,1)) %>% 
+  filter(is.na(stroke)==F)
 
 
-
-#plot volcano
-p <- ggplot(omics_prot, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+#break volcano into a pdf for editing description and legend texts and a PNG with the points (or it breaks illustrator)
+#plot volcano_description
+p <- ggplot(data=filter(omics_prot,sig=='sig',pch==21), aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
   facet_wrap(~source)+
-  geom_jitter(pch=omics_prot$pch,size=3,alpha=0.75)+
+  #geom_jitter(pch=omics_prot$pch,size=3,alpha=0.75,stroke=omics_prot$stroke)+
   geom_text_repel(data=filter(omics_prot,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
   geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
   geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
   geom_text(aes(x=4,y=-log10(0.05)-0.1,label='P = 0.05'), size = 2.5, colour='#003366')+
-  geom_text(aes(x=-0.4-0.5,y=5.5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
-  geom_text(aes(x=0.4+0.5,y=5.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=-0.4-0.5,y=5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  geom_text(aes(x=0.4+0.5,y=5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
   scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
-  scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
+  scale_x_continuous(limits=c(-5,5), breaks = c(-4:4))+
+  scale_y_continuous(limits=c(0,5.5), breaks = c(0,2.5,5))+
   theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
         axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
         title = element_text(face='bold',size=18))+
@@ -1627,7 +1678,32 @@ p <- ggplot(omics_prot, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
 p
 
 
-ggsave('Prot_volcano.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
+ggsave('Prot_volcano_desc.pdf',device = 'pdf',dpi=600,plot = p,height = 8,width = 10,units = 'in')
+
+
+#plot volcano_data
+p <- ggplot(omics_prot, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+  facet_wrap(~source)+
+  geom_jitter(pch=omics_prot$pch,size=3,alpha=0.75,stroke=omics_prot$stroke)+
+  #geom_text_repel(data=filter(omics_prot,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
+  # geom_hline(yintercept = -log10(0.05),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  # geom_vline(xintercept = c(-0.4,0.4),size=0.3, alpha=0.5,linetype="dashed",color='#0033ff')+
+  # geom_text(aes(x=4,y=-log10(0.05)-0.1,label='P = 0.05'), size = 2.5, colour='#003366')+
+  # geom_text(aes(x=-0.4-0.5,y=15.5,label='Log2FC \u2264 -0.4'), size = 2.5, colour='#003366')+
+  # geom_text(aes(x=0.4+0.5,y=15.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
+  scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
+  scale_x_continuous(limits=c(-5,5), breaks = c(-4:4))+
+  scale_y_continuous(limits=c(0,5.5), breaks = c(0,2.5,5))+
+  theme(legend.position = 'none', 
+        axis.title = element_text(face='bold',size = 18,colour='#FFFFFF'),
+        axis.text = element_text(face='bold',size = 16,colour='#FFFFFF'), 
+        strip.text = element_text(face='bold',size=18,colour='#FFFFFF'),
+        title = element_text(face='bold',size=18,colour='#FFFFFF'))+
+  labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
+p
+
+
+ggsave('Prot_volcano_data.png',device = 'png',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
 
 #RNA####
 #shrink max foldchange and pvalue
@@ -1643,7 +1719,7 @@ omics_rna <- filter(omics,source=='RNA') %>%
 
 #break volcano into a pdf for editing description and legend texts and a PNG with the points (or it breaks illustrator)
 #plot volcano_description
-p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
+p <- ggplot(data=filter(omics_rna,sig=='sig',pch==21), aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
   facet_wrap(~source)+
   #geom_jitter(pch=omics_rna$pch,size=3,alpha=0.75,stroke=omics_rna$stroke)+
   geom_text_repel(data=filter(omics_rna,sig=='sig',pch==21),aes(label=symbol),col='black',size=2.5, fontface='bold')+
@@ -1654,14 +1730,17 @@ p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
   geom_text(aes(x=0.4+0.5,y=15.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
   scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
   scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
-  theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
+  scale_y_continuous(limits=c(0,16), breaks = c(5,10,15))+
+    theme(legend.position = 'none', axis.title = element_text(face='bold',size = 18),
         axis.text = element_text(face='bold',size = 16), strip.text = element_text(face='bold',size=18),
         title = element_text(face='bold',size=18))+
   labs(title='', x='log2FC clp1/clp2 VS WT', y=expression(paste("-Lo", g[10]," P",sep="")))
 p
 
 
-ggsave('RNA_volcano_desc.pdf',device = 'pdf',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
+ggsave('RNA_volcano_desc.pdf',device = 'pdf',dpi=600,plot = p,height = 8,width = 10,units = 'in')
+
+
 #plot volcano_data
 p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
   facet_wrap(~source)+
@@ -1674,7 +1753,8 @@ p <- ggplot(omics_rna, aes(x=lfc_mod,y=-log10(p_mod),fill=sig))+
   # geom_text(aes(x=0.4+0.5,y=15.5,label='Log2FC \u2265 -0.4'), size = 2.5, colour='#003366')+
   scale_fill_manual(values=c('#006699','#009900','#ff9900'))+
   scale_x_continuous(limits=c(-4.5,4.5), breaks = c(-4:4))+
-  theme(legend.position = 'none', 
+  scale_y_continuous(limits=c(0,16), breaks = c(5,10,15))+
+    theme(legend.position = 'none', 
         axis.title = element_text(face='bold',size = 18,colour='#FFFFFF'),
         axis.text = element_text(face='bold',size = 16,colour='#FFFFFF'), 
         strip.text = element_text(face='bold',size=18,colour='#FFFFFF'),
