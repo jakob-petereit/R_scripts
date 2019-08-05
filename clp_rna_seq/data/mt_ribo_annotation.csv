@@ -1,0 +1,62 @@
+AGI,description,   lp-BN PAGE ,,                      SVC,                     Waltz,,SUBAcon,GFP ,MS,cytosolic ribosome ,plastid ribosome
+AT3G13160, rPPR3b (P-class),,mtLSU (core),other,,mtSSU,mitochondrion,+,+,-,-
+AT3G26360, putative S21-type protein of small ribosomal subunit ,,mtSSU (core),-,,mtSSU,mitochondrion,-,-,-,-
+AT2G21290, 30S ribosomal protein S31,,mtSSU (core),-,,mtSSU,mitochondrion,-,-,-,-
+AT2G34520, ribosomal S14 family protein,,mtSSU (core),-,,mtSSU,mitochondrion,-,-,-,-
+AT5G44710, 37S ribosomal protein S27 (RPS27),,mtSSU (core),-,,mtSSU,mitochondrion,-,+,-,-
+AT5G26800, XAA-Pro aminopeptidase P ,,mtSSU (core),-,,mtSSU,mitochondrion,-,-,-,-
+AT1G77750, ribosomal S13 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,+,+,-,-
+AT3G03600, ribosomal S2 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+ATMG00290, ribosomal S4 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G64880, ribosomal S5 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT4G29430, 40S ribosomal protein S15a-5 (RPS15AE),,mtSSU (core),mtSSU,,mtSSU,cytosol,-,+,+,-
+AT3G49080, ribosomal S5 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G16870, ribosomal S29 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT3G18240, ribosomal S24/S35 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G61870, PPR336/rPPR1 (P-class),,mtSSU (core),mtSSU,,mtSSU,mitochondrion,+,+,-,-
+AT4G15640, adenylyl cyclase ,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,+,+,-,-
+AT3G22300, 40S ribosomal protein S10 (RPS10),,mtSSU (core),other,,mtSSU,mitochondrion,-,+,-,-
+ATMG00090, ribosomal S3 family protein,,mtSSU (core),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT5G62270, ?,,mtSSU (core),other,,mtSSU,mitochondrion,-,+,-,-
+AT5G56940, 30S ribosomal protein S16-2 (RPS16B),,mtSSU (pot.),-,,mtSSU,mitochondrion,+,+,-,-
+AT3G21465, adenylyl cyclase,,mtSSU (pot.),-,,mtSSU,mitochondrion,-,-,-,-
+AT3G18760, translation elongation factor EF1B/rib. S6 family protein,,mtSSU (pot.),mtSSU,,mtSSU,cytosol,-,+,-,-
+AT1G80620, ribosomal S15 family protein,,mtSSU (pot.),mtSSU,,mtSSU,plastid,-,+,-,-
+AT1G26750, ?,,mtSSU (pot.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT5G52370, 28S ribosomal S34 protein,,mtSSU (pot.),other,,mtSSU,mitochondrion,-,-,-,-
+AT1G49400," nucleic acid-binding, OB-fold-like protein",,mtSSU (prob.),-,,mtSSU,cytosol,-,-,-,-
+AT1G47278, ?,,mtSSU (prob.),-,,mtSSU,mitochondrion,-,+,-,-
+AT1G31817, ribosomal L18p/L5e family protein,,mtSSU (prob.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT5G47320, 40S ribosomal protein S19 (RPS19),,mtSSU (prob.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G19520, NFD5/rPPR2 (P-class),,mtSSU (prob.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G55890, rPPR3a (P-class),,mtSSU (prob.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+AT1G53645, hydroxyproline-rich glycoprotein family protein,,mtSSU (prob.),mtSSU,,mtSSU,mitochondrion,-,+,-,-
+ATMG01270, ribosomal S7 family protein,,mtSSU (prob.),other,,mtSSU,mitochondrion,-,+,-,-
+AT1G18630, glycine-rich RNA-binding protein 6 (GRRBP6),,mtSSU (prob.),other,,mtSSU,mitochondrion,-,+,-,-
+AT1G16740, 50S ribosomal protein L20 (RPL20),,mtLSU (core),-,,mtLSU,mitochondrion,-,+,-,-
+AT1G27435, ?,,mtLSU (core),-,,mtLSU,mitochondrion,-,+,-,-
+AT3G51010, protein translocase subunit ,,mtLSU (core),-,,mtLSU,mitochondrion,-,+,-,-
+AT5G39800, ribosomal protein L27,,mtLSU (core),-,,mtLSU,mitochondrion,-,+,-,-
+ATMG00080, 60S ribosomal protein L16 (RPL16),,mtLSU (core),-,,mtLSU,mitochondrion,-,+,-,-
+AT1G24240, ribosomal L19 family protein,,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT4G30930, 50S ribosomal protein L21 (RPL21M),,mtLSU (core),mtLSU,,mtLSU,mitochondrion,+,+,-,-
+AT5G53070, ribosomal L9 family protein,,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT4G36680, rPPR7 (P-class),,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT3G01790, ribosomal L13 family protein,,mtLSU (core),mtLSU,,mtLSU,mitochondrion,+,+,-,-
+AT5G46160, 50S ribosomal protein (HLP),,mtLSU (core),mtLSU,,mtLSU,mitochondrion,+,+,-,-
+AT5G64670, ribosomal L15 family protein,,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT4G39880," ribosomal L23 family protein, putative",,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT5G23535, 50S ribosomal protein L24,,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT3G17465, 50S ribosomal protein L3-2 (RPL3B),,mtLSU (core),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT4G31460," ribosomal L28 family protein, putative",,mtLSU (core),other,,mtLSU,mitochondrion,-,+,-,-
+AT2G37230, rPPR5 (P-class),,mtLSU (core),other,,mtLSU,plastid,-,+,-,-
+AT4G28360," ribosomal L22 family protein, putative",,mtLSU (core),other,,mtLSU,mitochondrion,-,+,-,-
+AT5G40080, ribosomal protein L27 (MRLP27),,mtLSU (pot.),-,,mtLSU,mitochondrion,-,-,-,-
+AT1G52370, ribosomal L22 family protein,,mtLSU (prob.),-,,mtLSU,mitochondrion,-,+,-,-
+AT5G09770," ribosomal L17 family protein, putative",,mtLSU (prob.),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT5G66860, ribosomal L25 family protein /GLN-tRNA synth.,,mtLSU (prob.),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT4G35490, ribosomal protein L11 (MRPL11),,mtLSU (prob.),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT5G55140, ribosomal L30 family protein,,mtLSU (prob.),mtLSU,,mtLSU,mitochondrion,-,+,-,-
+AT1G73940, tumor necrosis factor receptor family protein,,mtLSU (prob.),other,,mtLSU,mitochondrion,+,+,-,-
+AT1G07830, ribosomal L29 family protein,,mtLSU (prob.),other,,mtLSU,mitochondrion,-,+,-,-
+AT2G20060, 50S ribosomal protein L4 (RPL4),,mtLSU (prob.),other,,mtLSU,mitochondrion,-,+,-,-

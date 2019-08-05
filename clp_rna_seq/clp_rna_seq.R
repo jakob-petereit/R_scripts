@@ -99,6 +99,30 @@ dds <- DESeq(dds)
 
 
 #stand alone sections
+#rna seq overlap of differential expression----
+overlap <- fread('clp1_2vs_wt_results.csv') %>% 
+  mutate(clp1_reg=ifelse(clp1_log2FoldChange <= -0.4,'down',
+                    ifelse(clp1_log2FoldChange >= 0.4,'up',
+                           ifelse(clp1_log2FoldChange > -0.4 & clp1_log2FoldChange < 0.4,'unchanged','failsave'))),
+         clp2_reg=ifelse(clp2_log2FoldChange <= -0.4,'down',
+                         ifelse(clp2_log2FoldChange >= 0.4,'up',
+                                ifelse(clp2_log2FoldChange > -0.4 & clp2_log2FoldChange < 0.4,'unchanged','failsave'))),
+         match=ifelse(clp1_reg==clp2_reg,'match','no_match')) 
+
+clp2_dxg <- overlap %>% 
+  filter(clp2_reg != 'unchanged')
+clp2_dxg_sig <- clp2_dxg %>% 
+  filter(clp2_padj <= 0.1)
+table(clp2_dxg$match)
+table(clp2_dxg_sig$match)
+
+clp1_dxg <- overlap %>% 
+  filter(clp1_reg != 'unchanged')
+clp1_dxg_sig <- clp1_dxg %>% 
+  filter(clp1_padj <= 0.1)
+table(clp1_dxg$match)
+table(clp1_dxg_sig$match)
+
 # DESEQ workflow from guide ----
 #Log fold change shrinkage for visualization and ranking
 resultsNames(dds)
@@ -1766,4 +1790,179 @@ p
 ggsave('RNA_volcano_data.png',device = 'png',dpi=2160,plot = p,height = 8,width = 10,units = 'in')
 
 
+
+
+#ribosome data----
+
+library(tidyverse)
+library(data.table)
+
+#omics data set
+omics <- fread('data/omics_with_na.csv')
+omics <- omics %>% 
+  mutate(isoform=AGI,
+         AGI=substr(AGI,1,9))
+
+#ribosome annotation
+mtRibo_anno <- fread('data/mt_ribo_annotation.csv')
+#intersect'
+
+mtRibo <- filter(omics,AGI %in% mtRibo_anno$AGI)
+
+
+
+#remove isoforms (keep longest protein, as the fragemets are probably double counted)
+mtRibo <- mtRibo %>% 
+  mutate(AGI=substr(AGI,1,9)) %>% 
+  distinct(AGI,.keep_all = T)
+
+#need long format for heatmap
+# save <- mtRibo
+mtRibo <- save
+mtRibo <- mtRibo %>% 
+  select(-isoform,V1) %>% 
+  gather(condition,value,9:ncol(.)) %>% 
+  mutate(type=ifelse(str_detect(condition,'log2fc'),'log2fc','padj'),
+         condition=ifelse(str_detect(condition,'RNA'),paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sep='_'),
+                          paste(sapply(strsplit(condition,'_'),'[',1),sapply(strsplit(condition,'_'),'[',2),sapply(strsplit(condition,'_'),'[',3),sep='_'))) %>% 
+  spread(type,value)
+
+#rename conditions
+mtRibo <- mtRibo %>% 
+  mutate(condition=ifelse(condition=='clp1_RNA','clpp2-1 \nRNA',
+                          ifelse(condition=='clp2_RNA','clpp2-2 \nRNA',
+                                 ifelse(condition=='clp1_Protein_membrane','clpp2-1 \nProtein',
+                                        ifelse(condition=='clp2_Protein_membrane','clpp2-2 \nProtein',
+                                               ifelse(condition=='clp1_Protein_soluble','clpp2-1 \nLMW',
+                                                      ifelse(condition=='clp2_Protein_soluble','clpp2-2 \nLMW','failsave')))))))
+
+#levels  
+mtRibo$condition <- factor(mtRibo$condition,levels = c('clpp2-1 \nRNA','clpp2-2 \nRNA',
+                                                       'clpp2-1 \nProtein','clpp2-2 \nProtein',
+                                                       'clpp2-1 \nLMW','clpp2-2 \nLMW'))
+
+
+# 
+# 
+# #make y labels pretty
+# 
+# CI_pretty <- filter(oxphos,complex=='complex_I',condition=='clpp2-1 \nRNA') %>% 
+#   select(1,2) %>% 
+#   rowwise() %>% 
+#   mutate(length=nchar(desc)) %>% 
+#   ungroup() %>% 
+#   mutate(max=max(length),
+#          diff=max-length) %>% 
+#   rowwise() %>% 
+#   mutate(filler=paste(rep('-',1+diff),collapse = ''),
+#          Identifier=paste0(AGI,filler,desc,sep='')) %>% 
+#   select(AGI,Identifier)
+# 
+# oxphos <- oxphos %>% left_join(CI_pretty)
+# 
+# AGI_order1 <- oxphos %>% 
+#   filter(condition=='clpp2-1 \nRNA',complex=='complex_I',encoded=='Mitochondrion') %>% 
+#   arrange(log2fc)
+# 
+# 
+# AGI_order2 <- oxphos %>% 
+#   filter(condition=='clpp2-1 \nProtein',complex=='complex_I',encoded=='Nucleus') %>% 
+#   arrange(log2fc)
+# AGI_order <- bind_rows(AGI_order2,AGI_order1)
+# 
+# oxphos$Identifier <- factor(oxphos$Identifier,levels=AGI_order$Identifier)
+# 
+
+
+#adjust upper limits of foldchange
+mtRibo <- mtRibo %>% 
+  mutate(log2fc=ifelse(log2fc > 2,2,log2fc),
+         log2fc=ifelse(log2fc < -2,-2,log2fc))
+
+#add stars for pvalues
+mtRibo <- mtRibo %>% 
+  mutate(sig_level=ifelse(padj <= 0.05 & padj > 0.01 ,'*',
+                          ifelse(padj <= 0.01 & padj > 0.001,'**',
+                                 ifelse(padj <= 0.001 ,'***',
+                                        ifelse(is.na(padj),'',
+                                               ifelse(padj>0.05,'','failsave'))))))
+
+#remove NA - AGIs
+mtRibo <- mtRibo %>% 
+  filter(is.na(AGI)==F)
+
+
+#ribosome heatmap (incomplete) ====
+p <- ggplot(data = filter(mtRibo,str_detect(condition,'LMW',negate = T)), aes(x = condition, y = AGI)) +
+  geom_tile(aes(fill = log2fc))+
+  geom_text(aes(label=sig_level),size=4,alpha=0.5,vjust=0.8)+
+  scale_fill_gradient2(low='#cc0066',mid = '#ffffcc',high = '#339900',limits=c(-2,2))+
+  labs(title='Complex I',y='',x='')+
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(face=c('italic','italic','italic'),size=5,family='mono',hjust = 0.4),
+        axis.title.y = element_text(face='bold',size=4),
+        axis.text.y = element_text(face='plain',size=6,hjust = 0,family='mono'),
+        strip.text = element_text(face='bold',size=12),
+        title=element_text(size=10),
+        legend.position = 'right',
+        legend.key.size = unit(0.25,'cm'),
+        legend.title=element_text(size=4),
+        legend.text=element_text(size=4,hjust=1),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+p
+ggsave('complex_i_heatmap.pdf',device = 'pdf',dpi=1080,plot = p,height = 12,width = 8,units = 'cm')
+
+
+#multi omics correlation----
+library(data.table)
+library(tidyverse)
+
+#omics data with data for both RNA and Protein
+cor_omics <- fread('data/omics_without_na.csv') %>% 
+  select_if(str_detect(colnames(.),'soluble', negate = T)) %>% 
+  gather(condition,value,9:16) %>% 
+  mutate(condition=gsub('_membrane','',condition),
+         genotype=sapply(strsplit(condition,'_'),'[',1),
+         source=sapply(strsplit(condition,'_'),'[',2),
+         type=sapply(strsplit(condition,'_'),'[',3)) %>% 
+  select(-condition) %>% 
+  spread(source,value)
+
+#plot correlation from protein and RNA, will be poor results, but dont worry about that
+ggplot(filter(cor_omics,type=='log2fc'), aes (RNA,Protein,colour=genotype))+
+  geom_jitter(alpha=0.5)
+
+#now correlate clp1 and clp2 to show that the mutant overlap is actually good, even if clp2 is dirty
+#make dataframes with RNA and protein, then combine them to have groups for protein rna and colums for clp1 and clp2
+cor_rna <- cor_omics %>% 
+  select(-Protein) %>% 
+  spread(genotype,RNA) %>% 
+  mutate(source='RNA')
+cor_protein <- cor_omics %>% 
+  select(-RNA) %>% 
+  spread(genotype,Protein) %>% 
+  mutate(source='Protein')
+cor_clp <- bind_rows(cor_rna,cor_protein)
+#create siginificant gene lists for clp1 and clp2
+sig_clp1 <-  filter(cor_clp, type=='padj',clp1 <= 0.05) %>% 
+  distinct(AGI)
+sig_clp2 <-  filter(cor_clp, type=='padj',clp2 <= 0.05) %>% 
+  distinct(AGI)
+#calculate correlation of all data for protein and rna between mutants
+#all pvalues
+cor_clp %>%
+  group_by(source) %>%
+  summarize(COR=cor(clp1,clp2))
+#clp1 significant
+cor_clp %>% filter(AGI %in% sig_clp1$AGI) %>% 
+  group_by(source) %>%
+  summarize(COR=cor(clp1,clp2))
+#clp2 significant
+cor_clp %>% filter(AGI %in% sig_clp2$AGI) %>% 
+  group_by(source) %>%
+  summarize(COR=cor(clp1,clp2))
+ggplot(filter(cor_clp,type=='log2fc'), aes (clp1,clp2,group=source,colour=source))+
+  geom_jitter(data=filter(cor_clp,type=='log2fc',source=='Protein'),alpha=0.5)+
+  geom_jitter(data=filter(cor_clp,type=='log2fc',source=='RNA'),alpha=0.5)
 
