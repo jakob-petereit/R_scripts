@@ -1966,3 +1966,41 @@ ggplot(filter(cor_clp,type=='log2fc'), aes (clp1,clp2,group=source,colour=source
   geom_jitter(data=filter(cor_clp,type=='log2fc',source=='Protein'),alpha=0.5)+
   geom_jitter(data=filter(cor_clp,type=='log2fc',source=='RNA'),alpha=0.5)
 
+
+#mito changes comapred to general changes----
+library(tidyverse)
+library(data.table)
+
+omics <- fread('data/omics_with_na.csv')
+#RNA####
+omics %>% filter(clp1_RNA_padj <= 0.05 & clp2_RNA_padj <= 0.05) %>% 
+  distinct(AGI,location_consensus) %>%
+  group_by(location_consensus) %>% 
+  tally()
+
+omics %>% filter(str_detect(location_consensus,'mito')) %>% nrow()
+
+omics %>% filter(str_detect(location_consensus,'mito',negate = T)) %>% nrow()
+
+omics %>% filter(clp1_RNA_padj <= 0.05 & clp2_RNA_padj <= 0.05 & str_detect(location_consensus,'mito')) %>% 
+  distinct(AGI,encoded) %>%
+  group_by(encoded) %>% 
+  tally()
+
+omics %>% filter(str_detect(AGI,'ATM')) %>% mutate(AGI=substr(AGI,1,9)) %>% distinct(AGI) %>% nrow()
+#Protein####
+omics %>% filter(clp1_Protein_membrane_padj <= 0.05 & clp2_Protein_membrane_padj <= 0.05) %>% 
+  distinct(AGI,location_consensus) %>%
+  group_by(location_consensus) %>% 
+  tally()
+
+omics %>% filter(str_detect(location_consensus,'mito'), is.na(clp1_Protein_membrane_padj)==F) %>% nrow()
+
+omics %>% filter(str_detect(location_consensus,'mito',negate = T),is.na(clp1_Protein_membrane_padj)==F) %>% nrow()
+
+omics %>% filter(clp1_Protein_membrane_padj <= 0.05 & clp2_Protein_membrane_padj <= 0.05 & str_detect(location_consensus,'mito')) %>% 
+  distinct(AGI,encoded) %>%
+  group_by(encoded) %>% 
+  tally()
+
+omics %>% filter(str_detect(AGI,'ATM')) %>% mutate(AGI=substr(AGI,1,9)) %>% distinct(AGI) %>% nrow()
